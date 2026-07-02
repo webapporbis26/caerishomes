@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
-import heroVideo from "@/assets/Villa_design_and_construction_an…_202606261727.mp4";
+import heroImg from "@/assets/desk/hero 1 desk.png";
 import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 import { ArrowLeft } from "lucide-react";
 
@@ -51,12 +51,9 @@ function QuotePage() {
       
       {/* Left Column - Video Background (Sticky on Desktop) */}
       <div className="w-full lg:w-[45%] lg:h-screen relative overflow-hidden hidden lg:block sticky top-0">
-        <video
-          src={heroVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src={heroImg}
+          alt="Luxury Architecture"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
