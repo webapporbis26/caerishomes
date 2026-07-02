@@ -4,14 +4,14 @@ import { Magnetic } from "./magnetic";
 import { FullScreenMenu } from "./full-screen-menu";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/logo-caeris.png";
+import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 
 const links = [
   { to: "/" as const, label: "Home" },
   { to: "/about" as const, label: "About Us" },
   { to: "/construction" as const, label: "Services" },
   { to: "/projects" as const, label: "Projects" },
-  { to: "/projects" as const, label: "Gallery" }, // Mapping to projects for now
+  { to: "/gallery" as const, label: "Gallery" },
   { to: "/quote" as const, label: "Contact" },
 ];
 
@@ -67,17 +67,21 @@ export function Nav() {
     <>
       <header 
         className={cn(
-        "fixed top-0 left-0 right-0 z-[90] px-4 sm:px-6 md:px-10 flex items-center justify-between transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]",
-        isTransparent ? "bg-transparent py-6" : "bg-white/95 backdrop-blur-xl border-b border-black/5 py-4 shadow-sm",
+        "fixed top-0 left-0 right-0 z-[90] px-4 sm:px-8 md:px-12 flex items-center h-[90px] md:h-[130px] transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]",
+        isTransparent ? "bg-transparent" : "bg-transparent", // Removed white bg on scroll as requested
         isHidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
-      <Link to="/" className="relative z-10">
-        <img src={logoImg} alt="Logo" className="h-16 md:h-20 w-auto object-contain transition-all" />
-      </Link>
+      {/* Left: Logo (very large) */}
+      <div className="flex-1 md:flex-none md:w-[450px] flex justify-start items-center h-full py-2">
+        <Link to="/" className="relative z-10 block h-full w-full max-w-[260px] md:max-w-[420px]">
+          <img src={logoImg} alt="Logo" className="h-full w-full object-contain object-left transition-all" />
+        </Link>
+      </div>
       
+      {/* Center: Navigation (flex-1 perfectly centered) */}
       <nav className={cn(
-        "hidden md:flex items-center gap-8 text-[15px] font-medium transition-colors duration-500",
+        "hidden md:flex flex-1 justify-center items-center gap-6 lg:gap-12 text-[12px] tracking-[0.15em] uppercase font-bold transition-colors duration-500",
         isTransparent ? "text-white/90" : "text-black/80"
       )}>
         {links.map((link) => (
@@ -85,26 +89,27 @@ export function Nav() {
             key={link.label}
             to={link.to}
             className={cn(
-              "relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:after:origin-bottom-left hover:after:scale-x-100",
+              "relative py-2 whitespace-nowrap transition-colors after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:after:origin-bottom-left hover:after:scale-x-100",
               isTransparent ? "hover:text-white after:bg-white drop-shadow-sm" : "hover:text-black after:bg-black"
             )}
-            activeProps={{ className: isTransparent ? "text-white after:scale-x-100 after:origin-bottom-left" : "text-black after:scale-x-100 after:origin-bottom-left font-semibold" }}
+            activeProps={{ className: isTransparent ? "text-white after:scale-x-100 after:origin-bottom-left" : "text-black after:scale-x-100 after:origin-bottom-left" }}
           >
             {link.label}
           </Link>
         ))}
       </nav>
 
-      <div className="flex items-center gap-4 z-10">
+      {/* Right: Menu Button / CTA (450px to match left) */}
+      <div className="flex flex-1 md:flex-none md:w-[450px] justify-end items-center gap-4 z-10">
         <button 
           onClick={() => setIsMenuOpen(true)}
           className={cn(
-            "flex items-center justify-center min-w-[44px] min-h-[44px] transition-all duration-300 active:scale-[0.96] shadow-sm rounded-sm",
-            isTransparent ? "bg-white text-black hover:bg-gray-100" : "bg-black text-white hover:bg-black/90"
+            "flex items-center justify-center min-w-[48px] min-h-[48px] transition-all duration-300 active:scale-[0.96] shadow-sm rounded-none border",
+            isTransparent ? "bg-white/10 border-white/20 text-white hover:bg-white hover:text-black" : "bg-white border-black/10 text-black hover:bg-black hover:text-white"
           )}
           aria-label="Open menu"
         >
-          <Menu size={20} strokeWidth={1.5} />
+          <Menu size={20} strokeWidth={1} />
         </button>
       </div>
     </header>

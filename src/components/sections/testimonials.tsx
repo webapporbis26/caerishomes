@@ -1,60 +1,24 @@
-import { useState } from "react";
-import { splitChars } from "@/lib/split-chars";
+import { TestimonialsSection } from "@/components/blocks/testimonials-with-marquee";
 import { testimonials } from "@/lib/site-data";
 
 export function Testimonials() {
-  const [idx, setIdx] = useState(0);
+  const formattedTestimonials = testimonials.map((t) => ({
+    author: {
+      name: t.name,
+      handle: t.location,
+      avatar: t.image,
+    },
+    text: t.quote,
+  }));
 
   return (
-    <section id="testimonials" className="px-4 sm:px-8 md:px-12 xl:px-20 py-16 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 md:mb-16" data-reveal>
-          <div>
-            <p className="text-eyebrow mb-3">Testimonials</p>
-            <h2 data-split className="font-display text-4xl md:text-5xl lg:text-7xl">
-              {splitChars("Real reviews, real results.")}
-            </h2>
-          </div>
-          <div className="flex gap-3">
-            <button
-              onClick={() => setIdx((idx - 1 + testimonials.length) % testimonials.length)}
-              className="w-12 h-12 border border-border/20 hover:border-[#C8A45D] hover:text-[#C8A45D] transition"
-              aria-label="Previous testimonial"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => setIdx((idx + 1) % testimonials.length)}
-              className="w-12 h-12 border border-border/20 hover:border-[#C8A45D] hover:text-[#C8A45D] transition"
-              aria-label="Next testimonial"
-            >
-              →
-            </button>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-[320px_1fr] gap-12 items-start">
-          <div className="mask-reveal aspect-[3/4] overflow-hidden bg-background">
-            <img
-              key={testimonials[idx].image}
-              src={testimonials[idx].image}
-              alt={testimonials[idx].name}
-              className="w-full h-full object-cover animate-[fade-in_0.6s_ease-out]"
-              loading="lazy"
-            />
-          </div>
-          <div key={idx} className="animate-[fade-in_0.6s_ease-out]">
-            <span className="font-display text-7xl text-[#C8A45D] leading-none">"</span>
-            <p className="text-foreground/80 text-lg md:text-xl leading-relaxed -mt-6">{testimonials[idx].quote}</p>
-            <div className="mt-10 flex items-center gap-4 border-t border-border/10 pt-8">
-              <span className="w-12 h-px bg-[#C8A45D]" />
-              <div>
-                <p className="font-display text-2xl">{testimonials[idx].name}</p>
-                <p className="text-meta mt-1">{testimonials[idx].location}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="testimonials">
+      <TestimonialsSection
+        title="Voices of Trust"
+        description="Hear from families who have experienced our commitment to quality, transparency, and care firsthand."
+        testimonials={formattedTestimonials}
+        className="bg-[#FAF9F6] border-y border-border/10"
+      />
+    </div>
   );
 }

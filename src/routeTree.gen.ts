@@ -13,6 +13,7 @@ import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as MaterialsRouteImport } from './routes/materials'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConstructionRouteImport } from './routes/construction'
 import { Route as AboutRouteImport } from './routes/about'
@@ -36,6 +37,11 @@ const ProcessRoute = ProcessRouteImport.update({
 const MaterialsRoute = MaterialsRouteImport.update({
   id: '/materials',
   path: '/materials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/materials': typeof MaterialsRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/materials': typeof MaterialsRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/materials': typeof MaterialsRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/construction'
     | '/contact'
+    | '/gallery'
     | '/materials'
     | '/process'
     | '/projects'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/construction'
     | '/contact'
+    | '/gallery'
     | '/materials'
     | '/process'
     | '/projects'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/construction'
     | '/contact'
+    | '/gallery'
     | '/materials'
     | '/process'
     | '/projects'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ConstructionRoute: typeof ConstructionRoute
   ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
   MaterialsRoute: typeof MaterialsRoute
   ProcessRoute: typeof ProcessRoute
   ProjectsRoute: typeof ProjectsRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/materials'
       fullPath: '/materials'
       preLoaderRoute: typeof MaterialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ConstructionRoute: ConstructionRoute,
   ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
   MaterialsRoute: MaterialsRoute,
   ProcessRoute: ProcessRoute,
   ProjectsRoute: ProjectsRoute,

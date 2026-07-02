@@ -49,7 +49,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
           <CarouselContent className="-ml-4 sm:-ml-6">
             {items.map((project) => (
               <CarouselItem key={project.slug} className="pl-4 sm:pl-6 basis-[85%] sm:basis-1/2 lg:basis-1/3">
-                <article className="group relative aspect-[4/5] rounded-2xl overflow-hidden h-full apple-shadow border border-white/10 cursor-grab active:cursor-grabbing">
+                <article className="group relative aspect-[4/3] rounded-2xl overflow-hidden h-full apple-shadow border border-white/10 cursor-grab active:cursor-grabbing">
                   <img
                     src={project.img}
                     alt={project.client}

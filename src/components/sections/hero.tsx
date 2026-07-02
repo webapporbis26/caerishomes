@@ -1,12 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import desk1 from "@/assets/desk/hero 1 desk.png";
+import desk2 from "@/assets/desk/hero 2 desk.png";
+import desk3 from "@/assets/desk/hero 3 desk.png";
+import mob1 from "@/assets/mob/hero 1 mob.png";
+import mob2 from "@/assets/mob/hero 2 mob.png";
+import mob3 from "@/assets/mob/hero 3 mob.png";
 import { Magnetic } from "@/components/site/magnetic";
 
 export function Hero() {
-  const images = [project1, project2, project3];
+  const images = [
+    { desktop: desk1, mobile: mob1 },
+    { desktop: desk2, mobile: mob2 },
+    { desktop: desk3, mobile: mob3 }
+  ];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -20,22 +27,24 @@ export function Hero() {
     <section className="hero relative h-[100dvh] w-full overflow-hidden dark text-foreground">
       <div className="absolute inset-0 overflow-hidden bg-black">
         {images.map((img, index) => (
-          <img
-            key={img}
-            src={img}
-            alt="Hero architectural background"
-            className={`absolute inset-0 w-full h-[120%] object-cover transition-opacity duration-[3000ms] ease-in-out ${
-              index === currentImage ? "opacity-100" : "opacity-0"
-            }`}
-            style={{ transform: "scale(1.15)" }}
-          />
+          <picture key={index}>
+            <source media="(max-width: 768px)" srcSet={img.mobile} />
+            <source media="(min-width: 769px)" srcSet={img.desktop} />
+            <img
+              src={img.desktop}
+              alt="Hero architectural background"
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
+                index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+            />
+          </picture>
         ))}
       </div>
 
-      <div className="relative h-full flex flex-col justify-center px-4 sm:px-8 md:px-12 pt-12">
+      <div className="relative z-20 h-full flex flex-col justify-center px-4 sm:px-8 md:px-12 pt-[120px] md:pt-[160px]">
         <div className="text-eyebrow mb-8 hero-sub flex items-center gap-4">
           <span className="w-10 h-px bg-[#C8A45D]" />
-          <span>Luxury Home Builders · Architects · Turnkey</span>
+          <span>Care in Every Detail</span>
         </div>
         <h1 className="font-display text-[12vw] md:text-[8vw] text-foreground overflow-hidden max-w-5xl">
           <span className="block overflow-hidden">

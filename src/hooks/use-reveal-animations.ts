@@ -42,6 +42,17 @@ export function useRevealAnimations() {
         );
       });
 
+      // Counter Animation
+      gsap.utils.toArray<HTMLElement>(".counter").forEach((el) => {
+        const target = parseFloat(el.getAttribute("data-count") || "0");
+        gsap.to(el, {
+          innerHTML: target,
+          duration: 2,
+          snap: { innerHTML: 1 },
+          scrollTrigger: { trigger: el, start: "top 90%" },
+        });
+      });
+
       // Text Scrub Effect
       gsap.utils.toArray<HTMLElement>("[data-scrub]").forEach((el) => {
         gsap.fromTo(

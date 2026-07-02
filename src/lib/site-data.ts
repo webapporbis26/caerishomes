@@ -7,6 +7,16 @@ import kerala2 from "@/assets/kerala-modern-2.png";
 import client1 from "@/assets/client-1.jpg";
 import client2 from "@/assets/client-2.jpg";
 import client3 from "@/assets/client-3.jpg";
+import jamsheer1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
+import jamsheer2 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.jpeg";
+import jamsheer3 from "@/assets/hero and complted projects/JAMSHEER FINAL 03.jpg.jpeg";
+import shibu1 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
+import shibu2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.jpeg";
+import shibu3 from "@/assets/hero and complted projects/SHIBU 5_3 - Photo.jpg.jpeg";
+import wp1 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.17 PM.jpeg";
+import wp2 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM.jpeg";
+import wp3 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (1).jpeg";
+import wp4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (2).jpeg";
 
 export const CONTACT = {
   phone: "+1 (212) 555 0188",
@@ -18,35 +28,38 @@ export const CONTACT = {
 
 export const services = [
   {
-    title: "Architecture",
-    description: "We craft beautiful, inspiring spaces that open a property's full potential.",
+    title: "Residential Construction",
+    description: "We build well-planned homes that balance comfort, durability, and cost, ensuring long-term value for your investment.",
   },
   {
-    title: "Construction",
-    description: "We manage every stage of construction, from design to completion, with exceptional project management.",
+    title: "Renovation & Extension",
+    description: "We upgrade and expand existing homes to improve space, function, and overall living experience without unnecessary expense.",
   },
   {
-    title: "Interior",
-    description: "Timeless, elegant interiors that balance quality, comfort, and the way you actually live.",
+    title: "Design & Planning",
+    description: "We create smart and practical designs that make the best use of space while keeping your budget in control.",
   },
   {
     title: "Turnkey Projects",
-    description: "Complete design-to-handover delivery — one studio managing every stage of your residence.",
+    description: "From idea to handover, we manage the entire process so you can build your home without stress or confusion.",
   },
+  {
+    title: "Consultation",
+    description: "We prepare building plans based on your site and requirements. We also assist with K-SMART submissions, permits, approvals, completion certificates, and provide full site guidance.",
+  }
 ];
 
 export const projects = [
-  { img: kerala1, client: "Mr. Menon & Family", location: "Kochi, Kerala", slug: "kerala-modern-villa-1" },
-  { img: kerala2, client: "Mr. Nambiar & Family", location: "Trivandrum, Kerala", slug: "kerala-modern-villa-2" },
-  { img: project1, client: "Mr. Moretti & Family", location: "Lake Como, Italy", slug: "villa-aurelia" },
-  { img: project2, client: "Mr. Whitford & Family", location: "Manhattan, NY", slug: "penthouse-47" },
-  { img: project3, client: "Mr. Sterling & Family", location: "London, UK", slug: "atrium-hq" },
-  { img: project4, client: "Mr. Laurent & Family", location: "Paris, France", slug: "maison-elysee" },
-  { img: project1, client: "Mr. Chen & Family", location: "Singapore", slug: "orchard-residence" },
-  { img: project2, client: "Mr. Al-Rashid & Family", location: "Dubai, UAE", slug: "palm-villa" },
-  { img: project3, client: "Mr. Nakamura & Family", location: "Kyoto, Japan", slug: "zen-retreat" },
-  { img: project4, client: "Mr. Bennett & Family", location: "Hamptons, US", slug: "coastal-estate" },
-  { img: project1, client: "Mr. Rossi & Family", location: "Florence, Italy", slug: "tuscan-manor" },
+  { img: jamsheer1, client: "Mr. Jamsheer", location: "Kerala", slug: "jamsheer-1" },
+  { img: shibu1, client: "Mr. Shibu", location: "Kerala", slug: "shibu-1" },
+  { img: jamsheer2, client: "Mr. Jamsheer", location: "Kerala", slug: "jamsheer-2" },
+  { img: shibu2, client: "Mr. Shibu", location: "Kerala", slug: "shibu-2" },
+  { img: jamsheer3, client: "Mr. Jamsheer", location: "Kerala", slug: "jamsheer-3" },
+  { img: shibu3, client: "Mr. Shibu", location: "Kerala", slug: "shibu-3" },
+  { img: wp1, client: "Client Residence", location: "Kerala", slug: "residence-1" },
+  { img: wp2, client: "Client Residence", location: "Kerala", slug: "residence-2" },
+  { img: wp3, client: "Client Residence", location: "Kerala", slug: "residence-3" },
+  { img: wp4, client: "Client Residence", location: "Kerala", slug: "residence-4" },
 ];
 
 export const whyPillars = [
@@ -84,25 +97,106 @@ export const guarantees = [
 export const testimonials = [
   {
     image: client1,
-    name: "Mr. Justine John & Family",
-    location: "Kerala",
-    quote:
-      "Caeris Homes has exceptionally performed to deliver my home with their strong experience, dedication and commitment to the fullest extent. Their professionalism was evident since beginning of design and drawings. They are valued for On-time delivery, Quality and Customer Support.",
+    name: "Jaison Paul",
+    location: "Mutholapuram",
+    quote: "The team guided us with exceptional care at every stage. The result is a serene, beautifully refined home that feels effortless, comfortable, and truly ours. Their attention to detail and thoughtful approach made the entire experience feel seamless and premium.",
   },
   {
     image: client2,
-    name: "Mr. Anish Raju & Family",
-    location: "Kerala",
-    quote:
-      "I'm truly grateful for the excellent service provided by Caeris Homes. From start to finish, the process was smooth and hassle-free. The staff was friendly, attentive, and ensured that all my needs were met. I appreciate their dedication and hardwork.. thank you Caeris for fulfilling my dream.",
+    name: "Ebin Santhosh",
+    location: "Vaduthala",
+    quote: "Caeris Homes made our first home journey smooth. They explained every step clearly and stayed within our budget.",
   },
   {
     image: client3,
-    name: "Mr. Siju Ayyappan & Family",
-    location: "Kerala",
-    quote:
-      "When we decided to build a new home, it was a very huge challenge to find professional company especially when we are settled abroad. Caeris has set a good coordination between the office team and the site team which was a great success in delivering the project at the right time.",
+    name: "Rooban Sebastian",
+    location: "Mutholapuram",
+    quote: "Our home has a calm and peaceful feel. The design is simple and well planned. We are very happy with the overall experience.",
   },
+  {
+    image: client1,
+    name: "K V Thomas",
+    location: "Josegiri",
+    quote: "We wanted a simple and practical home, and they delivered exactly that. No confusion, no hidden costs.",
+  },
+  {
+    image: client2,
+    name: "Simi Karunan",
+    location: "Thodupuzha",
+    quote: "The design feels calm and balanced. Every space is useful and comfortable for daily living.",
+  },
+  {
+    image: client3,
+    name: "Justin Mani",
+    location: "Josegiri",
+    quote: "They created a clean and peaceful home for our family. The process was clear and stress-free.",
+  },
+  {
+    image: client1,
+    name: "Sijimol",
+    location: "Thrissur",
+    quote: "A very calm and thoughtful design. The team listened to our needs and delivered beyond expectations.",
+  },
+  {
+    image: client2,
+    name: "Shini",
+    location: "Thodupuzha",
+    quote: "There is a calmness in our home that we truly value. Nothing feels excessive. Every space has purpose and comfort.",
+  },
+  {
+    image: client3,
+    name: "Nikhil Raj",
+    location: "Thripunitura",
+    quote: "They listened carefully and designed a home that reflects our daily life. The simplicity and balance make it special.",
+  },
+  {
+    image: client1,
+    name: "Jobin John",
+    location: "Mundakkayam",
+    quote: "Our priority was staying within budget without losing quality. Caeris Homes delivered exactly that, with honesty and care.",
+  },
+  {
+    image: client2,
+    name: "Binto Charly",
+    location: "Periyapuram",
+    quote: "We appreciate the way everything was planned and executed. The home feels calm, functional, and built to last.",
+  },
+  {
+    image: client3,
+    name: "Sajin Paul",
+    location: "Piravom",
+    quote: "There is a quiet elegance in the design. It is simple, but it feels complete in every way.",
+  },
+  {
+    image: client1,
+    name: "Sijo Mathew",
+    location: "Thodupuzha",
+    quote: "We never felt overwhelmed during the process. Everything was handled with clarity, and the outcome is a home we are proud of.",
+  },
+  {
+    image: client2,
+    name: "Sini Mathew",
+    location: "Thrissur",
+    quote: "Our home feels open, calm, and well thought out. It suits our lifestyle perfectly.",
+  },
+  {
+    image: client3,
+    name: "Jils Madhavadas",
+    location: "Cherthala",
+    quote: "What stands out is their honesty and attention to detail. The home feels strong, simple, and reliable.",
+  },
+  {
+    image: client1,
+    name: "Bino Joseph",
+    location: "Josegiri",
+    quote: "We wanted a design that would remain timeless. Caeris Homes delivered a space that feels peaceful and lasting.",
+  },
+  {
+    image: client2,
+    name: "Sebaan K",
+    location: "Mutholapuram",
+    quote: "The experience was smooth and reassuring. Today, we live in a home that feels calm, comfortable, and complete.",
+  }
 ];
 
 export const serviceOptions = [

@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/hero";
 import { ProjectCTA } from "@/components/sections/project-cta";
 import { ProjectsGrid } from "@/components/sections/projects-grid";
 import { Services } from "@/components/sections/services";
-import { Stats } from "@/components/sections/stats";
 import { Testimonials } from "@/components/sections/testimonials";
 import { WeEnsure } from "@/components/sections/we-ensure";
 import { WhatWeDo } from "@/components/sections/what-we-do";
@@ -11,6 +10,7 @@ import { WhyUs } from "@/components/sections/why-us";
 import { YourStory } from "@/components/sections/your-story";
 import { SiteLayout } from "@/components/site/site-layout";
 import { useHomeAnimations } from "@/hooks/use-home-animations";
+import { Stats } from "@/components/sections/stats";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,6 +33,7 @@ function HomePage() {
   return (
     <SiteLayout>
       <Hero />
+      <Stats />
       <Services />
       <WhatWeDo />
       <ProjectsGrid limit={6} showViewAll />
@@ -40,7 +41,6 @@ function HomePage() {
       <WhyUs />
       <YourStory />
       <Testimonials />
-      <Stats />
     </SiteLayout>
   );
 }

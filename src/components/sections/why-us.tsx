@@ -4,42 +4,62 @@ import whyUsImg from "@/assets/whyus-villa.png";
 export function WhyUs() {
   const topFeatures = [
     {
-      title: "Client-Centric Approach",
-      desc: "Your vision is our starting point.",
+      title: "Easy Accessibility",
+      desc: "We are always reachable and available when you need support or clarity.",
       icon: Users
     },
     {
-      title: "Uncompromising Quality",
-      desc: "We use the finest materials and craftsmanship.",
+      title: "Trust & Credibility",
+      desc: "We build lasting relationships through honesty, consistency, and dependable work.",
+      icon: Award
+    },
+    {
+      title: "Clear Budgets",
+      desc: "We offer transparent estimates with complete clarity and no hidden costs.",
+      icon: Settings
+    },
+    {
+      title: "Reliable Timelines",
+      desc: "We plan with care and deliver projects on time, as promised.",
+      icon: Calendar
+    },
+    {
+      title: "Quality & Comfort",
+      desc: "We focus on materials and finishes that ensure lasting strength and everyday comfort.",
       icon: Gem
     },
     {
-      title: "On-Time, Every Time",
-      desc: "We value your time and deliver on our promises.",
-      icon: Calendar
+      title: "Personal Service",
+      desc: "We stay closely involved, guiding you through every stage with care.",
+      icon: Headset
+    },
+    {
+      title: "Local Expertise",
+      desc: "We understand local conditions, approvals, and practical building requirements.",
+      icon: Home
     }
   ];
 
   const principles = [
     {
       num: "01",
-      title: "Flexibility",
-      subtitle: "Designed Around You",
-      desc: "We adapt to your needs and preferences, creating spaces as unique as you are.",
-      icon: PenTool
+      title: "Build with Integrity",
+      subtitle: "OUR COMMITMENT",
+      desc: "We do what we promise, with honesty in every detail and decision.",
+      icon: Award
     },
     {
       num: "02",
       title: "Simplicity",
-      subtitle: "Less Complexity, More Living",
-      desc: "Smart planning and minimalist designs that bring clarity, comfort and calm to your home.",
+      subtitle: "OUR APPROACH",
+      desc: "We believe in clear thinking, clean design, and straightforward processes.",
       icon: LayoutTemplate
     },
     {
       num: "03",
       title: "Adaptability",
-      subtitle: "Built for the Future",
-      desc: "Homes that evolve with your life, ensuring long-term value and timeless appeal.",
+      subtitle: "OUR PROMISE",
+      desc: "We stay flexible and responsive, shaping each home to fit your needs and changing priorities.",
       icon: Home
     }
   ];
@@ -78,14 +98,14 @@ export function WhyUs() {
               With years of expertise and a passion for design, we create bespoke homes that reflect your lifestyle, your values, and your vision of luxury.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {topFeatures.map((item, i) => (
-                <div key={i} className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-full bg-[#C8A45D] flex items-center justify-center flex-shrink-0 shadow-[0_0_0_4px_rgba(200,164,93,0.15)] transition-transform group-hover:scale-110">
-                    <item.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
+                <div key={i} className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-[#C8A45D] flex items-center justify-center flex-shrink-0 shadow-[0_0_0_4px_rgba(200,164,93,0.15)] transition-transform group-hover:scale-110">
+                    <item.icon className="w-4 h-4 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h4 className="font-display text-lg text-foreground font-medium mb-1">
+                    <h4 className="font-display text-base text-foreground font-medium mb-1">
                       {item.title}
                     </h4>
                     <p className="text-foreground/60 text-sm">

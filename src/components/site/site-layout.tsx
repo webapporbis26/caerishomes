@@ -3,6 +3,7 @@ import { useRouterState } from "@tanstack/react-router";
 import { ScrollTrigger } from "@/lib/gsap";
 import { useLenis } from "@/lib/use-lenis";
 import { Footer } from "./footer";
+import { Stats } from "@/components/sections/stats";
 import { FloatingContact } from "./floating-contact";
 import { Nav } from "./nav";
 import { Loader } from "./loader";
@@ -22,6 +23,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <Loader />
       <Nav />
       {children}
+      <Stats />
       <Footer />
       <FloatingContact />
       <QuoteModal />

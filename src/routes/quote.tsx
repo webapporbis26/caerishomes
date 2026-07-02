@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 import heroVideo from "@/assets/Villa_design_and_construction_an…_202606261727.mp4";
-import logoImg from "@/assets/logo-caeris.png";
+import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 import { ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/quote")({
@@ -44,7 +44,7 @@ function QuotePage() {
     setSubmitted(true);
   };
 
-  const inputClass = "h-14 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-base sm:text-lg transition-colors";
+  const inputClass = "h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-sm sm:text-base transition-colors";
 
   return (
     <div className="min-h-screen bg-background flex flex-col lg:flex-row font-sans">
@@ -87,7 +87,7 @@ function QuotePage() {
       </div>
 
       {/* Right Column - Form */}
-      <div className="w-full lg:w-[55%] min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-12 lg:p-20 bg-background text-foreground relative z-10">
+      <div className="w-full lg:w-[55%] min-h-[100dvh] flex items-center justify-center p-4 sm:p-6 md:px-12 lg:px-20 py-8 lg:py-6 bg-background text-foreground relative z-10">
         
         {/* Absolute Back button for desktop */}
         <div className="absolute top-12 right-12 hidden lg:block">
@@ -111,11 +111,11 @@ function QuotePage() {
               </Link>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-10">
+            <form onSubmit={handleSubmit} className="space-y-6">
               
               <div className="space-y-2">
                 <label className="text-xs font-semibold uppercase tracking-widest text-foreground/50">Your Details</label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                   <Input name="firstName" required placeholder="First Name" defaultValue="John" className={inputClass} />
                   <Input name="lastName" required placeholder="Last Name" defaultValue="Doe" className={inputClass} />
                 </div>
@@ -123,12 +123,12 @@ function QuotePage() {
 
               <div className="space-y-2">
                 <label className="text-xs font-semibold uppercase tracking-widest text-foreground/50">Contact Info</label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                   <Input name="email" type="email" required placeholder="Email Address" defaultValue="john.doe@example.com" className={inputClass} />
                   
                   <div className="flex gap-4">
                     <Select defaultValue="+91">
-                      <SelectTrigger className="w-[110px] h-14 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-base sm:text-lg">
+                      <SelectTrigger className="w-[110px] h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-sm sm:text-base">
                         <SelectValue placeholder="Country" />
                       </SelectTrigger>
                       <SelectContent>
@@ -143,14 +143,14 @@ function QuotePage() {
                 </div>
               </div>
 
-              <div className="space-y-2 pt-4">
+              <div className="space-y-2 pt-1">
                 <label className="text-xs font-semibold uppercase tracking-widest text-foreground/50">Project Information</label>
-                <div className="pt-2 space-y-8">
+                <div className="pt-1 space-y-4">
                   <Input name="location" required placeholder="Location of your plot" defaultValue="Kochi, Kerala" className={inputClass} />
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Select name="service" required defaultValue="Architecture">
-                      <SelectTrigger className="h-14 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-base sm:text-lg">
+                      <SelectTrigger className="h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-sm sm:text-base">
                         <SelectValue placeholder="Service Type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -161,7 +161,7 @@ function QuotePage() {
                     </Select>
 
                     <Select name="area" required defaultValue="2500 - 5000">
-                      <SelectTrigger className="h-14 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-base sm:text-lg">
+                      <SelectTrigger className="h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-sm sm:text-base">
                         <SelectValue placeholder="Built-up Area (Sq. Ft.)" />
                       </SelectTrigger>
                       <SelectContent>
@@ -177,17 +177,12 @@ function QuotePage() {
                     required
                     placeholder="Tell us more about your vision..."
                     defaultValue="I am looking to build a modern 4-bedroom villa with a pool."
-                    className="min-h-[120px] border-0 border-b border-border/20 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-base sm:text-lg resize-none pt-4"
+                    className="min-h-[80px] border-0 border-b border-border/20 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-sm sm:text-base resize-none pt-2"
                   />
                 </div>
               </div>
               
-              <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div className="border border-border/20 bg-background flex items-center gap-3 px-4 py-3 min-h-[44px] rounded shadow-sm self-start">
-                  <div className="w-5 h-5 border-[1.5px] border-border rounded-sm bg-background flex items-center justify-center"></div>
-                  <span className="text-sm text-foreground/80">I'm not a robot</span>
-                </div>
-                
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-end gap-4">
                 <Button type="submit" className="h-14 px-12 bg-red-600 hover:bg-red-700 text-white rounded-sm font-medium transition-colors w-full sm:w-auto text-lg">
                   Submit Request
                 </Button>
