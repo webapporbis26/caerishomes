@@ -147,9 +147,6 @@ export function WhyUs() {
           <div className="grid md:grid-cols-3 gap-6">
             {principles.map((item, i) => (
               <div key={i} className="bg-[#FAF9F6] rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow">
-                <div className="bg-[#8A8175] text-white w-12 h-10 flex items-center justify-center text-sm font-bold mb-8 rounded-sm">
-                  {item.num}
-                </div>
                 
                 <h4 className="font-display text-2xl text-foreground mb-2">
                   {item.title}
