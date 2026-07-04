@@ -123,34 +123,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Team / Leadership Section */}
-      <section className="py-20 px-4 sm:px-6 md:px-10 xl:px-20 bg-surface">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 md:mb-20 text-center" data-reveal>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display">Meet Our Leaders</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Mr. Roshan Eshutty", role: "Managing Director", img: project1 },
-              { name: "Mr. Arun Joy", role: "Director - Sales & Marketing", img: project1 },
-              { name: "Mr. Tigil Thomas", role: "Director - Projects : construction", img: project1 },
-              { name: "Mr. Nikhil Sotter", role: "Director - Projects : Interior", img: project1 }
-            ].map((member, i) => (
-              <div key={i} data-reveal className={`bg-[#111] text-white rounded-xl overflow-hidden group shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`} style={{ transitionDelay: `${i * 100}ms` }}>
-                <div className="aspect-[4/5] bg-gray-900 relative overflow-hidden mask-reveal">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10 transition-opacity duration-500 group-hover:opacity-100"></div>
-                  {/* Placeholder for team images */}
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
-                </div>
-                <div className="p-6 relative z-20 -mt-20 transform group-hover:-translate-y-2 transition-transform duration-500">
-                  <h3 className="text-2xl font-display mb-1">{member.name}</h3>
-                  <p className="text-[#C8A45D] text-sm uppercase tracking-wider">{member.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Let's Collaborate CTA */}
       <section className="bg-red-600 text-white py-20 px-4 sm:px-6 md:px-10 text-center relative overflow-hidden">
