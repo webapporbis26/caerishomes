@@ -18,7 +18,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
   const items = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-24 md:py-32">
+    <section className="px-4 sm:px-8 md:px-12 xl:px-20 pt-12 pb-24 md:pt-16 md:pb-32">
       <div className="max-w-7xl mx-auto">
         <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16" data-reveal>

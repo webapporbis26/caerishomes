@@ -73,7 +73,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="bg-white py-24 md:py-32 overflow-hidden relative">
+    <section className="bg-white pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20">
         
         {/* Top Section */}

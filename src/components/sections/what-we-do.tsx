@@ -5,7 +5,7 @@ import { services } from "@/lib/site-data";
 export function WhatWeDo() {
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-16 border-y border-border/10">
+    <section className="px-4 sm:px-8 md:px-12 xl:px-20 pt-8 pb-4 md:pt-12 md:pb-8 border-y border-border/10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         <div data-reveal>
           <p className="text-eyebrow mb-4">What we do</p>

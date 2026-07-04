@@ -8,8 +8,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-background text-foreground relative pt-8 pb-8 px-4 sm:px-8 md:px-12">
-      <div className="max-w-5xl mx-auto">
+    <footer className="bg-background text-foreground relative pt-12 pb-8 px-4 sm:px-8 md:px-12">
+      <div className="max-w-[90rem] mx-auto">
         
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">

@@ -52,8 +52,8 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={containerRef} className="px-4 sm:px-8 md:px-12 xl:px-20 py-12 md:py-16">
-      <div className="max-w-6xl mx-auto py-8 md:py-16 px-4 md:px-8 lg:px-12">
+    <section ref={containerRef} className="px-4 sm:px-8 md:px-12 xl:px-20 pt-12 md:pt-16 pb-8 md:pb-12">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
           {stats.map((s) => {
             const Icon = s.icon;

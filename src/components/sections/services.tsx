@@ -39,7 +39,7 @@ export function Services() {
   ];
 
   return (
-    <section className="bg-[#FAF9F6] text-foreground py-24 md:py-32 px-4 sm:px-8 md:px-12 xl:px-20 relative overflow-hidden">
+    <section className="bg-[#FAF9F6] text-foreground pt-12 pb-4 md:pt-16 md:pb-8 px-4 sm:px-8 md:px-12 xl:px-20 relative overflow-hidden">
       <div className="max-w-[90rem] mx-auto relative z-10">
         
         {/* Header Section */}

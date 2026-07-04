@@ -50,14 +50,14 @@ export function Hero() {
           <span className="block overflow-hidden">
             {"We Build Your".split("").map((c, i) => (
               <span key={i} className="hero-char inline-block">
-                {c === " " ? "\u00A0" : c}
+                {c === " " ? " " : c}
               </span>
             ))}
           </span>
           <span className="block overflow-hidden italic font-light text-[#C8A45D]">
             {"Dream Home".split("").map((c, i) => (
               <span key={i} className="hero-char inline-block">
-                {c === " " ? "\u00A0" : c}
+                {c === " " ? " " : c}
               </span>
             ))}
           </span>
