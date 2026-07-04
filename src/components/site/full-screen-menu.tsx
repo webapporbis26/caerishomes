@@ -7,6 +7,7 @@ import proj1 from "@/assets/project-1.jpg";
 import proj2 from "@/assets/project-2.jpg";
 import proj3 from "@/assets/project-3.jpg";
 import proj4 from "@/assets/project-4.jpg";
+import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 
 const images = [proj1, proj2, proj3, proj4];
 
@@ -87,6 +88,11 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
       ref={menuRef}
       className="fixed inset-0 z-[100] h-[100dvh] bg-background text-foreground flex flex-col md:flex-row invisible overflow-hidden"
     >
+      {/* Logo */}
+      <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-[110] h-[60px] md:h-[80px] w-[200px] md:w-[260px]">
+        <img src={logoImg} alt="Logo" className="w-full h-full object-contain object-left filter dark:invert" />
+      </div>
+
       {/* Close Button */}
       <button 
         onClick={onClose}
