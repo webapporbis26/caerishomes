@@ -73,9 +73,9 @@ export function Nav() {
       )}
     >
       {/* Left: Logo (very large) */}
-      <div className="flex-1 md:flex-none md:w-[450px] flex justify-start items-center h-full py-2">
-        <Link to="/" className="relative z-10 block h-full w-full max-w-[260px] md:max-w-[420px]">
-          <img src={logoImg} alt="Logo" className="h-full w-full object-contain object-left transition-all" />
+      <div className="flex-1 md:flex-none md:w-[450px] flex justify-start items-center h-full py-1 md:py-2">
+        <Link to="/" className="relative z-10 block h-full w-full max-w-[320px] md:max-w-[420px]">
+          <img src={logoImg} alt="Logo" className="h-full w-full object-contain object-left transition-all scale-110 sm:scale-100 origin-left" />
         </Link>
       </div>
       
@@ -100,7 +100,7 @@ export function Nav() {
       </nav>
 
       {/* Right: Menu Button / CTA (450px to match left) */}
-      <div className="flex flex-1 md:flex-none md:w-[450px] justify-end items-center gap-4 z-10">
+      <div className="flex flex-none md:w-[450px] justify-end items-center gap-4 z-10">
         <button 
           onClick={() => setIsMenuOpen(true)}
           className={cn(
