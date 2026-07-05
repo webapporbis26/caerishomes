@@ -1,6 +1,6 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project4 from "@/assets/project-4.jpg";
+import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
+import project2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
+import project4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (1).jpeg";
 import { Magnetic } from "@/components/site/magnetic";
 import { splitChars } from "@/lib/split-chars";
 
@@ -18,29 +18,29 @@ export function Showcase() {
     {
       img: project1,
       n: "01",
-      t: "Villa Aurelia",
-      loc: "Lake Como, IT",
-      area: "1,240 m²",
-      style: "Contemporary Mediterranean",
-      date: "Spring 2024",
+      t: "Mr. Jamsheer",
+      loc: "Kerala",
+      area: "3,240 sq.ft",
+      style: "Contemporary",
+      date: "Spring 2026",
     },
     {
       img: project2,
       n: "02",
-      t: "Penthouse 47",
-      loc: "Manhattan, US",
-      area: "680 m²",
-      style: "Modern Art Deco",
-      date: "Winter 2024",
+      t: "Mr. Shibu",
+      loc: "Kerala",
+      area: "2,680 sq.ft",
+      style: "Modern",
+      date: "Winter 2026",
     },
     {
       img: project4,
       n: "03",
-      t: "Maison Élysée",
-      loc: "Paris, FR",
-      area: "320 m²",
-      style: "Haussmann Reimagined",
-      date: "Autumn 2023",
+      t: "Client Residence",
+      loc: "Kerala",
+      area: "3,320 sq.ft",
+      style: "Traditional Modern",
+      date: "Autumn 2026",
     },
   ];
   return (

@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 import { splitChars } from "@/lib/split-chars";
 import heroImg from "@/assets/hero.jpg";
-import project1 from "@/assets/project-1.jpg";
+import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Target, Eye } from "lucide-react";
 

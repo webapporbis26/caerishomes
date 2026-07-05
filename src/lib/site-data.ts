@@ -1,7 +1,4 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+
 import kerala1 from "@/assets/kerala-modern-1.png";
 import kerala2 from "@/assets/kerala-modern-2.png";
 import client1 from "@/assets/client-1.jpg";
@@ -68,21 +65,21 @@ export const whyPillars = [
     subtitle: "AN INCLUSIVE MODEL",
     description:
       "A team of creative architects who combine vision with disciplined practice to create beautiful, inspirational spaces tailored to you.",
-    img: project1,
+    img: jamsheer1,
   },
   {
     title: "Simplicity",
     subtitle: "MORE CLARITY, LESS NOISE",
     description:
       "We focus on making your home a place you love — timelessly elegant interiors with equal attention to quality and comfort.",
-    img: project2,
+    img: shibu1,
   },
   {
     title: "Adaptability",
     subtitle: "EVOLVES WITH YOU OVER TIME",
     description:
       "From design conception to construction completion, we handle every aspect with unmatched project management and transparency.",
-    img: project3,
+    img: wp1,
   },
 ];
 

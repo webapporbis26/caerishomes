@@ -1,15 +1,15 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
+import project2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
+import project3 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.17 PM.jpeg";
+import project4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM.jpeg";
 import { splitChars } from "@/lib/split-chars";
 
 export function FeaturedProjects() {
   const projects = [
-    { img: project1, name: "Villa Aurelia", place: "Lake Como, Italy", type: "Luxury Villa", year: "2024" },
-    { img: project2, name: "Penthouse 47", place: "Manhattan, NY", type: "Modern Apartment", year: "2024" },
-    { img: project3, name: "Atrium HQ", place: "London, UK", type: "Office Interior", year: "2023" },
-    { img: project4, name: "Maison Élysée", place: "Paris, FR", type: "Commercial Boutique", year: "2023" },
+    { img: project1, name: "Mr. Jamsheer", place: "Kerala", type: "Luxury Villa", year: "2026" },
+    { img: project2, name: "Mr. Shibu", place: "Kerala", type: "Modern House", year: "2026" },
+    { img: project3, name: "Client Residence", place: "Kerala", type: "Residence", year: "2026" },
+    { img: project4, name: "Client Residence", place: "Kerala", type: "Residence", year: "2026" },
   ];
   return (
     <section className="h-scroll relative h-screen overflow-hidden bg-background">

@@ -3,10 +3,10 @@ import { Link } from "@tanstack/react-router";
 import { gsap } from "@/lib/gsap";
 import { X } from "lucide-react";
 
-import proj1 from "@/assets/project-1.jpg";
-import proj2 from "@/assets/project-2.jpg";
-import proj3 from "@/assets/project-3.jpg";
-import proj4 from "@/assets/project-4.jpg";
+import proj1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
+import proj2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
+import proj3 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.17 PM.jpeg";
+import proj4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM.jpeg";
 import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 
 const images = [proj1, proj2, proj3, proj4];
