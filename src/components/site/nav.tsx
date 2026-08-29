@@ -12,7 +12,7 @@ const links = [
   { to: "/construction" as const, label: "Services" },
   { to: "/projects" as const, label: "Projects" },
   { to: "/gallery" as const, label: "Gallery" },
-  { to: "/quote" as const, label: "Contact" },
+  { to: "/contact" as const, label: "Contact" },
 ];
 
 export function Nav() {
