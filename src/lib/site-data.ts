@@ -1,4 +1,3 @@
-
 import kerala1 from "@/assets/kerala-modern-1.png";
 import kerala2 from "@/assets/kerala-modern-2.png";
 import client1 from "@/assets/client-1.jpg";
@@ -26,24 +25,29 @@ export const CONTACT = {
 export const services = [
   {
     title: "Residential Construction",
-    description: "We build well-planned homes that balance comfort, durability, and cost, ensuring long-term value for your investment.",
+    description:
+      "We build well-planned homes that balance comfort, durability, and cost, ensuring long-term value for your investment.",
   },
   {
     title: "Renovation & Extension",
-    description: "We upgrade and expand existing homes to improve space, function, and overall living experience without unnecessary expense.",
+    description:
+      "We upgrade and expand existing homes to improve space, function, and overall living experience without unnecessary expense.",
   },
   {
     title: "Design & Planning",
-    description: "We create smart and practical designs that make the best use of space while keeping your budget in control.",
+    description:
+      "We create smart and practical designs that make the best use of space while keeping your budget in control.",
   },
   {
     title: "Turnkey Projects",
-    description: "From idea to handover, we manage the entire process so you can build your home without stress or confusion.",
+    description:
+      "From idea to handover, we manage the entire process so you can build your home without stress or confusion.",
   },
   {
     title: "Consultation",
-    description: "We prepare building plans based on your site and requirements. We also assist with K-SMART submissions, permits, approvals, completion certificates, and provide full site guidance.",
-  }
+    description:
+      "We prepare building plans based on your site and requirements. We also assist with K-SMART submissions, permits, approvals, completion certificates, and provide full site guidance.",
+  },
 ];
 
 export const projects = [
@@ -96,79 +100,92 @@ export const testimonials = [
     image: client1,
     name: "Jaison Paul",
     location: "Mutholapuram",
-    quote: "The team guided us with exceptional care at every stage. The result is a serene, beautifully refined home that feels effortless, comfortable, and truly ours. Their attention to detail and thoughtful approach made the entire experience feel seamless and premium.",
+    quote:
+      "The team guided us with exceptional care at every stage. The result is a serene, beautifully refined home that feels effortless, comfortable, and truly ours. Their attention to detail and thoughtful approach made the entire experience feel seamless and premium.",
   },
   {
     image: client2,
     name: "Ebin Santhosh",
     location: "Vaduthala",
-    quote: "Caeris Homes made our first home journey smooth. They explained every step clearly and stayed within our budget.",
+    quote:
+      "Caeris Homes made our first home journey smooth. They explained every step clearly and stayed within our budget.",
   },
   {
     image: client3,
     name: "Rooban Sebastian",
     location: "Mutholapuram",
-    quote: "Our home has a calm and peaceful feel. The design is simple and well planned. We are very happy with the overall experience.",
+    quote:
+      "Our home has a calm and peaceful feel. The design is simple and well planned. We are very happy with the overall experience.",
   },
   {
     image: client1,
     name: "K V Thomas",
     location: "Josegiri",
-    quote: "We wanted a simple and practical home, and they delivered exactly that. No confusion, no hidden costs.",
+    quote:
+      "We wanted a simple and practical home, and they delivered exactly that. No confusion, no hidden costs.",
   },
   {
     image: client2,
     name: "Simi Karunan",
     location: "Thodupuzha",
-    quote: "The design feels calm and balanced. Every space is useful and comfortable for daily living.",
+    quote:
+      "The design feels calm and balanced. Every space is useful and comfortable for daily living.",
   },
   {
     image: client3,
     name: "Justin Mani",
     location: "Josegiri",
-    quote: "They created a clean and peaceful home for our family. The process was clear and stress-free.",
+    quote:
+      "They created a clean and peaceful home for our family. The process was clear and stress-free.",
   },
   {
     image: client1,
     name: "Sijimol",
     location: "Thrissur",
-    quote: "A very calm and thoughtful design. The team listened to our needs and delivered beyond expectations.",
+    quote:
+      "A very calm and thoughtful design. The team listened to our needs and delivered beyond expectations.",
   },
   {
     image: client2,
     name: "Shini",
     location: "Thodupuzha",
-    quote: "There is a calmness in our home that we truly value. Nothing feels excessive. Every space has purpose and comfort.",
+    quote:
+      "There is a calmness in our home that we truly value. Nothing feels excessive. Every space has purpose and comfort.",
   },
   {
     image: client3,
     name: "Nikhil Raj",
     location: "Thripunitura",
-    quote: "They listened carefully and designed a home that reflects our daily life. The simplicity and balance make it special.",
+    quote:
+      "They listened carefully and designed a home that reflects our daily life. The simplicity and balance make it special.",
   },
   {
     image: client1,
     name: "Jobin John",
     location: "Mundakkayam",
-    quote: "Our priority was staying within budget without losing quality. Caeris Homes delivered exactly that, with honesty and care.",
+    quote:
+      "Our priority was staying within budget without losing quality. Caeris Homes delivered exactly that, with honesty and care.",
   },
   {
     image: client2,
     name: "Binto Charly",
     location: "Periyapuram",
-    quote: "We appreciate the way everything was planned and executed. The home feels calm, functional, and built to last.",
+    quote:
+      "We appreciate the way everything was planned and executed. The home feels calm, functional, and built to last.",
   },
   {
     image: client3,
     name: "Sajin Paul",
     location: "Piravom",
-    quote: "There is a quiet elegance in the design. It is simple, but it feels complete in every way.",
+    quote:
+      "There is a quiet elegance in the design. It is simple, but it feels complete in every way.",
   },
   {
     image: client1,
     name: "Sijo Mathew",
     location: "Thodupuzha",
-    quote: "We never felt overwhelmed during the process. Everything was handled with clarity, and the outcome is a home we are proud of.",
+    quote:
+      "We never felt overwhelmed during the process. Everything was handled with clarity, and the outcome is a home we are proud of.",
   },
   {
     image: client2,
@@ -180,20 +197,23 @@ export const testimonials = [
     image: client3,
     name: "Jils Madhavadas",
     location: "Cherthala",
-    quote: "What stands out is their honesty and attention to detail. The home feels strong, simple, and reliable.",
+    quote:
+      "What stands out is their honesty and attention to detail. The home feels strong, simple, and reliable.",
   },
   {
     image: client1,
     name: "Bino Joseph",
     location: "Josegiri",
-    quote: "We wanted a design that would remain timeless. Caeris Homes delivered a space that feels peaceful and lasting.",
+    quote:
+      "We wanted a design that would remain timeless. Caeris Homes delivered a space that feels peaceful and lasting.",
   },
   {
     image: client2,
     name: "Sebaan K",
     location: "Mutholapuram",
-    quote: "The experience was smooth and reassuring. Today, we live in a home that feels calm, comfortable, and complete.",
-  }
+    quote:
+      "The experience was smooth and reassuring. Today, we live in a home that feels calm, comfortable, and complete.",
+  },
 ];
 
 export const serviceOptions = [
