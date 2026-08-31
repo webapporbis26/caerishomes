@@ -10,6 +10,12 @@ import { useRevealAnimations } from '@/hooks/use-reveal-animations'
 import heroImg from '@/assets/construction-hero.png'
 
 export const Route = createFileRoute('/construction')({
+  head: () => ({
+    meta: [
+      { title: "Services — Caeris Homes" },
+      { name: "description", content: "Top home builders and architectural consultants in Kerala, focused on delivering sustainable, innovative homes through turnkey construction." }
+    ]
+  }),
   component: ConstructionRoute,
 })
 
@@ -21,7 +27,7 @@ function ConstructionRoute() {
       <PageHero
         eyebrow="Construction"
         title="We Build Your Dream Home"
-        description="We are world renowned for delivering inventive engineering solutions for challenging construction projects. Our architects and engineers create strong, innovative designs for complex buildings, keeping function, schedule, budget, safety, and sustainability in mind."
+        description="We are top home builders and architectural consultants in Kerala, focused on delivering sustainable, innovative homes through turnkey construction. Our architects and engineers create strong, innovative designs, keeping function, schedule, budget, safety, and sustainability in mind."
         image={heroImg}
       />
       <ConstructionStats />

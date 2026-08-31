@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { CONTACT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -46,10 +47,8 @@ function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Office Address</h3>
-                    <p className="text-foreground/80 leading-relaxed">
-                      Neduvelil H<br />
-                      Mutholapuram po<br />
-                      Elanji. Ernakulam.
+                    <p className="text-foreground/80 leading-relaxed whitespace-pre-line">
+                      {CONTACT.address.split(", ").join("\\n")}
                     </p>
                   </div>
                 </div>
@@ -61,8 +60,8 @@ function ContactPage() {
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Phone</h3>
                     <p className="text-foreground/80 leading-relaxed">
-                      +91 8075931749<br />
-                      +91 9400759169
+                      {CONTACT.phone}<br />
+                      {CONTACT.phone2}
                     </p>
                   </div>
                 </div>
@@ -74,7 +73,7 @@ function ContactPage() {
                   <div>
                     <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Email</h3>
                     <p className="text-foreground/80 leading-relaxed break-all">
-                      jismariajl@gmail.com
+                      {CONTACT.email}
                     </p>
                   </div>
                 </div>
@@ -83,7 +82,7 @@ function ContactPage() {
 
             <div className="w-full h-[300px] bg-surface relative overflow-hidden border border-border/10 rounded-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1714652414737!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=Elanji,+Ernakulam,+Kerala&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, position: "absolute", inset: 0 }}

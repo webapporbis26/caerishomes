@@ -12,7 +12,7 @@ import { ArrowLeft } from "lucide-react";
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Get a Quote — Creo Homes" },
+      { title: "Get a Quote — Caeris Homes" },
       { name: "description", content: "Request a custom quote for your architectural or construction project." },
     ],
   }),
@@ -60,7 +60,7 @@ function QuotePage() {
         
         <div className="relative z-10 p-12 h-full flex flex-col justify-between">
           <Link to="/" className="inline-block hover:opacity-70 transition-opacity">
-            <img src={logoImg} alt="Creo Homes" className="h-16 brightness-0 invert" />
+            <img src={logoImg} alt="Caeris Homes" className="h-16 brightness-0 invert" />
           </Link>
           
           <div data-reveal>
@@ -101,7 +101,7 @@ function QuotePage() {
               </div>
               <h2 className="text-5xl font-display mb-4 text-[#C8A45D]">Quote Request Received</h2>
               <p className="text-foreground/70 text-lg leading-relaxed max-w-md mx-auto">
-                Thank you for reaching out to Creo Homes. Our team is reviewing your project details and will contact you within 24 hours.
+                Thank you for reaching out to Caeris Homes. Our team is reviewing your project details and will contact you within 24 hours.
               </p>
               <Link to="/" className="inline-block mt-10 border-b border-foreground pb-1 hover:text-[#C8A45D] hover:border-[#C8A45D] transition-colors">
                 Return to homepage
@@ -123,9 +123,9 @@ function QuotePage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                   <Input name="email" type="email" required placeholder="Email Address" defaultValue="john.doe@example.com" className={inputClass} />
                   
-                  <div className="flex gap-4">
+                  <div className="flex gap-2">
                     <Select defaultValue="+91">
-                      <SelectTrigger className="w-[110px] h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-sm sm:text-base">
+                      <SelectTrigger className="w-[80px] h-11 border-0 border-b border-border/20 rounded-none px-0 shadow-none focus:ring-0 bg-transparent text-foreground text-sm sm:text-base">
                         <SelectValue placeholder="Country" />
                       </SelectTrigger>
                       <SelectContent>
@@ -135,7 +135,7 @@ function QuotePage() {
                         <SelectItem value="+971">UAE (+971)</SelectItem>
                       </SelectContent>
                     </Select>
-                    <Input name="phone" type="tel" required placeholder="Phone Number" defaultValue="9876543210" className={`flex-1 ${inputClass}`} />
+                    <Input name="phone" type="tel" required placeholder="Phone Number" defaultValue="9876543210" className={`flex-1 min-w-[120px] ${inputClass}`} />
                   </div>
                 </div>
               </div>

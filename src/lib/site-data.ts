@@ -9,17 +9,24 @@ import jamsheer3 from "@/assets/hero and complted projects/JAMSHEER FINAL 03.jpg
 import shibu1 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
 import shibu2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.jpeg";
 import shibu3 from "@/assets/hero and complted projects/SHIBU 5_3 - Photo.jpg.jpeg";
-import wp1 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.17 PM.jpeg";
-import wp2 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM.jpeg";
-import wp3 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (1).jpeg";
-import wp4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (2).jpeg";
+import wp1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
+import wp2 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.jpeg";
+import wp3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-3.jpeg";
+import wp4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-4.jpeg";
 
 export const CONTACT = {
-  phone: "+1 (212) 555 0188",
-  phoneHref: "tel:+12125550188",
-  whatsapp: "+1 (212) 555 0188",
-  whatsappHref: "https://wa.me/12125550188",
-  email: "studio@caerishomes.com",
+  phone: "+91 8075931749",
+  phone2: "+91 9400759169",
+  phoneHref: "tel:+918075931749",
+  whatsapp: "+91 8075931749",
+  whatsappHref: "https://wa.me/918075931749",
+  email: "hello@caerishomes.com",
+  address: "Caeris Homes, Neduvelil H, Mutholapuram PO, Elanji, Ernakulam, Kerala"
+};
+
+export const STATS = {
+  yearsExperience: "12+",
+  projectsCompleted: "1000+"
 };
 
 export const services = [
@@ -58,9 +65,9 @@ export const projects = [
   { img: jamsheer3, client: "Mr. Jamsheer", location: "Kerala", slug: "jamsheer-3" },
   { img: shibu3, client: "Mr. Shibu", location: "Kerala", slug: "shibu-3" },
   { img: wp1, client: "Client Residence", location: "Kerala", slug: "residence-1" },
-  { img: wp2, client: "Client Residence", location: "Kerala", slug: "residence-2" },
+  { img: wp3, client: "Client Residence", location: "Kerala", slug: "residence-2" },
   { img: wp3, client: "Client Residence", location: "Kerala", slug: "residence-3" },
-  { img: wp4, client: "Client Residence", location: "Kerala", slug: "residence-4" },
+  { img: wp3, client: "Client Residence", location: "Kerala", slug: "residence-4" },
 ];
 
 export const whyPillars = [
@@ -89,10 +96,10 @@ export const whyPillars = [
 
 export const guarantees = [
   "Timely Delivery",
-  "Using German Technology",
   "15 Years Warranty",
   "Assured Lifetime Service",
-  "Delivery Directly From Our Own Factories",
+  "Transparent Pricing",
+  "End-to-End Project Management",
 ];
 
 export const testimonials = [

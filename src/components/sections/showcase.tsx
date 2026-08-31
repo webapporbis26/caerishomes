@@ -1,6 +1,6 @@
 import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
 import project2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
-import project4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM (1).jpeg";
+import project4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-3.jpeg";
 import { Magnetic } from "@/components/site/magnetic";
 import { splitChars } from "@/lib/split-chars";
 

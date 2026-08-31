@@ -32,7 +32,7 @@ export function Hero() {
             <source media="(min-width: 769px)" srcSet={img.desktop} />
             <img
               src={img.desktop}
-              alt="Hero architectural background"
+              alt={`Luxury Caeris Homes architecture view ${index + 1}`}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
                 index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
@@ -50,14 +50,14 @@ export function Hero() {
           <span className="block overflow-hidden">
             {"We Build Your".split("").map((c, i) => (
               <span key={i} className="hero-char inline-block">
-                {c === " " ? " " : c}
+                {c === " " ? "\u00A0" : c}
               </span>
             ))}
           </span>
           <span className="block overflow-hidden italic font-light text-[#C8A45D]">
             {"Dream Home".split("").map((c, i) => (
               <span key={i} className="hero-char inline-block">
-                {c === " " ? " " : c}
+                {c === " " ? "\u00A0" : c}
               </span>
             ))}
           </span>

@@ -20,7 +20,7 @@ export function ProjectsTestimonials() {
     {
       text: "Professional, reliable and creative – Caeris Homes exceeded our expectations in every way.",
       name: "Marco Moretti",
-      location: "Lake Como, Italy",
+      location: "Thrissur, Kerala",
       avatar: avatar3
     }
   ];

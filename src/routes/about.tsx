@@ -11,7 +11,7 @@ import { Lightbulb, Target, Eye } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Creo Homes" },
+      { title: "About Us — Caeris Homes" },
       { name: "description", content: "Best Home Builders In Kerala" },
     ],
   }),
@@ -24,7 +24,7 @@ function AboutPage() {
   return (
     <SiteLayout>
       <PageHero 
-        eyebrow="CREO HOMES"
+        eyebrow="CAERIS HOMES"
         title="Best Home Builders In Kerala"
         image={heroImg}
       />
@@ -64,7 +64,7 @@ function AboutPage() {
               <Target size={32} strokeWidth={1} className="group-hover:scale-110 transition-transform" />
             </div>
             <p className="text-foreground/70 leading-relaxed text-sm">
-              Our mission at Creo Homes is to provide client focused service through our responsible practice of Architecture. Our tradition of dedication, professionalism and outstanding customer service is a testament to that mission as we strive each day for excellence in bringing our valued clients' ideas to life.
+              Our mission at Caeris Homes is to provide client focused service through our responsible practice of Architecture. Our tradition of dedication, professionalism and outstanding customer service is a testament to that mission as we strive each day for excellence in bringing our valued clients' ideas to life.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ function AboutPage() {
             </h2>
             <div data-reveal className="space-y-8 text-white/70 leading-relaxed text-xl">
               <p>
-                At Creo Homes, we view each project as a journey, from concept to successful completion. As top home builders and architectural consultants in Kerala, our skilled team focuses on delivering sustainable, innovative homes through turnkey construction.
+                At Caeris Homes, we view each project as a journey, from concept to successful completion. As top home builders and architectural consultants in Kerala, our skilled team focuses on delivering sustainable, innovative homes through turnkey construction.
               </p>
               <p>
                 We handle planning, design, and execution of both interiors and exteriors, ensuring client satisfaction at every stage, and hand over the keys after completion. Using advanced technology, proven processes, and award-winning designs, we aim to provide an exceptional experience for every homeowner.

@@ -1,0 +1,1 @@
+var e=`/assets/hero%201%20desk-DF1DnT2D.png`;export{e as t};

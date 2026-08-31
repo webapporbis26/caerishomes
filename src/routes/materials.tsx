@@ -7,8 +7,8 @@ import { useMaterialsAnimations } from "@/hooks/use-materials-animations";
 export const Route = createFileRoute("/materials")({
   head: () => ({
     meta: [
-      { title: "Materials — Maison Noire" },
-      { name: "description", content: "Premium materials sourced from heritage workshops across Europe and Japan." },
+      { title: "Materials — Caeris Homes" },
+      { name: "description", content: "Premium materials sourced with a focus on quality, durability, and timeless elegance." },
     ],
   }),
   component: MaterialsPage,

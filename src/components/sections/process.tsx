@@ -38,9 +38,9 @@ export function Process() {
         <div className="w-full md:w-1/2 flex flex-col md:pt-[15dvh] md:pb-[30dvh] order-2">
           <div className="process-header mb-16 md:mb-32">
             <p className="text-eyebrow mb-3 text-[#C8A45D]">Design Process</p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl text-foreground">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-7xl text-foreground">
               <span className="italic">A method</span>, not a formula.
-            </h2>
+            </h1>
           </div>
 
           {steps.map((s, i) => (

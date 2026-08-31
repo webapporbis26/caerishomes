@@ -47,7 +47,7 @@ export function ConstructionFeatures() {
   const bottomGuarantees = [
     { title: "Certified Quality\nAssurance", icon: CheckCircle },
     { title: "Advanced Building\nTechnology", icon: Settings },
-    { title: "10 Year Structural\nWarranty", icon: Award },
+    { title: "15 Year Structural\nWarranty", icon: Award },
     { title: "Dedicated Project\nSupport", icon: Headset },
     { title: "Transparent Process\n& On-Time Delivery", icon: Factory },
   ];

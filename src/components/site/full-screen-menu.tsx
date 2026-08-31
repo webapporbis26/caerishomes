@@ -5,8 +5,8 @@ import { X } from "lucide-react";
 
 import proj1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
 import proj2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
-import proj3 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.17 PM.jpeg";
-import proj4 from "@/assets/hero and complted projects/WhatsApp Image 2026-07-02 at 5.13.18 PM.jpeg";
+import proj3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
+import proj4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.jpeg";
 import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
 
 const images = [proj1, proj2, proj3, proj4];
@@ -129,11 +129,7 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
           </li>
         </ul>
         
-        <div className="mt-10 md:mt-16 flex gap-8">
-          <a href="#" className="text-meta hover:text-[#C8A45D] transition-colors">Instagram</a>
-          <a href="#" className="text-meta hover:text-[#C8A45D] transition-colors">LinkedIn</a>
-          <a href="#" className="text-meta hover:text-[#C8A45D] transition-colors">Pinterest</a>
-        </div>
+
         </div>
       </div>
 
@@ -142,7 +138,7 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
         <img 
           ref={imgRef}
           src={currentImage} 
-          alt="Project" 
+          alt="Caeris Homes Luxury Project Design" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/10" />

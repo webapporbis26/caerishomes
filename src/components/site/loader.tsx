@@ -2,11 +2,20 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function Loader() {
-  const [stage, setStage] = useState<"initial" | "fadeLogo" | "exit">("initial");
+  const [stage, setStage] = useState<"initial" | "fadeLogo" | "exit" | "hidden">("initial");
   const [isVisible, setIsVisible] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Check if already loaded in this session
+    if (sessionStorage.getItem("caeris_loaded")) {
+      setStage("hidden");
+      setIsVisible(false);
+      return;
+    }
+
+    sessionStorage.setItem("caeris_loaded", "true");
+
     // Simulate loading progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => {

@@ -18,11 +18,11 @@ export function Materials() {
       <div className="flex justify-between items-end mb-16 max-w-7xl mx-auto" data-reveal>
         <div>
           <p className="text-eyebrow mb-3">Material Library · 05</p>
-          <h2 data-split className="font-display text-5xl md:text-7xl">
+          <h1 data-split className="font-display text-5xl md:text-7xl">
             {splitChars("Tactile by intent.")}
-          </h2>
+          </h1>
         </div>
-        <p className="text-meta hidden md:block max-w-xs">Sourced from heritage workshops across Florence, Lyon and Kyoto.</p>
+        <p className="text-meta hidden md:block max-w-xs">Premium materials sourced with a focus on quality, durability, and timeless elegance.</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-7xl mx-auto">
         {items.map((m, i) => (
@@ -34,9 +34,9 @@ export function Materials() {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-            <div className="absolute inset-0 p-5 flex flex-col justify-between">
+            <div className="absolute inset-0 p-3 md:p-5 flex flex-col justify-between">
               <span className="text-eyebrow text-[#C8A45D]">{m.n}</span>
-              <h3 className="font-display text-2xl md:text-3xl">{m.t}</h3>
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl leading-tight">{m.t}</h3>
             </div>
             <div className="absolute inset-0 border border-transparent group-hover:border-[#C8A45D]/40 transition-colors" />
             <span className="sr-only">{i}</span>
