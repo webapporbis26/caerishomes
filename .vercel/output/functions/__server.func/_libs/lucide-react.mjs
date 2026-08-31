@@ -1,5 +1,5 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { u as require_react } from "./@floating-ui/react-dom+[...].mjs";
+import { s as require_react } from "./@radix-ui/react-avatar+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -217,36 +217,6 @@ var Calendar = createLucideIcon("calendar", [
 		key: "8toen8"
 	}]
 ]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var Check = createLucideIcon("check", [["path", {
-	d: "M20 6 9 17l-5-5",
-	key: "1gmf2c"
-}]]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var ChevronDown = createLucideIcon("chevron-down", [["path", {
-	d: "m6 9 6 6 6-6",
-	key: "qrunsl"
-}]]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var ChevronUp = createLucideIcon("chevron-up", [["path", {
-	d: "m18 15-6-6-6 6",
-	key: "153udz"
-}]]);
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -743,4 +713,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { Calendar as A, Gem as C, ChevronUp as D, Clock as E, House as F, CircleCheckBig as I, ArrowUp as M, ArrowRight as N, ChevronDown as O, ArrowLeft as P, Globe as S, Eye as T, Heart as _, Settings as a, HardHat as b, PencilRuler as c, Menu as d, MapPin as f, Key as g, LayoutTemplate as h, ShieldCheck as i, Award as j, Check as k, PenTool as l, Lightbulb as m, Users as n, Play as o, Mail as p, Target as r, Phone as s, X as t, MoveUpRight as u, HeartHandshake as v, Factory as w, Handshake as x, Headset as y };
+export { ArrowRight as A, Gem as C, Calendar as D, Clock as E, House as M, CircleCheckBig as N, Award as O, Globe as S, Eye as T, Heart as _, Settings as a, HardHat as b, PencilRuler as c, Menu as d, MapPin as f, Key as g, LayoutTemplate as h, ShieldCheck as i, ArrowLeft as j, ArrowUp as k, PenTool as l, Lightbulb as m, Users as n, Play as o, Mail as p, Target as r, Phone as s, X as t, MoveUpRight as u, HeartHandshake as v, Factory as w, Handshake as x, Headset as y };

@@ -1,5 +1,5 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { u as require_react } from "./@floating-ui/react-dom+[...].mjs";
+import { s as require_react } from "./@radix-ui/react-avatar+[...].mjs";
 //#region node_modules/react-icons/lib/iconContext.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var DefaultContext = {

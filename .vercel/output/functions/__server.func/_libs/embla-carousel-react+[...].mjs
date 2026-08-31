@@ -1,5 +1,5 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { u as require_react } from "./@floating-ui/react-dom+[...].mjs";
+import { s as require_react } from "./@radix-ui/react-avatar+[...].mjs";
 import { t as EmblaCarousel } from "./embla-carousel.mjs";
 //#region node_modules/embla-carousel-reactive-utils/esm/embla-carousel-reactive-utils.esm.js
 var import_react = /* @__PURE__ */ __toESM(require_react());

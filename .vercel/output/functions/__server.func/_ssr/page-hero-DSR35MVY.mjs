@@ -1,4 +1,4 @@
-import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
+import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-avatar+[...].mjs";
 import { t as splitChars } from "./split-chars-XR_qVCnk.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/page-hero-DSR35MVY.js
 var import_jsx_runtime = require_jsx_runtime();

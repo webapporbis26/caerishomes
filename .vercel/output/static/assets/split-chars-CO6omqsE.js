@@ -1,0 +1,1 @@
+import{o as e}from"./index-B4AvKOLz.js";var t=e();function n(e){return e.split(``).map((e,n)=>(0,t.jsx)(`span`,{className:`split-char`,style:{display:e===` `?`inline`:`inline-block`},children:e===` `?` `:e},n))}export{n as t};
