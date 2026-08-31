@@ -118,15 +118,6 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
               </Link>
             </li>
           ))}
-          <li className="pt-4 md:hidden" onMouseEnter={() => handleLinkHover(links.length)}>
-            <Link
-              to="/quote"
-              onClick={onClose}
-              className="font-display text-3xl sm:text-4xl text-[#C8A45D] hover:italic transition-colors block py-2"
-            >
-              Get a Free Quote
-            </Link>
-          </li>
         </ul>
         
 

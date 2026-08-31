@@ -60,7 +60,7 @@ export function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <Magnetic>
-                <Link to="/quote" className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-4 font-bold tracking-wide uppercase text-sm rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1">
+                <Link to="/contact" className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-4 font-bold tracking-wide uppercase text-sm rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1">
                   <Calendar className="w-5 h-5" />
                   SCHEDULE CONSULTATION
                 </Link>

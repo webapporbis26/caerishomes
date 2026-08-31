@@ -6,7 +6,7 @@ import { Footer } from "./footer";
 import { FloatingContact } from "./floating-contact";
 import { Nav } from "./nav";
 import { Loader } from "./loader";
-import { QuoteModal } from "./quote-modal";
+
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   useLenis();
@@ -24,7 +24,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       {children}
       <Footer />
       <FloatingContact />
-      <QuoteModal />
     </main>
   );
 }

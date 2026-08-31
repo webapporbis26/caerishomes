@@ -1460,7 +1460,6 @@ function isResolvedRedirect(obj) {
 }
 //#endregion
 //#region node_modules/@tanstack/router-core/dist/esm/rewrite.js
-var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 /** Compose multiple rewrite pairs into a single in/out rewrite. */
 function composeRewrites(rewrites) {
 	return {
@@ -4029,6 +4028,7 @@ function useStore(atom, selector, compare = defaultCompare) {
 }
 //#endregion
 //#region node_modules/@tanstack/react-router/dist/esm/link.js
+var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 /**
 * Build anchor-like props for declarative navigation and preloading.
 *

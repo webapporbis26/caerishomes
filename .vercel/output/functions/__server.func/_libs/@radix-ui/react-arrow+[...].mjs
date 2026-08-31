@@ -40,6 +40,7 @@ var require_jsx_runtime = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 }));
 //#endregion
 //#region node_modules/@radix-ui/react-compose-refs/dist/index.mjs
+var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 function setRef(ref, value) {
 	if (typeof ref === "function") return ref(value);
@@ -161,7 +162,6 @@ var createSlottableError = (ownerName) => {
 var use = import_react[" use ".trim().toString()];
 //#endregion
 //#region node_modules/@radix-ui/react-primitive/dist/index.mjs
-var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var import_jsx_runtime = require_jsx_runtime();
 var Primitive = [
 	"a",

@@ -70,8 +70,8 @@ export function Hero() {
 
         <div className="hero-sub mt-12 flex flex-wrap gap-4">
           <Magnetic>
-            <Link to="/quote" className="inline-block bg-[#C8A45D] text-black px-8 py-4 text-meta transition-all duration-500 hover:bg-white active:scale-[0.98] shadow-sm">
-              Get a Free Quote
+            <Link to="/contact" className="inline-block bg-[#C8A45D] text-black px-8 py-4 text-meta transition-all duration-500 hover:bg-white active:scale-[0.98] shadow-sm">
+              Contact Us
             </Link>
           </Magnetic>
           <Magnetic>

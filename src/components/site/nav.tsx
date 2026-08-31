@@ -101,15 +101,7 @@ export function Nav() {
 
       {/* Right: Menu Button / CTA (450px to match left) */}
       <div className="flex flex-none md:w-[450px] justify-end items-center gap-4 z-10">
-        <Link 
-          to="/quote" 
-          className={cn(
-            "hidden md:flex items-center justify-center px-6 min-h-[48px] text-[11px] tracking-widest font-bold uppercase transition-all duration-300 shadow-sm border",
-            isTransparent ? "bg-[#C8A45D] border-[#C8A45D] text-white hover:bg-white hover:text-[#C8A45D] hover:border-white" : "bg-[#C8A45D] border-[#C8A45D] text-white hover:bg-black hover:text-white hover:border-black"
-          )}
-        >
-          Get a Quote
-        </Link>
+
         <button 
           onClick={() => setIsMenuOpen(true)}
           className={cn(
