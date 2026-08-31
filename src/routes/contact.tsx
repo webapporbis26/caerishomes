@@ -27,7 +27,7 @@ function ContactPage() {
     <SiteLayout>
       <PageHero 
         eyebrow="Get In Touch"
-        title="Let's Build Something Extraordinary"
+        title="Contact Caeris Homes"
         description="Whether you have a specific project in mind or just want to explore possibilities, our team is ready to listen and bring your vision to life."
         image={heroImg}
       />
