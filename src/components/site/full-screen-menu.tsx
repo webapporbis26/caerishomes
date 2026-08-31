@@ -122,7 +122,7 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
             <Link
               to="/quote"
               onClick={onClose}
-              className="font-display text-3xl sm:text-4xl text-red-600 hover:italic transition-colors block py-2"
+              className="font-display text-3xl sm:text-4xl text-[#C8A45D] hover:italic transition-colors block py-2"
             >
               Get a Free Quote
             </Link>

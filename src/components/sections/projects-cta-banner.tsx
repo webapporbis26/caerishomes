@@ -16,7 +16,7 @@ export function ProjectsCTABanner() {
 
         <div className="relative z-10 p-10 md:p-14 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-6">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-[#C8A45D] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+            <div className="hidden md:flex w-16 h-16 md:w-20 md:h-20 bg-[#C8A45D] rounded-full items-center justify-center flex-shrink-0 shadow-lg">
               <Phone className="w-8 h-8 text-white fill-current" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white font-normal leading-tight">

@@ -135,7 +135,7 @@ function QuotePage() {
                         <SelectItem value="+971">UAE (+971)</SelectItem>
                       </SelectContent>
                     </Select>
-                    <Input name="phone" type="tel" required placeholder="Phone Number" defaultValue="9876543210" className={`flex-1 min-w-[120px] ${inputClass}`} />
+                    <Input name="phone" type="tel" required placeholder="Phone Number" className={`flex-1 min-w-[100px] placeholder:text-sm md:text-sm ${inputClass}`} />
                   </div>
                 </div>
               </div>

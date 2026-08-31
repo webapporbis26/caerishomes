@@ -36,7 +36,7 @@ export function Materials() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
             <div className="absolute inset-0 p-3 md:p-5 flex flex-col justify-between">
               <span className="text-eyebrow text-[#C8A45D]">{m.n}</span>
-              <h3 className="font-display text-xl sm:text-2xl md:text-3xl leading-tight">{m.t}</h3>
+              <h3 className="font-display text-lg sm:text-2xl md:text-3xl leading-tight">{m.t}</h3>
             </div>
             <div className="absolute inset-0 border border-transparent group-hover:border-[#C8A45D]/40 transition-colors" />
             <span className="sr-only">{i}</span>

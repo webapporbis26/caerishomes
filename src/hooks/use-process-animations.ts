@@ -54,7 +54,7 @@ export function useProcessAnimations() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: step,
-              start: "top 70%",
+              start: "top 85%",
             },
           });
         }
