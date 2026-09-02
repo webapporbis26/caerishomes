@@ -5,6 +5,7 @@ export interface TestimonialAuthor {
   name: string
   handle: string
   avatar: string
+  rating?: number
 }
 
 export interface TestimonialCardProps {
@@ -40,6 +41,11 @@ export function TestimonialCard({
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
         <div className="flex flex-col items-start">
+          <div className="flex text-[#C8A45D] text-xs mb-1">
+            {Array.from({ length: author.rating || 5 }).map((_, i) => (
+              <span key={i}>★</span>
+            ))}
+          </div>
           <h3 className="text-md font-semibold leading-none">
             {author.name}
           </h3>

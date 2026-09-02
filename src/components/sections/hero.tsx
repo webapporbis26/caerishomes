@@ -6,13 +6,14 @@ import desk3 from "@/assets/desk/hero 3 desk.png";
 import mob1 from "@/assets/mob/hero 1 mob.png";
 import mob2 from "@/assets/mob/hero 2 mob.png";
 import mob3 from "@/assets/mob/hero 3 mob.png";
-import { Magnetic } from "@/components/site/magnetic";
+import { Home, Clock, HeartHandshake } from "lucide-react";
+import { STATS } from "@/lib/site-data";
 
 export function Hero() {
   const images = [
-    { desktop: desk1, mobile: mob1 },
-    { desktop: desk2, mobile: mob2 },
-    { desktop: desk3, mobile: mob3 }
+    { desktop: desk1, mobile: mob1, title: "Caeris Homes – Celebrating Excellence in Kerala" },
+    { desktop: desk2, mobile: mob2, title: "Caeris Homes – Building Your Dream Home" },
+    { desktop: desk3, mobile: mob3, title: "Caeris Homes – Generations of Quality Construction" }
   ];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -24,67 +25,41 @@ export function Hero() {
   }, [images.length]);
 
   return (
-    <section className="hero relative h-[100dvh] w-full overflow-hidden dark text-foreground">
-      <div className="absolute inset-0 overflow-hidden bg-black">
+    <section className="relative w-full bg-black">
+      {/* Slider Container */}
+      <div className="relative h-[100dvh] w-full overflow-hidden">
         {images.map((img, index) => (
-          <picture key={index}>
-            <source media="(max-width: 768px)" srcSet={img.mobile} />
-            <source media="(min-width: 769px)" srcSet={img.desktop} />
-            <img
-              src={img.desktop}
-              alt={`Luxury Caeris Homes architecture view ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
-                index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            />
-          </picture>
+          <div
+            key={index}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/40 z-10"></div>
+            
+            <picture>
+              <source media="(max-width: 768px)" srcSet={img.mobile} />
+              <source media="(min-width: 769px)" srcSet={img.desktop} />
+              <img
+                src={img.desktop}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </picture>
+
+            {/* Text Content */}
+            <div className="absolute inset-0 z-20 flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-24">
+              <div className="max-w-4xl">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                  {img.title}
+                </h1>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
 
-      <div className="relative z-20 h-full flex flex-col justify-center px-4 sm:px-8 md:px-12 pt-[120px] md:pt-[160px]">
-        <div className="text-eyebrow mb-8 hero-sub flex items-center gap-4">
-          <span className="w-10 h-px bg-[#C8A45D]" />
-          <span>Care in Every Detail</span>
-        </div>
-        <h1 className="font-display text-[12vw] md:text-[8vw] text-foreground overflow-hidden max-w-5xl">
-          <span className="block overflow-hidden">
-            {"We Build Your".split("").map((c, i) => (
-              <span key={i} className="hero-char inline-block">
-                {c === " " ? "\u00A0" : c}
-              </span>
-            ))}
-          </span>
-          <span className="block overflow-hidden italic font-light text-[#C8A45D]">
-            {"Dream Home".split("").map((c, i) => (
-              <span key={i} className="hero-char inline-block">
-                {c === " " ? "\u00A0" : c}
-              </span>
-            ))}
-          </span>
-        </h1>
-
-        <p className="hero-sub text-foreground/70 max-w-xl leading-relaxed mt-8 text-lg">
-          Experienced architectural consultants crafting beautiful, luxurious residences — from concept and construction
-          to interiors and turnkey handover.
-        </p>
-
-        <div className="hero-sub mt-12 flex flex-wrap gap-4">
-          <Magnetic>
-            <Link to="/contact" className="inline-block bg-[#C8A45D] text-black px-8 py-4 text-meta transition-all duration-500 hover:bg-white active:scale-[0.98] shadow-sm">
-              Contact Us
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link to="/projects" className="inline-block border border-border/40 px-8 py-4 text-meta text-foreground transition-all duration-500 hover:border-border hover:bg-white/5 active:scale-[0.98]">
-              View Projects →
-            </Link>
-          </Magnetic>
-        </div>
-      </div>
-
-      <div className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 text-meta text-foreground/60 flex-col items-center gap-2">
-        <span className="w-px h-12 bg-white/40 animate-pulse" />
-      </div>
     </section>
   );
 }

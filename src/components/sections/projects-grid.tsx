@@ -1,80 +1,64 @@
 import { Link } from "@tanstack/react-router";
-import { splitChars } from "@/lib/split-chars";
 import { projects } from "@/lib/site-data";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ArrowRight } from "lucide-react";
 
-type ProjectsGridProps = {
+interface ProjectsGridProps {
   limit?: number;
   showViewAll?: boolean;
-};
+}
 
 export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) {
-  const items = limit ? projects.slice(0, limit) : projects;
+  const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 xl:px-20 pt-12 pb-12 md:pt-16 md:pb-16">
-      <div className="max-w-7xl mx-auto">
-        <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16" data-reveal>
-            <div>
-              <p className="text-eyebrow mb-3">Our Projects</p>
-              <h2 data-split className="font-display text-4xl md:text-5xl lg:text-7xl">
-                {splitChars("From vision to reality.")}
-              </h2>
-              <p className="text-foreground/60 mt-4 max-w-xl">
-                On time and with unwavering commitment. Explore our newest residential commissions.
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              {showViewAll && (
-                <Link to="/projects" className="text-meta border-b border-[#C8A45D] text-[#C8A45D] pb-2 pt-2 hover:text-foreground hover:border-border w-fit inline-block mr-2 lg:mr-4">
-                  View all projects →
+    <section className="py-20 bg-muted/10">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-3 text-sm">
+              Portfolio
+            </h4>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+              Our Projects
+            </h2>
+          </div>
+          {showViewAll && (
+            <Link 
+              to="/projects"
+              className="group flex items-center gap-2 text-foreground font-bold hover:text-[#C8A45D] transition-colors"
+            >
+              View All Projects 
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayProjects.map((project, i) => (
+            <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-border/50 group">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img 
+                  src={project.img} 
+                  alt={project.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  onError={(e) => { (e.target as HTMLImageElement).src = "/og-image.jpg" }}
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {project.name}
+                </h3>
+                <Link 
+                  to={`/projects`} 
+                  className="inline-block mt-2 text-sm font-bold text-[#C8A45D] uppercase tracking-wider hover:text-black transition-colors"
+                >
+                  View Project
                 </Link>
-              )}
-              {/* Navigation Buttons */}
-              <div className="hidden md:flex gap-2 relative">
-                <CarouselPrevious aria-label="Previous projects" className="static translate-y-0 translate-x-0 h-12 w-12 bg-background border-border hover:bg-surface hover:text-[#C8A45D] transition-colors" />
-                <CarouselNext aria-label="Next projects" className="static translate-y-0 translate-x-0 h-12 w-12 bg-background border-border hover:bg-surface hover:text-[#C8A45D] transition-colors" />
               </div>
             </div>
-          </div>
-
-          <CarouselContent className="-ml-4 sm:-ml-6">
-            {items.map((project) => (
-              <CarouselItem key={project.slug} className="pl-4 sm:pl-6 basis-[85%] sm:basis-1/2 lg:basis-1/3">
-                <article className="group relative aspect-[4/3] rounded-2xl overflow-hidden h-full apple-shadow border border-white/10 cursor-grab active:cursor-grabbing">
-                  <img
-                    src={project.img}
-                    alt={project.client}
-                    className="w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.03]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="font-display text-3xl md:text-4xl text-white mb-2">{project.client}</h3>
-                      <p className="text-white/80 font-light tracking-wide">{project.location}</p>
-                      <Link
-                        to="/projects"
-                        className="mt-6 py-2 text-[#C8A45D] opacity-0 group-hover:opacity-100 transition-all duration-500 inline-block font-medium uppercase tracking-widest text-xs lg:text-sm"
-                      >
-                        View project →
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+          ))}
+        </div>
       </div>
     </section>
   );

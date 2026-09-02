@@ -15,24 +15,25 @@ import { Stats } from "@/components/sections/stats";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Caeris Homes — Luxury Home Builders & Architects" },
+      { title: "Caeris Homes — Trusted Home Builders in Kerala" },
       {
         name: "description",
-        content: "Luxury home builders and leading architects crafting dream residences — architecture, construction, interiors and turnkey delivery.",
+        content: "Trusted home builders in Kerala crafting practical, durable, and beautiful residences. From architectural design to construction and turnkey handover.",
       },
       { property: "og:title", content: "Caeris Homes — We Build Your Dream Home" },
-      { property: "og:description", content: "From vision to reality. Architecture, construction, interiors and turnkey projects worldwide." },
+      { property: "og:description", content: "Trusted home builders in Kerala. Architecture, construction, interiors and turnkey projects." },
     ],
   }),
   component: HomePage,
 });
 
-function HomePage() {
-  useHomeAnimations();
+import { HomeAbout } from "@/components/sections/home-about";
 
+function HomePage() {
   return (
     <SiteLayout>
       <Hero />
+      <HomeAbout />
       <Stats />
       <Services />
       <WhatWeDo />

@@ -1,18 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/site-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 import { splitChars } from "@/lib/split-chars";
 import heroImg from "@/assets/hero.jpg";
 import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
-import { Button } from "@/components/ui/button";
 import { Lightbulb, Target, Eye } from "lucide-react";
+import { STATS, CONTACT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Caeris Homes" },
-      { name: "description", content: "Best Home Builders In Kerala" },
+      { title: "About Us — Caeris Homes | Trusted Home Builders in Kerala" },
+      { name: "description", content: "Caeris Homes is a trusted construction company based in Elanji, Ernakulam, Kerala. We specialize in quality residential construction, renovation, and turnkey projects." },
     ],
   }),
   component: AboutPage,
@@ -24,20 +24,20 @@ function AboutPage() {
   return (
     <SiteLayout>
       <PageHero 
-        eyebrow="CAERIS HOMES"
-        title="Best Home Builders In Kerala"
+        eyebrow="ABOUT CAERIS HOMES"
+        title="Trusted Home Builders in Kerala"
         image={heroImg}
       />
 
-      {/* Intro Text Section */}
+      {/* Founding Story Section */}
       <section className="py-16 px-4 sm:px-6 md:px-10 xl:px-20 max-w-5xl mx-auto text-center">
         <p className="text-foreground/80 text-xl md:text-2xl leading-relaxed font-medium" data-reveal>
-          As leading Luxury Builders and Architects in Kerala, we specialize in crafting
-          beautiful, sustainable, and luxurious homes. With over a decade of experience in
-          architecture and homebuilding, our mission is to design energy-efficient, resource-conscious,
-          and healthy living spaces tailored to your unique needs and budget. Our team encourages creative
-          collaboration and explores diverse design possibilities to ensure every project reflects both your vision
-          and our commitment to excellence.
+          Caeris Homes is a trusted construction company based in Elanji, Ernakulam, Kerala.
+          With over a decade of hands-on experience in residential construction, we specialize in
+          building practical, well-designed homes that suit the Kerala climate and lifestyle.
+          From contemporary villas to budget-friendly family homes, every project is handled
+          with care, transparency, and a commitment to quality that families across central Kerala
+          have come to rely on.
         </p>
       </section>
 
@@ -46,37 +46,37 @@ function AboutPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Philosophy */}
           <div data-reveal className="bg-background border border-border/10 p-10 rounded-xl text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center group">
-            <h3 className="text-3xl font-display mb-8 group-hover:text-red-600 transition-colors">Our philosophy</h3>
-            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-red-600 transition-colors">
-              <div className="absolute inset-0 bg-red-600/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+            <h3 className="text-3xl font-display mb-8 group-hover:text-[#C8A45D] transition-colors">Our Approach</h3>
+            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-[#C8A45D] transition-colors">
+              <div className="absolute inset-0 bg-[#C8A45D]/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
               <Lightbulb size={32} strokeWidth={1} className="group-hover:scale-110 transition-transform" />
             </div>
             <p className="text-foreground/70 leading-relaxed text-sm">
-              We deliver top-quality architectural services, blending creative design, technical excellence, and attention to detail. Our style evolves from site specifics and design goals, avoiding imitation of trends. We excel in both contemporary and historical designs to bring your dream home to life.
+              We don't follow trends — we focus on what works for Kerala families. Every design starts with your plot, your budget, and how you actually live. We combine practical space planning with durable construction methods suited to Kerala's climate, so your home stays comfortable and low-maintenance for years.
             </p>
           </div>
 
           {/* Mission */}
           <div data-reveal className="bg-background border border-border/10 p-10 rounded-xl text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center group delay-100">
-            <h3 className="text-3xl font-display mb-8 group-hover:text-red-600 transition-colors">On a mission</h3>
-            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-red-600 transition-colors">
-              <div className="absolute inset-0 bg-red-600/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+            <h3 className="text-3xl font-display mb-8 group-hover:text-[#C8A45D] transition-colors">Our Promise</h3>
+            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-[#C8A45D] transition-colors">
+              <div className="absolute inset-0 bg-[#C8A45D]/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
               <Target size={32} strokeWidth={1} className="group-hover:scale-110 transition-transform" />
             </div>
             <p className="text-foreground/70 leading-relaxed text-sm">
-              Our mission at Caeris Homes is to provide client focused service through our responsible practice of Architecture. Our tradition of dedication, professionalism and outstanding customer service is a testament to that mission as we strive each day for excellence in bringing our valued clients' ideas to life.
+              Transparent pricing with no hidden costs. Timely completion with weekly progress updates. Branded materials — Ultratech cement, Jindal steel, Asian Paints — verified on site. We handle everything from permits and K-SMART submissions to final handover, so you don't have to chase multiple contractors.
             </p>
           </div>
 
           {/* Vision */}
           <div data-reveal className="bg-background border border-border/10 p-10 rounded-xl text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center group delay-200">
-            <h3 className="text-3xl font-display mb-8 group-hover:text-red-600 transition-colors">Our vision</h3>
-            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-red-600 transition-colors">
-              <div className="absolute inset-0 bg-red-600/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
+            <h3 className="text-3xl font-display mb-8 group-hover:text-[#C8A45D] transition-colors">Our Vision</h3>
+            <div className="w-20 h-20 rounded-full border border-foreground/20 flex items-center justify-center mb-8 relative overflow-hidden group-hover:border-[#C8A45D] transition-colors">
+              <div className="absolute inset-0 bg-[#C8A45D]/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
               <Eye size={32} strokeWidth={1} className="group-hover:scale-110 transition-transform" />
             </div>
             <p className="text-foreground/70 leading-relaxed text-sm">
-              We envision raising the standards of living by designing the most energy-efficient and environmentally responsible homes possible. We want to viewed as a respected architectural firm, providing high quality design and services to our clients with honesty and integrity.
+              To be the most trusted name in residential construction across Ernakulam and central Kerala — known not for flashy marketing, but for honest work, quality materials, and homes that families are proud of. We want every client to recommend us with confidence.
             </p>
           </div>
         </div>
@@ -88,57 +88,60 @@ function AboutPage() {
           <img src={heroImg} alt="Background" className="w-full h-[120%] object-cover grayscale" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center mb-24 md:mb-32 border-b border-white/10 pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center mb-24 md:mb-32 border-b border-white/10 pb-12">
             <div data-reveal>
-              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">1000+</p>
-              <p className="text-white/60 text-sm uppercase tracking-widest">Completed projects</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">{STATS.projectsCompleted.value}{STATS.projectsCompleted.suffix}</p>
+              <p className="text-white/60 text-sm uppercase tracking-widest">{STATS.projectsCompleted.label}</p>
             </div>
             <div data-reveal className="delay-100">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">12+</p>
-              <p className="text-white/60 text-sm uppercase tracking-widest">Years of experience</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">{STATS.yearsExperience.value}{STATS.yearsExperience.suffix}</p>
+              <p className="text-white/60 text-sm uppercase tracking-widest">{STATS.yearsExperience.label}</p>
             </div>
             <div data-reveal className="delay-200">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">100+</p>
-              <p className="text-white/60 text-sm uppercase tracking-widest">Team members</p>
-            </div>
-            <div data-reveal className="delay-300">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">500+</p>
-              <p className="text-white/60 text-sm uppercase tracking-widest">Active clients</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-display mb-4 text-[#C8A45D]">{STATS.clientSatisfaction.value}{STATS.clientSatisfaction.suffix}</p>
+              <p className="text-white/60 text-sm uppercase tracking-widest">{STATS.clientSatisfaction.label}</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-display leading-tight" data-split>
-              {splitChars("From inception to end of project' solution")}
+              {splitChars("From first meeting to key handover")}
             </h2>
             <div data-reveal className="space-y-8 text-white/70 leading-relaxed text-xl">
               <p>
-                At Caeris Homes, we view each project as a journey, from concept to successful completion. As top home builders and architectural consultants in Kerala, our skilled team focuses on delivering sustainable, innovative homes through turnkey construction.
+                At Caeris Homes, every project begins with understanding your family's needs — the way you live, the space you need, and the budget you're comfortable with. We handle design, permits, construction, and interiors under one roof.
               </p>
               <p>
-                We handle planning, design, and execution of both interiors and exteriors, ensuring client satisfaction at every stage, and hand over the keys after completion. Using advanced technology, proven processes, and award-winning designs, we aim to provide an exceptional experience for every homeowner.
+                Our team of experienced engineers and skilled workers focus on getting the fundamentals right — strong foundations, quality materials, and clean workmanship. We keep you informed at every stage with regular site visits and progress updates.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Let's Collaborate CTA */}
-      <section className="bg-red-600 text-white py-20 px-4 sm:px-6 md:px-10 text-center relative overflow-hidden">
-        {/* Parallax texture background */}
-        <div className="absolute inset-0 opacity-20 mix-blend-overlay w-full h-[120%] -top-[10%]" data-parallax="0.15">
+      {/* CTA Section */}
+      <section className="bg-[#1a1a1a] text-white py-20 px-4 sm:px-6 md:px-10 text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-15 mix-blend-overlay w-full h-[120%] -top-[10%]" data-parallax="0.15">
            <img src={project1} alt="Texture" className="w-full h-full object-cover grayscale" />
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-display mb-8 md:mb-12 leading-tight" data-split>
-            {splitChars("Let's collaborate on a project")}
+            {splitChars("Ready to build your home?")}
           </h2>
-          <div data-reveal>
-            <Button className="bg-black hover:bg-white hover:text-black text-white px-8 py-6 sm:px-12 sm:py-8 text-base sm:text-xl rounded-none shadow-2xl transition-all duration-500 hover:scale-105 uppercase tracking-widest min-w-[44px] min-h-[44px] whitespace-normal h-auto">
-              Give us a call now
-            </Button>
+          <div data-reveal className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link 
+              to="/contact"
+              className="bg-[#C8A45D] hover:bg-white hover:text-black text-white px-8 py-5 text-base rounded-none shadow-2xl transition-all duration-500 hover:scale-105 uppercase tracking-widest font-bold"
+            >
+              Talk to Us Today
+            </Link>
+            <a 
+              href={CONTACT.phoneHref}
+              className="border border-white/30 hover:border-white text-white px-8 py-5 text-base rounded-none transition-all duration-500 hover:scale-105 uppercase tracking-widest font-bold"
+            >
+              Call {CONTACT.phoneRaw}
+            </a>
           </div>
         </div>
       </section>

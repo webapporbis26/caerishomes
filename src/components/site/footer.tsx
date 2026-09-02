@@ -10,10 +10,10 @@ export function Footer() {
 
   // Only render social icons that have real URLs
   const socialLinks = [
-    { href: SOCIAL.instagram, icon: FaInstagram, label: "Instagram" },
-    { href: SOCIAL.facebook, icon: FaFacebookF, label: "Facebook" },
-    { href: SOCIAL.youtube, icon: FaYoutube, label: "YouTube" },
-    { href: CONTACT.whatsappHref, icon: FaWhatsapp, label: "WhatsApp" },
+    { href: SOCIAL?.instagram, icon: FaInstagram, label: "Instagram" },
+    { href: SOCIAL?.facebook, icon: FaFacebookF, label: "Facebook" },
+    { href: SOCIAL?.youtube, icon: FaYoutube, label: "YouTube" },
+    { href: CONTACT?.whatsappHref, icon: FaWhatsapp, label: "WhatsApp" },
   ].filter((s) => s.href);
 
   return (
@@ -26,7 +26,7 @@ export function Footer() {
           <div className="flex flex-col text-left">
             <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-4 text-foreground/90">Address</h3>
             <p className="text-[10px] md:text-sm leading-relaxed md:leading-loose text-foreground/70 font-medium whitespace-pre-line max-w-[200px]">
-              {CONTACT.address.split(", ").join("\n")}
+              {CONTACT?.address?.split(", ").join("\n")}
             </p>
           </div>
 
@@ -64,17 +64,17 @@ export function Footer() {
           <div className="flex flex-col items-end text-right">
             <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-4 text-foreground/90">Contact</h3>
             <div className="space-y-2 md:space-y-3 flex flex-col items-end">
-              <a href={CONTACT.phoneHref} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium">
+              <a href={CONTACT?.phoneHref} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium">
                 <Phone className="w-3 h-3 md:w-4 md:h-4 hidden sm:block" />
-                <span>{CONTACT.phone}</span>
+                <span>{CONTACT?.phone}</span>
               </a>
-              <a href={`tel:${CONTACT.phone2.replace(/\D/g, "")}`} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium">
+              <a href={`tel:${CONTACT?.phone2?.replace(/\D/g, "")}`} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium">
                 <Phone className="w-3 h-3 md:w-4 md:h-4 hidden sm:block" />
-                <span>{CONTACT.phone2}</span>
+                <span>{CONTACT?.phone2}</span>
               </a>
-              <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium mt-1 md:mt-2">
+              <a href={`mailto:${CONTACT?.email}`} className="flex items-center gap-1 md:gap-3 text-[10px] md:text-sm text-foreground/70 hover:text-[#C8A45D] transition-colors font-medium mt-1 md:mt-2">
                 <Mail className="w-3 h-3 md:w-4 md:h-4 hidden sm:block" />
-                <span className="break-all">{CONTACT.email}</span>
+                <span className="break-all">{CONTACT?.email}</span>
               </a>
             </div>
           </div>

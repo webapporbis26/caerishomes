@@ -1,14 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '@/lib/gsap';
+import { STATS } from '@/lib/site-data';
 
 export function ConstructionStats() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { n: 1000, suf: "+", l: "Completed projects" },
-    { n: 10, suf: "+", l: "Years of experience" },
-    { n: 100, suf: "+", l: "Team members" },
-    { n: 500, suf: "+", l: "Active clients" },
+    { n: STATS.projectsCompleted.value, suf: STATS.projectsCompleted.suffix, l: STATS.projectsCompleted.label },
+    { n: STATS.yearsExperience.value, suf: STATS.yearsExperience.suffix, l: STATS.yearsExperience.label },
+    { n: STATS.clientSatisfaction.value, suf: STATS.clientSatisfaction.suffix, l: STATS.clientSatisfaction.label },
   ];
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export function ConstructionStats() {
 
   return (
     <section ref={sectionRef} className="px-4 sm:px-8 md:px-12 xl:px-20 py-12 md:py-16 bg-background border-y border-border/10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
         {stats.map((s) => (
           <div key={s.l} data-reveal className="border-l border-border/10 pl-6 flex flex-col justify-center">
             <div className="font-display text-5xl md:text-6xl lg:text-7xl text-[#C8A45D]">
