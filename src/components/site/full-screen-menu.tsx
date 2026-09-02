@@ -7,7 +7,7 @@ import proj1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpe
 import proj2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
 import proj3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
 import proj4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.jpeg";
-import logoImg from "@/assets/ChatGPT Image Jul 2, 2026, 07_51_22 PM.png";
+import logoImg from "@/assets/logo-caeris.png";
 
 const images = [proj1, proj2, proj3, proj4];
 
