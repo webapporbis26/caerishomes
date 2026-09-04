@@ -1,8 +1,8 @@
-import img1 from "@/assets/process-1.png";
-import img2 from "@/assets/process-2.png";
-import img3 from "@/assets/kerala-modern-1.png";
-import img4 from "@/assets/process-4.png";
-import img5 from "@/assets/indian-interior.png";
+import img1 from "@/assets/process-1.webp";
+import img2 from "@/assets/process-2.webp";
+import img3 from "@/assets/kerala-modern-1.webp";
+import img4 from "@/assets/process-4.webp";
+import img5 from "@/assets/indian-interior.webp";
 import { useProcessAnimations } from "@/hooks/use-process-animations";
 
 export function Process() {

@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/about-villa.png";
+import aboutImg from "@/assets/about-villa.webp";
 
 export function YourStory() {
   return (

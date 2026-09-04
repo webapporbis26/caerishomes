@@ -3,8 +3,8 @@ import { SiteLayout } from "@/components/site/site-layout";
 import { PageHero } from "@/components/site/page-hero";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 import { splitChars } from "@/lib/split-chars";
-import heroImg from "@/assets/hero.jpg";
-import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
+import heroImg from "@/assets/hero.webp";
+import project1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.webp";
 import { Lightbulb, Target, Eye } from "lucide-react";
 import { STATS, CONTACT } from "@/lib/site-data";
 

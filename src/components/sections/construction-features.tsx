@@ -1,5 +1,5 @@
 import { Users, Gem, Calendar, CheckCircle, Settings, Award, Headset, Factory, PenTool, LayoutTemplate, Home } from "lucide-react";
-import whyUsImg from "@/assets/whyus-villa.png";
+import whyUsImg from "@/assets/whyus-villa.webp";
 
 export function ConstructionFeatures() {
   const topFeatures = [

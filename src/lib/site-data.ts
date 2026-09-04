@@ -1,18 +1,18 @@
-import kerala1 from "@/assets/kerala-modern-1.png";
-import kerala2 from "@/assets/kerala-modern-2.png";
-import client1 from "@/assets/client-1.jpg";
-import client2 from "@/assets/client-2.jpg";
-import client3 from "@/assets/client-3.jpg";
-import jamsheer1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
-import jamsheer2 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.jpeg";
-import jamsheer3 from "@/assets/hero and complted projects/JAMSHEER FINAL 03.jpg.jpeg";
-import shibu1 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
-import shibu2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.jpeg";
-import shibu3 from "@/assets/hero and complted projects/SHIBU 5_3 - Photo.jpg.jpeg";
-import wp1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
-import wp2 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.jpeg";
-import wp3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-3.jpeg";
-import wp4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-4.jpeg";
+import kerala1 from "@/assets/kerala-modern-1.webp";
+import kerala2 from "@/assets/kerala-modern-2.webp";
+import client1 from "@/assets/client-1.webp";
+import client2 from "@/assets/client-2.webp";
+import client3 from "@/assets/client-3.webp";
+import jamsheer1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.webp";
+import jamsheer2 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.webp";
+import jamsheer3 from "@/assets/hero and complted projects/JAMSHEER FINAL 03.jpg.webp";
+import shibu1 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.webp";
+import shibu2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.webp";
+import shibu3 from "@/assets/hero and complted projects/SHIBU 5_3 - Photo.jpg.webp";
+import wp1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.webp";
+import wp2 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.webp";
+import wp3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-3.webp";
+import wp4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-4.webp";
 
 // ── Single source of truth: Contact ──────────────────────────────
 export const CONTACT = {

@@ -1,8 +1,8 @@
-import finishes from "@/assets/material-finishes.jpg";
-import furniture from "@/assets/material-furniture.jpg";
-import lighting from "@/assets/material-lighting.jpg";
-import marble from "@/assets/material-marble.jpg";
-import wood from "@/assets/material-wood.jpg";
+import finishes from "@/assets/material-finishes.webp";
+import furniture from "@/assets/material-furniture.webp";
+import lighting from "@/assets/material-lighting.webp";
+import marble from "@/assets/material-marble.webp";
+import wood from "@/assets/material-wood.webp";
 import { splitChars } from "@/lib/split-chars";
 
 export function Materials() {

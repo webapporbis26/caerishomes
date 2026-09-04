@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import after from "@/assets/after.jpg";
-import before from "@/assets/before.jpg";
+import after from "@/assets/after.webp";
+import before from "@/assets/before.webp";
 import { splitChars } from "@/lib/split-chars";
 
 export function BeforeAfter() {

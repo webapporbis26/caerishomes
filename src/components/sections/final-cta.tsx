@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Magnetic } from "@/components/site/magnetic";
 import { Calendar, ArrowRight, Clock, ShieldCheck, Award, Headset, Factory } from "lucide-react";
-import heroImg from "@/assets/hero-bg.png";
+import heroImg from "@/assets/hero-bg.webp";
 
 export function FinalCTA() {
   const guarantees = [

@@ -1,5 +1,5 @@
-import port1 from '@/assets/construction-1.png';
-import port2 from '@/assets/construction-2.png';
+import port1 from '@/assets/construction-1.webp';
+import port2 from '@/assets/construction-2.webp';
 import { Link } from '@tanstack/react-router';
 
 export function ConstructionPortfolio() {

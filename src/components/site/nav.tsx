@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/logo-caeris.png";
+import logoImg from "@/assets/logo-caeris.webp";
 import { Magnetic } from "@/components/site/magnetic";
 import { ThemeToggle } from "@/components/site/theme-toggle";
 import { useTheme } from "@/components/theme-provider";

@@ -1,5 +1,5 @@
 import { Play, PenTool, ShieldCheck, Clock, HeartHandshake } from "lucide-react";
-import videoCover from "@/assets/projects_video.png";
+import videoCover from "@/assets/projects_video.webp";
 
 export function ProjectsWhyChoose() {
   const features = [

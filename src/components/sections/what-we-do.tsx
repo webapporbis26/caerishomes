@@ -1,7 +1,7 @@
-import p1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
-import p2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.jpeg";
-import p3 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.jpeg";
-import p4 from "@/assets/about-villa.png"; // Fallback to whatever images are there
+import p1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.webp";
+import p2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.webp";
+import p3 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.webp";
+import p4 from "@/assets/about-villa.webp"; // Fallback to whatever images are there
 
 export function WhatWeDo() {
   const categories = [

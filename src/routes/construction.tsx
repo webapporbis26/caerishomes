@@ -7,7 +7,7 @@ import { ConstructionFeatures } from '@/components/sections/construction-feature
 import { ConstructionPortfolio } from '@/components/sections/construction-portfolio'
 import { useRevealAnimations } from '@/hooks/use-reveal-animations'
 
-import heroImg from '@/assets/construction-hero.png'
+import heroImg from '@/assets/construction-hero.webp'
 
 export const Route = createFileRoute('/construction')({
   head: () => ({

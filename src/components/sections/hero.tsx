@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import desk1 from "@/assets/desk/hero 1 desk.png";
-import desk2 from "@/assets/desk/hero 2 desk.png";
-import desk3 from "@/assets/desk/hero 3 desk.png";
-import mob1 from "@/assets/mob/hero 1 mob.png";
-import mob2 from "@/assets/mob/hero 2 mob.png";
-import mob3 from "@/assets/mob/hero 3 mob.png";
+import desk1 from "@/assets/desk/hero 1 desk.webp";
+import desk2 from "@/assets/desk/hero 2 desk.webp";
+import desk3 from "@/assets/desk/hero 3 desk.webp";
+import mob1 from "@/assets/mob/hero 1 mob.webp";
+import mob2 from "@/assets/mob/hero 2 mob.webp";
+import mob3 from "@/assets/mob/hero 3 mob.webp";
 import { Home, Clock, HeartHandshake } from "lucide-react";
 import { STATS } from "@/lib/site-data";
 

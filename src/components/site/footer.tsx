@@ -1,5 +1,5 @@
 import { CONTACT, SOCIAL } from "@/lib/site-data";
-import logoImg from "@/assets/logo-caeris.png";
+import logoImg from "@/assets/logo-caeris.webp";
 import { Phone, Mail, ArrowUp } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp } from "react-icons/fa";
 

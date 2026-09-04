@@ -3,11 +3,11 @@ import { Link } from "@tanstack/react-router";
 import { gsap } from "@/lib/gsap";
 import { X } from "lucide-react";
 
-import proj1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.jpeg";
-import proj2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.jpeg";
-import proj3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.jpeg";
-import proj4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.jpeg";
-import logoImg from "@/assets/logo-caeris.png";
+import proj1 from "@/assets/hero and complted projects/JAMSHEER FINAL 01.jpg.webp";
+import proj2 from "@/assets/hero and complted projects/SHIBU 5_1 - Photo.jpg.webp";
+import proj3 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.webp";
+import proj4 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-2.webp";
+import logoImg from "@/assets/logo-caeris.webp";
 
 const images = [proj1, proj2, proj3, proj4];
 

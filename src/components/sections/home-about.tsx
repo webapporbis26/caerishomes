@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
-import aboutImg from "@/assets/about-villa.png"; // Assuming an image exists, or use hero-bg
+import aboutImg from "@/assets/about-villa.webp"; // Assuming an image exists, or use hero-bg
 
 export function HomeAbout() {
   const points = [
@@ -53,7 +53,7 @@ export function HomeAbout() {
             alt="Caeris Homes Villa" 
             className="w-full h-auto rounded-lg shadow-xl object-cover aspect-[4/3]"
             onError={(e) => {
-              // Fallback if about-villa.png doesn't exist
+              // Fallback if about-villa.webp doesn't exist
               const target = e.target as HTMLImageElement;
               target.src = "/og-image.jpg"; 
             }}

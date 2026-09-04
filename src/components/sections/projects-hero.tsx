@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight, Play, ArrowRight as ArrowRightIcon } from "lucide-react";
-import heroImg from "@/assets/projects_hero.png";
+import heroImg from "@/assets/projects_hero.webp";
 
 export function ProjectsHero() {
   return (

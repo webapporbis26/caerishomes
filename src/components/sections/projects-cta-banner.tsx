@@ -1,5 +1,5 @@
 import { Phone, ArrowRight } from "lucide-react";
-import bgImg from "@/assets/projects_hero.png";
+import bgImg from "@/assets/projects_hero.webp";
 import { Link } from "@tanstack/react-router";
 
 export function ProjectsCTABanner() {
