@@ -35,7 +35,7 @@ export function ConstructionStats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="px-4 sm:px-8 md:px-12 xl:px-20 py-12 md:py-16 bg-background border-y border-border/10">
+    <section ref={sectionRef} className="px-4 sm:px-8 md:px-12 xl:px-20 py-8 md:py-10 bg-background border-y border-border/10">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
         {stats.map((s) => (
           <div key={s.l} data-reveal className="border-l border-border/10 pl-6 flex flex-col justify-center">

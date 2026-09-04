@@ -69,7 +69,7 @@ export function VideoTestimonials() {
   };
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-16 bg-background">
+    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-10 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 md:mb-16" data-reveal>
           <div>

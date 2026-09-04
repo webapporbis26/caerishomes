@@ -6,7 +6,7 @@ export function Testimonials() {
   const scrollItems = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="py-12 md:py-16 bg-muted/10 overflow-hidden relative">
+    <section className="py-8 md:py-10 bg-muted/10 overflow-hidden relative">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="text-center mb-10 md:mb-12">
           <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-2 text-sm">

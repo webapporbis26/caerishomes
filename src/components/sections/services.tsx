@@ -35,7 +35,7 @@ export function Services() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-8 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-20" data-reveal>
           <h4 className="text-eyebrow mb-4">

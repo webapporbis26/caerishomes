@@ -11,7 +11,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
   const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="py-20 bg-muted/10">
+    <section className="py-10 bg-muted/10">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>

@@ -4,7 +4,7 @@ import { splitChars } from "@/lib/split-chars";
 
 export function ProjectCTA() {
   return (
-    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-12 bg-[#C8A45D] text-foreground">
+    <section className="px-4 sm:px-8 md:px-12 xl:px-20 py-8 bg-[#C8A45D] text-foreground">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         <div data-reveal>
           <p className="text-meta mb-3 opacity-70">Let's begin</p>

@@ -11,7 +11,7 @@ export function HomeAbout() {
   ];
 
   return (
-    <section className="py-20 md:py-32 px-4 md:px-8 bg-background">
+    <section className="py-10 md:py-10 px-4 md:px-8 bg-background">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         {/* Text Content */}
         <div>

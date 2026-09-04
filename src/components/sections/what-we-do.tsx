@@ -12,7 +12,7 @@ export function WhatWeDo() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 bg-background">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
           <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-3 text-sm">

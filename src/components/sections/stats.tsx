@@ -3,7 +3,7 @@ import { STATS } from "@/lib/site-data";
 
 export function Stats() {
   return (
-    <section className="bg-background py-16 px-4 sm:px-6 md:px-8">
+    <section className="bg-background py-10 px-4 sm:px-6 md:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="bg-card shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-lg p-6 md:p-10 flex flex-col md:flex-row justify-around items-center gap-8 md:gap-4 border border-border/10">
           

@@ -53,7 +53,7 @@ export function ConstructionFeatures() {
   ];
 
   return (
-    <section className="bg-card py-24 md:py-32 overflow-hidden relative">
+    <section className="bg-card py-8 md:py-10 overflow-hidden relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20">
         
         {/* Top Section */}

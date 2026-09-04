@@ -66,7 +66,7 @@ const sampleOffers: Offer[] = [
 
 export function OfferCarouselDemo() {
   return (
-    <div className="w-full bg-background flex flex-col items-center justify-center py-16 px-4 md:px-10">
+    <div className="w-full bg-background flex flex-col items-center justify-center py-10 px-4 md:px-10">
       <div className="w-full max-w-6xl">
         <h2 className="text-3xl font-bold mb-6 text-foreground">Deals of the Day</h2>
         <OfferCarousel offers={sampleOffers} />

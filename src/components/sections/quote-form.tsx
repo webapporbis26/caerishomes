@@ -16,7 +16,7 @@ export function QuoteForm() {
   };
 
   return (
-    <section className="px-8 md:px-12 py-24 md:py-32 pt-20">
+    <section className="px-8 md:px-12 py-8 md:py-10 pt-20">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
         <div data-reveal>
           <p className="text-eyebrow mb-4">Get a Free Quote</p>
@@ -44,7 +44,7 @@ export function QuoteForm() {
 
         <div data-reveal className="border border-border/10 bg-background p-8 md:p-12 apple-shadow rounded-2xl">
           {submitted ? (
-            <div className="py-16 text-center">
+            <div className="py-10 text-center">
               <p className="font-display text-4xl text-[#C8A45D] mb-4">Thank you.</p>
               <p className="text-foreground/60">Our team will contact you shortly to discuss your project.</p>
             </div>
