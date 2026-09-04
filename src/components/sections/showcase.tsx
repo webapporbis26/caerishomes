@@ -63,7 +63,7 @@ export function Showcase() {
             <div data-reveal>
               <p className="text-eyebrow mb-4">{p.n} · Featured</p>
               <h3 className="font-display text-5xl md:text-7xl mb-8">{p.t}</h3>
-              <div className="grid grid-cols-2 gap-6 border-t border-border/10 pt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-border/10 pt-8">
                 <Detail label="Location" value={p.loc} />
                 <Detail label="Area" value={p.area} />
                 <Detail label="Style" value={p.style} />

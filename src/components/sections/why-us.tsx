@@ -73,7 +73,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="bg-white pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden relative">
+    <section className="bg-card pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20">
         
         {/* Top Section */}
@@ -146,7 +146,7 @@ export function WhyUs() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {principles.map((item, i) => (
-              <div key={i} className="bg-[#FAF9F6] rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow">
+              <div key={i} className="bg-surface rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow">
                 
                 <h4 className="font-display text-2xl text-foreground mb-2">
                   {item.title}
@@ -169,7 +169,7 @@ export function WhyUs() {
         </div>
 
         {/* Bottom Section: Guarantees Bar */}
-        <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8" data-reveal>
+        <div className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8" data-reveal>
           <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-border/10">
             {bottomGuarantees.map((item, i) => (
               <div 

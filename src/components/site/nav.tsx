@@ -3,6 +3,9 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoImg from "@/assets/logo-caeris.png";
+import { Magnetic } from "@/components/site/magnetic";
+import { ThemeToggle } from "@/components/site/theme-toggle";
+import { useTheme } from "@/components/theme-provider";
 
 const links = [
   { to: "/" as const, label: "Home" },
@@ -14,12 +17,14 @@ const links = [
 ];
 
 export function Nav() {
+  const { theme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   
   const isHome = pathname === "/";
   const isTransparent = isHome && !isScrolled;
+  const shouldInvertLogo = isTransparent || theme === "dark";
   
   useEffect(() => {
     if (isMenuOpen) {
@@ -34,25 +39,26 @@ export function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     // Initial check
-    setIsScrolled(window.scrollY > 10);
+    setIsScrolled(window.scrollY > 50);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <header 
-        className={cn(
-        "fixed z-[90] flex items-center transition-all duration-500",
-        isTransparent 
-          ? "top-0 left-0 right-0 px-4 md:px-8 bg-transparent border-transparent h-[120px]" 
-          : "top-4 left-4 right-4 md:left-8 md:right-8 lg:left-auto lg:right-auto lg:w-[1200px] lg:transform lg:left-1/2 lg:-translate-x-1/2 bg-white/90 backdrop-blur-md border border-border/20 shadow-lg rounded-full h-[70px] px-6 md:px-8"
-      )}
-    >
-      <div className="max-w-7xl mx-auto w-full flex justify-between items-center h-full">
+      <header className="fixed top-0 left-0 right-0 w-full z-[90] flex justify-center pointer-events-none px-4 md:px-8">
+        <div 
+          className={cn(
+            "pointer-events-auto flex items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] w-full",
+            isTransparent 
+              ? "h-[120px] bg-transparent border-transparent" 
+              : "max-w-[1200px] bg-background/90 backdrop-blur-md border border-border/20 shadow-lg rounded-full h-[70px] px-6 md:px-8 mt-4"
+          )}
+        >
+          <div className="w-full flex justify-between items-center h-full">
         {/* Left: Logo */}
         <Link to="/" className={cn(
           "relative z-10 block flex items-center transition-all duration-500",
@@ -62,8 +68,8 @@ export function Nav() {
             src={logoImg} 
             alt="Logo" 
             className={cn(
-              "h-full w-full object-contain object-left transition-all duration-300",
-              isTransparent ? "brightness-0 invert drop-shadow-md" : ""
+              "h-full w-full object-contain object-left",
+              shouldInvertLogo ? "brightness-0 invert drop-shadow-md" : ""
             )} 
           />
         </Link>
@@ -74,23 +80,30 @@ export function Nav() {
           isTransparent ? "text-white" : "text-foreground/80"
         )}>
           {links.map((link) => (
-            <Link
-              key={link.label}
-              to={link.to}
-              className={cn(
-                "transition-colors py-2 drop-shadow-sm",
-                isTransparent ? "hover:text-[#C8A45D]" : "hover:text-[#C8A45D]"
-              )}
-              activeProps={{ className: "text-[#C8A45D] font-bold" }}
-            >
-              {link.label}
-            </Link>
+            <Magnetic key={link.label}>
+              <Link
+                to={link.to}
+                className={cn(
+                  "transition-colors py-2 drop-shadow-sm inline-block",
+                  isTransparent ? "hover:text-[#C8A45D]" : "hover:text-[#C8A45D]"
+                )}
+                activeProps={{ className: "text-[#C8A45D] font-bold" }}
+              >
+                {link.label}
+              </Link>
+            </Magnetic>
           ))}
 
           
-          <Link to="/contact" className="bg-[#C8A45D] hover:bg-black text-white px-6 py-2.5 rounded text-sm transition-colors font-bold ml-4">
-            Get a Quote
-          </Link>
+          <Magnetic>
+            <Link to="/contact" className="bg-[#C8A45D] hover:bg-foreground hover:text-background text-white px-6 py-2.5 rounded text-sm transition-colors font-bold ml-4 inline-block">
+              Get a Quote
+            </Link>
+          </Magnetic>
+
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -105,11 +118,12 @@ export function Nav() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
+      </div>
     </header>
 
     {/* Mobile Navigation Menu */}
     <div className={cn(
-      "fixed inset-0 bg-white z-[80] pt-[100px] px-6 transition-transform duration-300 ease-in-out md:hidden flex flex-col",
+      "fixed inset-0 bg-background z-[80] pt-[100px] px-6 transition-transform duration-300 ease-in-out md:hidden flex flex-col",
       isMenuOpen ? "translate-x-0" : "translate-x-full"
     )}>
       <nav className="flex flex-col gap-6 text-2xl font-semibold mt-10">
@@ -124,7 +138,10 @@ export function Nav() {
           </Link>
         ))}
       </nav>
-      <div className="mt-auto mb-12">
+      <div className="mt-auto mb-12 flex flex-col gap-6">
+        <div className="flex justify-center">
+          <ThemeToggle />
+        </div>
         <Link 
           to="/contact" 
           onClick={() => setIsMenuOpen(false)}

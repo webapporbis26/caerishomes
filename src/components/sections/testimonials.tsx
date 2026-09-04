@@ -1,6 +1,5 @@
 import { Quote } from "lucide-react";
 import { testimonials } from "@/lib/site-data";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export function Testimonials() {
   // Duplicate testimonials to ensure seamless infinite scroll
@@ -25,7 +24,7 @@ export function Testimonials() {
           {scrollItems.map((t, index) => (
             <div 
               key={index} 
-              className="w-[300px] md:w-[400px] flex-shrink-0 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-border/40 hover:shadow-lg transition-shadow duration-300 relative mx-4"
+              className="w-[300px] md:w-[400px] flex-shrink-0 bg-card p-6 md:p-8 rounded-xl shadow-sm border border-border/40 hover:shadow-lg transition-shadow duration-300 relative mx-4"
             >
               <Quote className="absolute top-4 right-4 w-8 h-8 text-[#C8A45D]/10 group-hover:text-[#C8A45D]/20 transition-colors" />
               
@@ -40,9 +39,6 @@ export function Testimonials() {
               </p>
               
               <div className="flex items-center gap-3 mt-auto">
-                <Avatar className="w-12 h-12 border-2 border-muted">
-                  <AvatarImage src={t.image} alt={t.name} />
-                </Avatar>
                 <div>
                   <h4 className="font-bold text-foreground text-base">{t.name}</h4>
                   <span className="text-[#C8A45D] text-xs font-semibold uppercase tracking-wide">

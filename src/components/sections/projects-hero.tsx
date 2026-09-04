@@ -3,7 +3,7 @@ import heroImg from "@/assets/projects_hero.png";
 
 export function ProjectsHero() {
   return (
-    <section className="relative w-full h-[800px] min-h-[100dvh] bg-[#FAF9F6] flex items-center overflow-hidden">
+    <section className="relative w-full h-[800px] min-h-[100dvh] bg-surface flex items-center overflow-hidden">
       {/* Background Image Area */}
       <div className="absolute inset-y-0 right-0 w-full md:w-[75%] z-0 h-full">
         <div className="absolute inset-y-0 left-0 w-full md:w-2/3 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/90 to-transparent z-10" />
@@ -20,10 +20,10 @@ export function ProjectsHero() {
         
         {/* Top Right Arrows */}
         <div className="absolute top-10 right-4 sm:right-8 md:right-12 xl:right-20 flex items-center gap-4">
-          <button className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors">
+          <button className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-card hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
           </button>
-          <button className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors">
+          <button className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-card hover:text-foreground transition-colors">
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

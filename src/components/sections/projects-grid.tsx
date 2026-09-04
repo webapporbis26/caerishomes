@@ -35,7 +35,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayProjects.map((project, i) => (
-            <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-border/50 group">
+            <div key={i} className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-border/50 group">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img 
                   src={project.img} 
@@ -51,7 +51,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
                 </h3>
                 <Link 
                   to={`/projects`} 
-                  className="inline-block mt-2 text-sm font-bold text-[#C8A45D] uppercase tracking-wider hover:text-black transition-colors"
+                  className="inline-block mt-2 text-sm font-bold text-[#C8A45D] uppercase tracking-wider hover:text-foreground transition-colors"
                 >
                   View Project
                 </Link>

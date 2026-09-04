@@ -35,13 +35,13 @@ export function Services() {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
-          <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-3 text-sm">
+        <div className="text-center mb-20" data-reveal>
+          <h4 className="text-eyebrow mb-4">
             What We Do
           </h4>
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-6xl text-foreground">
             Our Services
           </h2>
         </div>
@@ -52,17 +52,24 @@ export function Services() {
             return (
               <div 
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-sm border border-border/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                data-reveal
+                className="relative bg-card p-10 rounded-2xl border border-border/20 shadow-sm hover:apple-shadow hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
               >
-                <div className="w-14 h-14 bg-muted rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A45D] transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-[#C8A45D] group-hover:text-white transition-colors duration-300" />
+                
+                {/* Top Border Highlight */}
+                <div className="absolute top-0 left-0 w-0 h-1 bg-[#C8A45D] group-hover:w-full transition-all duration-700 ease-out z-10" />
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#C8A45D] group-hover:scale-110 transition-all duration-500 shadow-sm">
+                    <Icon className="w-7 h-7 text-[#C8A45D] group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-display text-2xl text-foreground mb-4 font-medium">
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground/70 leading-relaxed text-sm">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
               </div>
             );
           })}

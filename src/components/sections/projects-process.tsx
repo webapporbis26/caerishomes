@@ -51,7 +51,7 @@ export function ProjectsProcess() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative z-10">
             {steps.map((step, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#FAF9F6] rounded-full border border-[#C8A45D]/30 flex items-center justify-center mb-6 relative">
+                <div className="w-20 h-20 bg-surface rounded-full border border-[#C8A45D]/30 flex items-center justify-center mb-6 relative">
                   <div className="absolute inset-0 rounded-full border border-white m-1 shadow-sm" />
                   <step.icon className="w-8 h-8 text-[#C8A45D] relative z-10" strokeWidth={1} />
                 </div>

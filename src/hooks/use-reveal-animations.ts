@@ -11,9 +11,9 @@ export function useRevealAnimations() {
         gsap.from(el, {
           y: 60,
           opacity: 0,
-          duration: 1.1,
+          duration: 0.7,
           ease: "expo.out",
-          scrollTrigger: { trigger: el, start: "top 85%" },
+          scrollTrigger: { trigger: el, start: "top 95%" },
         });
       });
 
@@ -22,10 +22,10 @@ export function useRevealAnimations() {
         gsap.from(chars, {
           yPercent: 110,
           opacity: 0,
-          duration: 1,
+          duration: 0.8,
           ease: "expo.out",
           stagger: 0.02,
-          scrollTrigger: { trigger: el, start: "top 80%" },
+          scrollTrigger: { trigger: el, start: "top 95%" },
         });
       });
 
@@ -35,9 +35,9 @@ export function useRevealAnimations() {
           { clipPath: "inset(0 0 100% 0)" },
           {
             clipPath: "inset(0 0 0% 0)",
-            duration: 1.4,
+            duration: 0.8,
             ease: "expo.out",
-            scrollTrigger: { trigger: el, start: "top 80%" },
+            scrollTrigger: { trigger: el, start: "top 95%" },
           },
         );
       });

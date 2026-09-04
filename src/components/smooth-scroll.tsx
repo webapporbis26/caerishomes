@@ -4,11 +4,10 @@ import Lenis from "lenis";
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.6, // reduced from 1.2 for snappier scrolling
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.15, // snappier scrolling to remove perceived delay
       orientation: "vertical",
       gestureOrientation: "vertical",
-      wheelMultiplier: 1,
+      wheelMultiplier: 1.2, // slightly faster wheel tracking
       touchMultiplier: 2,
     });
 

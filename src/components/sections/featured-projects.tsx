@@ -36,7 +36,7 @@ export function FeaturedProjects() {
             </div>
           </article>
         ))}
-        <div className="w-[40vw] shrink-0 flex flex-col justify-center pl-8">
+        <div className="w-[80vw] md:w-[40vw] shrink-0 flex flex-col justify-center pl-8">
           <p className="font-display text-5xl leading-tight">
             View
             <br />

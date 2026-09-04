@@ -31,8 +31,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Cormorant Garamond", serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --animate-marquee: marquee var(--duration) linear infinite;
 }

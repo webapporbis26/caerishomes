@@ -40,7 +40,7 @@ export function BeforeAfter() {
           </div>
         </div>
         <span className="absolute top-6 left-6 text-meta bg-background/50 px-3 py-1">Before</span>
-        <span className="absolute top-6 right-6 text-meta bg-[#C8A45D] text-black px-3 py-1">After</span>
+        <span className="absolute top-6 right-6 text-meta bg-[#C8A45D] text-foreground px-3 py-1">After</span>
       </div>
     </section>
   );

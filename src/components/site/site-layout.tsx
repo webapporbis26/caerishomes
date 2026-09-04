@@ -6,7 +6,8 @@ import { Footer } from "./footer";
 import { FloatingContact } from "./floating-contact";
 import { Nav } from "./nav";
 import { Loader } from "./loader";
-
+import { ScrollProgress } from "./scroll-progress";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   useLenis();
@@ -19,9 +20,20 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <main className="bg-background text-foreground">
+      <ScrollProgress />
       <Loader />
       <Nav />
-      {children}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={pathname}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
       <Footer />
       <FloatingContact />
     </main>

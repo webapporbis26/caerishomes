@@ -2,7 +2,7 @@ import aboutImg from "@/assets/about-villa.png";
 
 export function YourStory() {
   return (
-    <section className="bg-[#FAF9F6] relative overflow-hidden pt-16 pb-4 md:pt-24 md:pb-8">
+    <section className="bg-surface relative overflow-hidden pt-16 pb-4 md:pt-24 md:pb-8">
       <div className="max-w-[90rem] mx-auto grid md:grid-cols-2 items-center gap-12 relative z-10">
         
         {/* Left Column */}

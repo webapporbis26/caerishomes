@@ -5,7 +5,7 @@ export function Stats() {
   return (
     <section className="bg-background py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-lg p-6 md:p-10 flex flex-col md:flex-row justify-around items-center gap-8 md:gap-4 border border-border/10">
+        <div className="bg-card shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-lg p-6 md:p-10 flex flex-col md:flex-row justify-around items-center gap-8 md:gap-4 border border-border/10">
           
           <div className="flex flex-col items-center text-center">
             <div className="w-16 h-16 rounded-full bg-[#f8f9fa] flex items-center justify-center mb-4">

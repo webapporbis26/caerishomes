@@ -99,7 +99,7 @@ export function VideoTestimonials() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
               <div className="absolute inset-0 grid place-items-center">
-                <span className="w-20 h-20 rounded-full border border-[#C8A45D] bg-background/40 backdrop-blur grid place-items-center text-[#C8A45D] text-2xl transition-all duration-500 group-hover:scale-110 group-hover:bg-[#C8A45D] group-hover:text-black">
+                <span className="w-20 h-20 rounded-full border border-[#C8A45D] bg-background/40 backdrop-blur grid place-items-center text-[#C8A45D] text-2xl transition-all duration-500 group-hover:scale-110 group-hover:bg-[#C8A45D] group-hover:text-foreground">
                   ▶
                 </span>
               </div>

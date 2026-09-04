@@ -1,27 +1,34 @@
+import * as React from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import avatar1 from "@/assets/avatar_1.png";
-import avatar2 from "@/assets/avatar_2.png";
-import avatar3 from "@/assets/avatar_3.png";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export function ProjectsTestimonials() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   const testimonials = [
     {
       text: "Caeris Homes turned our dream into reality. Their attention to detail and commitment is truly unmatched.",
       name: "Arjun & Neha",
       location: "Kochi, Kerala",
-      avatar: avatar2
     },
     {
       text: "The entire experience was seamless and transparent. We couldn't have asked for a better team to build our home.",
       name: "Rakesh Nambiar",
       location: "Trivandrum, Kerala",
-      avatar: avatar1
     },
     {
       text: "Professional, reliable and creative – Caeris Homes exceeded our expectations in every way.",
       name: "Marco Moretti",
       location: "Thrissur, Kerala",
-      avatar: avatar3
     }
   ];
 
@@ -37,37 +44,42 @@ export function ProjectsTestimonials() {
               Trusted by Families, Loved for Generations.
             </h2>
           </div>
-          <div className="flex gap-4">
-            <button className="w-10 h-10 rounded-full border border-[#C8A45D]/40 flex items-center justify-center text-[#C8A45D] hover:bg-[#C8A45D] hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button className="w-10 h-10 rounded-full border border-[#C8A45D]/40 flex items-center justify-center text-[#C8A45D] hover:bg-[#C8A45D] hover:text-white transition-colors">
-              <ArrowRight className="w-4 h-4" />
-            </button>
+        </div>
+
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-4 md:-ml-8">
+            {testimonials.map((item, i) => (
+              <CarouselItem key={i} className="pl-4 md:pl-8 basis-full sm:basis-1/2 lg:basis-1/3">
+                <div className="bg-surface p-8 md:p-10 rounded-2xl relative h-full flex flex-col" data-reveal>
+                  <div className="text-[#C8A45D] font-serif text-5xl leading-none absolute top-8 left-8">
+                    “
+                  </div>
+                  <p className="text-foreground/80 text-sm md:text-base leading-relaxed mt-6 mb-8 flex-1">
+                    {item.text}
+                  </p>
+                  <div>
+                    <p className="font-bold text-foreground text-sm mb-1">- {item.name}</p>
+                    <p className="text-[#C8A45D] text-xs font-medium">{item.location}</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          <div className="flex gap-4 mt-8 md:absolute md:top-[-80px] md:right-0 md:mt-0 justify-end">
+             <CarouselPrevious className="relative inset-auto translate-y-0 translate-x-0 h-10 w-10 border border-[#C8A45D]/40 text-[#C8A45D] hover:bg-[#C8A45D] hover:text-white bg-transparent" />
+             <CarouselNext className="relative inset-auto translate-y-0 translate-x-0 h-10 w-10 border border-[#C8A45D]/40 text-[#C8A45D] hover:bg-[#C8A45D] hover:text-white bg-transparent" />
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-          {testimonials.map((item, i) => (
-            <div key={i} className="bg-[#FAF9F6] p-8 md:p-10 rounded-2xl relative" data-reveal>
-              <div className="text-[#C8A45D] font-serif text-5xl leading-none absolute top-8 left-8">
-                “
-              </div>
-              <p className="text-foreground/80 text-sm md:text-base leading-relaxed mt-6 mb-8 min-h-[80px]">
-                {item.text}
-              </p>
-              <div>
-                <p className="font-bold text-foreground text-sm mb-1">- {item.name}</p>
-                <p className="text-[#C8A45D] text-xs font-medium">{item.location}</p>
-              </div>
-
-              {/* Avatar overlapping bottom right */}
-              <div className="absolute -bottom-4 right-8 w-16 h-16 rounded-full border-4 border-white overflow-hidden shadow-lg">
-                <img src={item.avatar} alt={item.name} className="w-full h-full object-cover" />
-              </div>
-            </div>
-          ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

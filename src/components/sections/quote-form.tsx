@@ -102,7 +102,7 @@ export function QuoteForm() {
                   className="bg-background/40 resize-none focus-visible:ring-[#C8A45D]"
                 />
               </div>
-              <Button type="submit" className="w-full h-12 bg-[#C8A45D] text-black hover:bg-white text-meta transition-all active:scale-[0.98]">
+              <Button type="submit" className="w-full h-12 bg-[#C8A45D] text-foreground hover:bg-card text-meta transition-all active:scale-[0.98]">
                 Get Free Quote
               </Button>
             </form>

@@ -24,7 +24,7 @@ export function ProjectsFeatured() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/90" />
               
               {/* Top Left Icon */}
-              <div className="absolute top-6 left-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute top-6 left-6 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg">
                 <Home className="w-5 h-5 text-[#C8A45D]" strokeWidth={1.5} />
               </div>
 

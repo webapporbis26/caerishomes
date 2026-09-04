@@ -36,7 +36,7 @@ export function ProjectsStats() {
 
   return (
     <section className="px-4 sm:px-8 md:px-12 xl:px-20 mb-20 md:mb-32">
-      <div className="max-w-[90rem] mx-auto bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-8 lg:p-12" data-reveal>
+      <div className="max-w-[90rem] mx-auto bg-card rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-8 lg:p-12" data-reveal>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 md:divide-x divide-border/10">
           {stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-center text-center px-4">

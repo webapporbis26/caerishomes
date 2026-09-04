@@ -40,7 +40,7 @@ export function ProjectsWhyChoose() {
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
             
             {/* Play Button */}
-            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white transition-all duration-300">
+            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-card transition-all duration-300">
               <Play className="w-6 h-6 text-[#C8A45D] ml-1 fill-current" />
             </button>
           </div>
