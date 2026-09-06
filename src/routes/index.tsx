@@ -17,10 +17,15 @@ export const Route = createFileRoute("/")({
       { title: "Caeris Homes — Trusted Home Builders in Kerala" },
       {
         name: "description",
-        content: "Trusted home builders in Kerala crafting practical, durable, and beautiful residences. From architectural design to construction and turnkey handover.",
+        content:
+          "Trusted home builders in Kerala crafting practical, durable, and beautiful residences. From architectural design to construction and turnkey handover.",
       },
       { property: "og:title", content: "Caeris Homes — We Build Your Dream Home" },
-      { property: "og:description", content: "Trusted home builders in Kerala. Architecture, construction, interiors and turnkey projects." },
+      {
+        property: "og:description",
+        content:
+          "Trusted home builders in Kerala. Architecture, construction, interiors and turnkey projects.",
+      },
     ],
   }),
   component: HomePage,

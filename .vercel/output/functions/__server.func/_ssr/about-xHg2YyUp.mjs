@@ -5,7 +5,7 @@ import { a as SiteLayout, i as STATS, n as JAMSHEER_FINAL_01_jpg_default, t as C
 import { t as splitChars } from "./split-chars-XR_qVCnk.mjs";
 import { t as PageHero } from "./page-hero-O7sT68Px.mjs";
 import { t as useRevealAnimations } from "./use-reveal-animations-BWoamc3F.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/about-_7tp3mTn.js
+//#region node_modules/.nitro/vite/services/ssr/assets/about-xHg2YyUp.js
 var import_jsx_runtime = require_jsx_runtime();
 var hero_default = "/assets/hero-0o9Hxzr1.webp";
 function AboutPage() {
@@ -104,6 +104,8 @@ function AboutPage() {
 				className: "absolute inset-0 opacity-20 pointer-events-none",
 				"data-parallax": "0.1",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: hero_default,
 					alt: "Background",
 					className: "w-full h-[120%] object-cover grayscale"
@@ -166,6 +168,8 @@ function AboutPage() {
 				className: "absolute inset-0 opacity-15 mix-blend-overlay w-full h-[120%] -top-[10%]",
 				"data-parallax": "0.15",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: JAMSHEER_FINAL_01_jpg_default,
 					alt: "Texture",
 					className: "w-full h-full object-cover grayscale"

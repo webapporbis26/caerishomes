@@ -46,25 +46,30 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
     if (isOpen) {
       gsap.set(el, { visibility: "visible" });
       gsap.to(el, { yPercent: 0, duration: 0.8, ease: "expo.inOut" });
-      
+
       if (linksRef.current) {
         const linkItems = linksRef.current.querySelectorAll("li");
         gsap.fromTo(
           linkItems,
           { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "expo.out", delay: 0.4 }
+          { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "expo.out", delay: 0.4 },
         );
       }
-      
+
       if (imgRef.current) {
         gsap.fromTo(
           imgRef.current,
           { scale: 1.1, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 1.2, ease: "expo.out", delay: 0.5 }
+          { scale: 1, opacity: 1, duration: 1.2, ease: "expo.out", delay: 0.5 },
         );
       }
     } else {
-      gsap.to(el, { yPercent: -100, duration: 0.8, ease: "expo.inOut", onComplete: () => gsap.set(el, { visibility: "hidden" }) });
+      gsap.to(el, {
+        yPercent: -100,
+        duration: 0.8,
+        ease: "expo.inOut",
+        onComplete: () => gsap.set(el, { visibility: "hidden" }),
+      });
     }
   }, [isOpen]);
 
@@ -73,10 +78,14 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
     const newImage = images[index % images.length];
     if (newImage !== currentImage) {
       if (imgRef.current) {
-        gsap.to(imgRef.current, { opacity: 0, duration: 0.2, onComplete: () => {
-          setCurrentImage(newImage);
-          gsap.to(imgRef.current, { opacity: 1, duration: 0.4 });
-        }});
+        gsap.to(imgRef.current, {
+          opacity: 0,
+          duration: 0.2,
+          onComplete: () => {
+            setCurrentImage(newImage);
+            gsap.to(imgRef.current, { opacity: 1, duration: 0.4 });
+          },
+        });
       } else {
         setCurrentImage(newImage);
       }
@@ -84,17 +93,21 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
   };
 
   return (
-    <div 
+    <div
       ref={menuRef}
       className="fixed inset-0 z-[100] h-[100dvh] bg-background text-foreground flex flex-col md:flex-row invisible overflow-hidden"
     >
       {/* Logo */}
       <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-[110] h-[60px] md:h-[80px] w-[200px] md:w-[260px]">
-        <img src={logoImg} alt="Logo" className="w-full h-full object-contain object-left filter dark:invert" />
+        <img
+          src={logoImg}
+          alt="Logo"
+          className="w-full h-full object-contain object-left filter dark:invert"
+        />
       </div>
 
       {/* Close Button */}
-      <button 
+      <button
         onClick={onClose}
         className="absolute top-4 right-4 sm:top-8 sm:right-8 z-[110] min-w-[44px] min-h-[44px] flex items-center justify-center p-4 text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
       >
@@ -105,31 +118,29 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
       <div className="w-full md:w-1/2 h-full overflow-y-auto">
         <div className="min-h-full flex flex-col justify-center px-8 md:px-24 py-20 md:py-24">
           <p className="text-eyebrow mb-6 md:mb-10 opacity-60">Menu</p>
-        <ul ref={linksRef} className="space-y-4 md:space-y-6">
-          {links.map((link, i) => (
-            <li key={link.to} onMouseEnter={() => handleLinkHover(i)}>
-              <Link
-                to={link.to}
-                onClick={onClose}
-                className="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl hover:italic hover:text-[#C8A45D] transition-colors block leading-tight"
-                activeProps={{ className: "italic text-[#C8A45D]" }}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        
-
+          <ul ref={linksRef} className="space-y-4 md:space-y-6">
+            {links.map((link, i) => (
+              <li key={link.to} onMouseEnter={() => handleLinkHover(i)}>
+                <Link
+                  to={link.to}
+                  onClick={onClose}
+                  className="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl hover:italic hover:text-[#C8A45D] transition-colors block leading-tight"
+                  activeProps={{ className: "italic text-[#C8A45D]" }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
       {/* Right Column: Image */}
       <div className="hidden md:block md:w-1/2 h-full relative overflow-hidden bg-surface">
-        <img 
+        <img
           ref={imgRef}
-          src={currentImage} 
-          alt="Caeris Homes Luxury Project Design" 
+          src={currentImage}
+          alt="Caeris Homes Luxury Project Design"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/10" />

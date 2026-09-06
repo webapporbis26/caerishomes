@@ -1,23 +1,35 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from '@/lib/gsap';
-import { STATS } from '@/lib/site-data';
+import { useEffect, useRef } from "react";
+import { gsap } from "@/lib/gsap";
+import { STATS } from "@/lib/site-data";
 
 export function ConstructionStats() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { n: STATS.projectsCompleted.value, suf: STATS.projectsCompleted.suffix, l: STATS.projectsCompleted.label },
-    { n: STATS.yearsExperience.value, suf: STATS.yearsExperience.suffix, l: STATS.yearsExperience.label },
-    { n: STATS.clientSatisfaction.value, suf: STATS.clientSatisfaction.suffix, l: STATS.clientSatisfaction.label },
+    {
+      n: STATS.projectsCompleted.value,
+      suf: STATS.projectsCompleted.suffix,
+      l: STATS.projectsCompleted.label,
+    },
+    {
+      n: STATS.yearsExperience.value,
+      suf: STATS.yearsExperience.suffix,
+      l: STATS.yearsExperience.label,
+    },
+    {
+      n: STATS.clientSatisfaction.value,
+      suf: STATS.clientSatisfaction.suffix,
+      l: STATS.clientSatisfaction.label,
+    },
   ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const counters = gsap.utils.toArray<HTMLElement>('.counter-num');
-      
+      const counters = gsap.utils.toArray<HTMLElement>(".counter-num");
+
       counters.forEach((counter) => {
-        const target = parseInt(counter.getAttribute('data-count') || '0', 10);
-        
+        const target = parseInt(counter.getAttribute("data-count") || "0", 10);
+
         gsap.to(counter, {
           innerHTML: target,
           duration: 2.5,
@@ -26,7 +38,7 @@ export function ConstructionStats() {
           scrollTrigger: {
             trigger: counter,
             start: "top 85%",
-          }
+          },
         });
       });
     }, sectionRef);
@@ -35,17 +47,26 @@ export function ConstructionStats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="px-4 sm:px-8 md:px-12 xl:px-20 py-8 md:py-10 bg-background border-y border-border/10">
+    <section
+      ref={sectionRef}
+      className="px-4 sm:px-8 md:px-12 xl:px-20 py-8 md:py-10 bg-background border-y border-border/10"
+    >
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
         {stats.map((s) => (
-          <div key={s.l} data-reveal className="border-l border-border/10 pl-6 flex flex-col justify-center">
+          <div
+            key={s.l}
+            data-reveal
+            className="border-l border-border/10 pl-6 flex flex-col justify-center"
+          >
             <div className="font-display text-3xl md:text-4xl lg:text-5xl text-[#C8A45D]">
               <span className="counter-num" data-count={s.n}>
                 0
               </span>
               <span>{s.suf}</span>
             </div>
-            <p className="text-foreground/70 mt-4 text-sm md:text-base tracking-wide uppercase">{s.l}</p>
+            <p className="text-foreground/70 mt-4 text-sm md:text-base tracking-wide uppercase">
+              {s.l}
+            </p>
           </div>
         ))}
       </div>

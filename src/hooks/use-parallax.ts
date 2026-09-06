@@ -7,7 +7,7 @@ export function useParallax() {
       // Parallax for images
       gsap.utils.toArray<HTMLElement>("[data-parallax]").forEach((el) => {
         const speed = el.dataset.parallax ? parseFloat(el.dataset.parallax) : 0.2;
-        
+
         gsap.to(el, {
           yPercent: speed * 100,
           ease: "none",

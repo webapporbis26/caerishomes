@@ -47,16 +47,18 @@ const OfferCard = React.forwardRef<HTMLAnchorElement, OfferCardProps>(({ offer }
         <h3 className="text-xl font-bold text-card-foreground leading-tight">{offer.title}</h3>
         <p className="text-sm text-muted-foreground">{offer.description}</p>
       </div>
-      
+
       {/* Footer */}
       <div className="flex items-center justify-between pt-4 border-t border-border">
         <div className="flex items-center gap-3">
-          <img src={offer.brandLogoSrc} alt={`${offer.brandName} logo`} className="w-8 h-8 rounded-full bg-muted object-cover" />
+          <img
+            src={offer.brandLogoSrc}
+            alt={`${offer.brandName} logo`}
+            className="w-8 h-8 rounded-full bg-muted object-cover"
+          />
           <div>
             <p className="text-xs font-semibold text-card-foreground">{offer.brandName}</p>
-            {offer.promoCode && (
-              <p className="text-xs text-muted-foreground">{offer.promoCode}</p>
-            )}
+            {offer.promoCode && <p className="text-xs text-muted-foreground">{offer.promoCode}</p>}
           </div>
         </div>
         <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground transform transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:bg-primary group-hover:text-primary-foreground">
@@ -97,7 +99,7 @@ const OfferCarousel = React.forwardRef<HTMLDivElement, OfferCarouselProps>(
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        
+
         {/* Scrollable Container */}
         <div
           ref={scrollContainerRef}
@@ -107,7 +109,7 @@ const OfferCarousel = React.forwardRef<HTMLDivElement, OfferCarouselProps>(
             <OfferCard key={offer.id} offer={offer} />
           ))}
         </div>
-        
+
         {/* Right Scroll Button */}
         <button
           onClick={() => scroll("right")}
@@ -118,7 +120,7 @@ const OfferCarousel = React.forwardRef<HTMLDivElement, OfferCarouselProps>(
         </button>
       </div>
     );
-  }
+  },
 );
 OfferCarousel.displayName = "OfferCarousel";
 

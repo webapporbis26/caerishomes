@@ -7,7 +7,7 @@ import { a as SiteLayout, c as testimonials, s as projects } from "./site-layout
 import { t as useRevealAnimations } from "./use-reveal-animations-BWoamc3F.mjs";
 import { a as CarouselPrevious, i as CarouselNext, n as CarouselContent, r as CarouselItem, t as Carousel } from "./carousel-CCI2U8Fn.mjs";
 import { t as Autoplay } from "../_libs/embla-carousel-autoplay.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/projects-BXcMY3Uf.js
+//#region node_modules/.nitro/vite/services/ssr/assets/projects-BXgWds96.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var projects_hero_default = "/assets/projects_hero-DKRimB_s.webp";
@@ -112,6 +112,8 @@ function ProjectsFeatured() {
 					"data-reveal": true,
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							loading: "lazy",
+							decoding: "async",
 							src: project.img,
 							alt: project.client,
 							className: "absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
@@ -226,6 +228,8 @@ function ProjectsWhyChoose() {
 					"data-reveal": true,
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							loading: "lazy",
+							decoding: "async",
 							src: projects_video_default,
 							alt: "Interior Video",
 							className: "absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
@@ -458,6 +462,8 @@ function ProjectsCTABanner() {
 			"data-reveal": true,
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: projects_hero_default,
 					alt: "CTA Background",
 					className: "absolute inset-0 w-full h-full object-cover"

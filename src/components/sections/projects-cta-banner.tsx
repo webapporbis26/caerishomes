@@ -6,9 +6,11 @@ export function ProjectsCTABanner() {
   return (
     <section className="px-4 sm:px-8 md:px-12 xl:px-20 mb-20 md:mb-32">
       <div className="max-w-[90rem] mx-auto relative rounded-[2rem] overflow-hidden" data-reveal>
-        <img 
-          src={bgImg} 
-          alt="CTA Background" 
+        <img
+          loading="lazy"
+          decoding="async"
+          src={bgImg}
+          alt="CTA Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#3A2E20]/90 mix-blend-multiply" />
@@ -25,7 +27,10 @@ export function ProjectsCTABanner() {
             </h2>
           </div>
 
-          <Link to="/contact" className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-5 font-bold tracking-widest uppercase text-xs rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-5 font-bold tracking-widest uppercase text-xs rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1"
+          >
             TALK TO US TODAY <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

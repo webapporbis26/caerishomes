@@ -2,7 +2,13 @@ import { useState, useEffect, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { areaOptions, serviceOptions } from "@/lib/site-data";
 import {
@@ -21,7 +27,7 @@ export function QuoteModal({ children }: { children?: React.ReactNode }) {
   useEffect(() => {
     // Check if the user has already seen or closed the popup in this browser
     const hasSeenPopup = localStorage.getItem("quote_popup_seen");
-    
+
     if (hasSeenPopup) return;
 
     const timer = setTimeout(() => {
@@ -46,32 +52,44 @@ export function QuoteModal({ children }: { children?: React.ReactNode }) {
     e.preventDefault();
     setSubmitted(true);
     localStorage.setItem("quote_popup_seen", "true");
-    
+
     setTimeout(() => {
       setOpen(false);
       setSubmitted(false);
     }, 3000);
   };
 
-  const inputClass = "h-10 border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-sm";
-  
+  const inputClass =
+    "h-10 border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 text-sm";
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       {children && <DialogTrigger asChild>{children}</DialogTrigger>}
       <DialogContent className="sm:max-w-[420px] bg-background border border-border/10 text-foreground p-6 z-[110] rounded-xl shadow-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader className="mb-4">
-          <DialogTitle className="font-display text-2xl md:text-3xl text-foreground font-normal">Get a Free Quote</DialogTitle>
+          <DialogTitle className="font-display text-2xl md:text-3xl text-foreground font-normal">
+            Get a Free Quote
+          </DialogTitle>
         </DialogHeader>
 
         {submitted ? (
           <div className="py-12 text-center">
             <p className="font-display text-3xl text-[#C8A45D] mb-4">Thank you.</p>
-            <p className="text-foreground/60 text-sm">Our team will contact you shortly to discuss your project.</p>
+            <p className="text-foreground/60 text-sm">
+              Our team will contact you shortly to discuss your project.
+            </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1">
-              <Input id="modal-name" name="name" required placeholder="Your name" defaultValue="John Doe" className={inputClass} />
+              <Input
+                id="modal-name"
+                name="name"
+                required
+                placeholder="Your name"
+                defaultValue="John Doe"
+                className={inputClass}
+              />
             </div>
 
             <div className="flex gap-4">
@@ -87,16 +105,39 @@ export function QuoteModal({ children }: { children?: React.ReactNode }) {
                 </SelectContent>
               </Select>
               <div className="flex-1 space-y-1">
-                <Input id="modal-phone" name="phone" type="tel" required placeholder="Your number" defaultValue="9876543210" className={inputClass} />
+                <Input
+                  id="modal-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="Your number"
+                  defaultValue="9876543210"
+                  className={inputClass}
+                />
               </div>
-            </div>
-            
-            <div className="space-y-1">
-              <Input id="modal-email" name="email" type="email" required placeholder="Your email" defaultValue="john.doe@example.com" className={inputClass} />
             </div>
 
             <div className="space-y-1">
-              <Input id="modal-location" name="location" required placeholder="Location of your plot" defaultValue="Kochi, Kerala" className={inputClass} />
+              <Input
+                id="modal-email"
+                name="email"
+                type="email"
+                required
+                placeholder="Your email"
+                defaultValue="john.doe@example.com"
+                className={inputClass}
+              />
+            </div>
+
+            <div className="space-y-1">
+              <Input
+                id="modal-location"
+                name="location"
+                required
+                placeholder="Location of your plot"
+                defaultValue="Kochi, Kerala"
+                className={inputClass}
+              />
             </div>
 
             <div className="space-y-1">
@@ -138,15 +179,18 @@ export function QuoteModal({ children }: { children?: React.ReactNode }) {
                 className={inputClass}
               />
             </div>
-            
+
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
               {/* Fake reCAPTCHA for visual similarity to screenshot */}
               <div className="border border-border/20 bg-background flex items-center gap-2 px-3 py-1.5 rounded shadow-sm self-start">
                 <div className="w-5 h-5 border-[1.5px] border-border rounded-sm bg-background flex items-center justify-center"></div>
                 <span className="text-xs text-foreground/80">I'm not a robot</span>
               </div>
-              
-              <Button type="submit" className="h-10 px-8 bg-red-600 hover:bg-red-700 text-white rounded-full font-medium transition-colors w-full sm:w-auto">
+
+              <Button
+                type="submit"
+                className="h-10 px-8 bg-red-600 hover:bg-red-700 text-white rounded-full font-medium transition-colors w-full sm:w-auto"
+              >
                 Submit
               </Button>
             </div>

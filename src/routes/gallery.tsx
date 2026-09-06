@@ -26,19 +26,20 @@ function GalleryPage() {
               Project Gallery
             </h1>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg">
-              A curated collection of our completed residential projects. Care in every detail, designed and built for life.
+              A curated collection of our completed residential projects. Care in every detail,
+              designed and built for life.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="group relative block overflow-hidden bg-muted aspect-[4/3] reveal-slide-up"
-                style={{ 
+                style={{
                   transitionDelay: `${(idx % 3) * 100}ms`,
                   contentVisibility: "auto",
-                  containIntrinsicSize: "400px" 
+                  containIntrinsicSize: "400px",
                 }}
               >
                 <img

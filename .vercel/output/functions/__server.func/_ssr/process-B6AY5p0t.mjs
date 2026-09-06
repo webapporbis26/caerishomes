@@ -3,7 +3,7 @@ import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { n as gsapWithCSS } from "../_libs/gsap.mjs";
 import { a as SiteLayout } from "./site-layout-mg_vMmDC.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/process-D2xrZshh.js
+//#region node_modules/.nitro/vite/services/ssr/assets/process-B6AY5p0t.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var process_1_default = "/assets/process-1-D-SiAm04.webp";
@@ -120,6 +120,8 @@ function Process() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "hidden md:block w-1/2 sticky top-32 h-[75dvh] overflow-hidden shadow-2xl order-1",
 				children: [steps.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: s.img,
 					className: "process-img absolute inset-0 w-full h-full object-cover",
 					alt: s.t
@@ -144,6 +146,8 @@ function Process() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "md:hidden w-full h-[40dvh] mb-8 overflow-hidden",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								loading: "lazy",
+								decoding: "async",
 								src: s.img,
 								alt: s.t,
 								className: "w-full h-full object-cover"

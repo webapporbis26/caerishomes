@@ -1,7 +1,13 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { gsap } from "@/lib/gsap";
 
-export function Magnetic({ children, className = "" }: { children: ReactNode; className?: string }) {
+export function Magnetic({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const el = ref.current;

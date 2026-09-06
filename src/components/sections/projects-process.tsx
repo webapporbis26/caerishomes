@@ -5,28 +5,28 @@ export function ProjectsProcess() {
     {
       icon: Users,
       title: "Consultation",
-      desc: "Understanding your needs and vision."
+      desc: "Understanding your needs and vision.",
     },
     {
       icon: PencilRuler,
       title: "Design & Planning",
-      desc: "Creating designs that inspire and function."
+      desc: "Creating designs that inspire and function.",
     },
     {
       icon: HardHat,
       title: "Execution",
-      desc: "Precision construction with quality checks."
+      desc: "Precision construction with quality checks.",
     },
     {
       icon: Key,
       title: "Handover",
-      desc: "Delivering your dream home, ready to live."
+      desc: "Delivering your dream home, ready to live.",
     },
     {
       icon: Heart,
       title: "After Care",
-      desc: "Continued support for complete peace of mind."
-    }
+      desc: "Continued support for complete peace of mind.",
+    },
   ];
 
   return (
@@ -47,7 +47,7 @@ export function ProjectsProcess() {
         <div className="relative">
           {/* Connecting Line (Desktop only) */}
           <div className="hidden md:block absolute top-10 left-12 right-12 h-[1px] border-t-2 border-dashed border-[#C8A45D]/20 z-0" />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative z-10">
             {steps.map((step, i) => (
               <div key={i} className="flex flex-col items-center">
@@ -55,11 +55,11 @@ export function ProjectsProcess() {
                   <div className="absolute inset-0 rounded-full border border-white m-1 shadow-sm" />
                   <step.icon className="w-8 h-8 text-[#C8A45D] relative z-10" strokeWidth={1} />
                 </div>
-                
+
                 <h4 className="font-display text-lg text-foreground font-medium mb-3">
                   {step.title}
                 </h4>
-                
+
                 <p className="text-foreground/60 text-xs md:text-sm leading-relaxed max-w-[180px]">
                   {step.desc}
                 </p>

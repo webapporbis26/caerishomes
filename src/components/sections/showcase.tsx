@@ -48,7 +48,8 @@ export function Showcase() {
       <div className="max-w-7xl mx-auto mb-24 text-center" data-reveal>
         <p className="text-eyebrow mb-3">Project Stories · 07</p>
         <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl">
-          {splitChars("Spaces that")} <span className="italic text-[#C8A45D]">{splitChars("inspire.")}</span>
+          {splitChars("Spaces that")}{" "}
+          <span className="italic text-[#C8A45D]">{splitChars("inspire.")}</span>
         </h2>
       </div>
       <div className="space-y-32">
@@ -70,7 +71,10 @@ export function Showcase() {
                 <Detail label="Completed" value={p.date} />
               </div>
               <Magnetic>
-                <a href="#" className="inline-block mt-10 text-meta border-b border-[#C8A45D] text-[#C8A45D] pb-2 hover:text-foreground hover:border-border">
+                <a
+                  href="#"
+                  className="inline-block mt-10 text-meta border-b border-[#C8A45D] text-[#C8A45D] pb-2 hover:text-foreground hover:border-border"
+                >
                   Read the case study →
                 </a>
               </Magnetic>

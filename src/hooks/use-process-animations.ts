@@ -62,7 +62,8 @@ export function useProcessAnimations() {
         // 4. Parallax Step Numbers (Scroll-Tied)
         const number = step.querySelector(".step-number");
         if (number) {
-          gsap.fromTo(number,
+          gsap.fromTo(
+            number,
             { y: -30 },
             {
               y: 50,
@@ -73,14 +74,15 @@ export function useProcessAnimations() {
                 end: "bottom top",
                 scrub: 1,
               },
-            }
+            },
           );
         }
 
         // 5. Progress Line Drawing (Scroll-Tied)
         const progressLine = step.querySelector(".progress-line");
         if (progressLine) {
-          gsap.fromTo(progressLine,
+          gsap.fromTo(
+            progressLine,
             { height: "0%" },
             {
               height: "100%",
@@ -91,7 +93,7 @@ export function useProcessAnimations() {
                 end: "bottom 60%",
                 scrub: 1,
               },
-            }
+            },
           );
         }
       });

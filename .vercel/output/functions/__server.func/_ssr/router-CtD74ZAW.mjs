@@ -5,7 +5,7 @@ import { t as ThemeProvider } from "./theme-provider-8i2QIxMo.mjs";
 import { N as useRouter, c as HeadContent, d as createRouter, f as Outlet, g as Link, h as createRootRouteWithContext, m as createFileRoute, p as lazyRouteComponent, s as Scripts } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as Lenis } from "../_libs/lenis.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-sdNuKCfH.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CtD74ZAW.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function SmoothScroll({ children }) {
@@ -157,16 +157,16 @@ var Route$8 = createRootRouteWithContext()({
 			children: JSON.stringify({
 				"@context": "https://schema.org",
 				"@type": "HomeAndConstructionBusiness",
-				"name": "Caeris Homes",
-				"image": "https://caerishomes.com/og-image.jpg",
-				"url": "https://caerishomes.com",
-				"telephone": "+918075931749",
-				"address": {
+				name: "Caeris Homes",
+				image: "https://caerishomes.com/og-image.jpg",
+				url: "https://caerishomes.com",
+				telephone: "+918075931749",
+				address: {
 					"@type": "PostalAddress",
-					"streetAddress": "Neduvelil H, Mutholapuram PO",
-					"addressLocality": "Elanji, Ernakulam",
-					"addressRegion": "Kerala",
-					"addressCountry": "IN"
+					streetAddress: "Neduvelil H, Mutholapuram PO",
+					addressLocality: "Elanji, Ernakulam",
+					addressRegion: "Kerala",
+					addressCountry: "IN"
 				}
 			})
 		}]
@@ -193,7 +193,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SmoothScroll, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {}) })
 	});
 }
-var $$splitComponentImporter$7 = () => import("./projects-BXcMY3Uf.mjs");
+var $$splitComponentImporter$7 = () => import("./projects-BXgWds96.mjs");
 var Route$7 = createFileRoute("/projects")({
 	head: () => ({ meta: [{ title: "Our Projects — Caeris Homes" }, {
 		name: "description",
@@ -201,7 +201,7 @@ var Route$7 = createFileRoute("/projects")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-var $$splitComponentImporter$6 = () => import("./process-D2xrZshh.mjs");
+var $$splitComponentImporter$6 = () => import("./process-B6AY5p0t.mjs");
 var Route$6 = createFileRoute("/process")({
 	head: () => ({ meta: [{ title: "Process — Caeris Homes" }, {
 		name: "description",
@@ -233,7 +233,7 @@ var Route$3 = createFileRoute("/contact")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./construction-Da6NGOv5.mjs");
+var $$splitComponentImporter$2 = () => import("./construction-DzAZ1V6z.mjs");
 var Route$2 = createFileRoute("/construction")({
 	head: () => ({ meta: [{ title: "Services — Caeris Homes" }, {
 		name: "description",
@@ -241,7 +241,7 @@ var Route$2 = createFileRoute("/construction")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./about-_7tp3mTn.mjs");
+var $$splitComponentImporter$1 = () => import("./about-xHg2YyUp.mjs");
 var Route$1 = createFileRoute("/about")({
 	head: () => ({ meta: [{ title: "About Us — Caeris Homes | Trusted Home Builders in Kerala" }, {
 		name: "description",
@@ -249,7 +249,7 @@ var Route$1 = createFileRoute("/about")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./routes-BaazHtHv.mjs");
+var $$splitComponentImporter = () => import("./routes-DCQb8AaG.mjs");
 var Route = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "Caeris Homes — Trusted Home Builders in Kerala" },

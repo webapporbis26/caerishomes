@@ -8,7 +8,7 @@ import { t as whyus_villa_default } from "./whyus-villa-BnqfMg9F.mjs";
 import { t as ProjectCTA } from "./project-cta-DQYF7ZhK.mjs";
 import { a as CarouselPrevious, i as CarouselNext, n as CarouselContent, r as CarouselItem, t as Carousel } from "./carousel-CCI2U8Fn.mjs";
 import { t as Autoplay } from "../_libs/embla-carousel-autoplay.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BaazHtHv.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DCQb8AaG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var hero_1_desk_default = "/assets/hero%201%20desk-BWMpKZvJ.webp";
@@ -249,6 +249,8 @@ function WhatWeDo() {
 					className: "relative aspect-[3/4] rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							loading: "lazy",
+							decoding: "async",
 							src: cat.img,
 							alt: cat.title,
 							className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700",
@@ -414,6 +416,8 @@ function WhyUs() {
 							className: "absolute inset-0 overflow-hidden shadow-2xl",
 							style: { clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)" },
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								loading: "lazy",
+								decoding: "async",
 								src: whyus_villa_default,
 								alt: "Luxury Villa Design",
 								className: "w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
@@ -553,6 +557,8 @@ function YourStory() {
 				className: "relative h-[300px] sm:h-[400px] md:h-[600px] w-full pr-4 md:pr-8",
 				"data-reveal": true,
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 bottom-0 w-32 bg-gradient-to-r from-[#FAF9F6] to-transparent z-10" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: about_villa_default,
 					alt: "Luxury Villa Exterior",
 					className: "w-full h-full object-cover rounded-3xl shadow-2xl"
@@ -668,6 +674,8 @@ function HomeAbout() {
 			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[#C8A45D] rounded-lg translate-x-4 translate-y-4 md:translate-x-6 md:translate-y-6 -z-10" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: about_villa_default,
 					alt: "Caeris Homes Villa",
 					className: "w-full h-auto rounded-lg shadow-xl object-cover aspect-[4/3]",

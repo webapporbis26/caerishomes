@@ -25,12 +25,19 @@ export function WhatWeDo() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat, i) => (
-            <div key={i} className="relative aspect-[3/4] rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300">
-              <img 
-                src={cat.img} 
-                alt={cat.title} 
+            <div
+              key={i}
+              className="relative aspect-[3/4] rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <img
+                loading="lazy"
+                decoding="async"
+                src={cat.img}
+                alt={cat.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                onError={(e) => { (e.target as HTMLImageElement).src = "/og-image.jpg" }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "/og-image.jpg";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 text-center">

@@ -26,7 +26,9 @@ export function FloatingContact() {
           <Phone className="w-5 h-5" />
         </span>
         <span className="flex flex-col leading-tight">
-          <span className="text-[10px] uppercase tracking-widest text-white/60 font-medium">Customer Care</span>
+          <span className="text-[10px] uppercase tracking-widest text-white/60 font-medium">
+            Customer Care
+          </span>
           <span className="text-sm font-bold tracking-wide">{CONTACT.phoneRaw}</span>
         </span>
       </a>

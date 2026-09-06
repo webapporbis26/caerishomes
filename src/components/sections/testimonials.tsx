@@ -12,7 +12,7 @@ import {
 
 export function Testimonials() {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true }),
   );
 
   return (
@@ -38,20 +38,23 @@ export function Testimonials() {
           >
             <CarouselContent className="-ml-4 md:-ml-8">
               {testimonials.map((t, index) => (
-                <CarouselItem key={index} className="pl-4 md:pl-8 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="pl-4 md:pl-8 basis-full sm:basis-1/2 lg:basis-1/3"
+                >
                   <div className="bg-card p-6 md:p-8 rounded-xl shadow-sm border border-border/40 hover:shadow-lg transition-shadow duration-300 relative h-full flex flex-col justify-center">
                     <Quote className="absolute top-4 right-4 w-8 h-8 text-[#C8A45D]/10 group-hover:text-[#C8A45D]/20 transition-colors" />
-                    
+
                     <div className="flex text-[#C8A45D] text-base mb-4">
                       {Array.from({ length: t.rating || 5 }).map((_, i) => (
                         <span key={i}>★</span>
                       ))}
                     </div>
-                    
+
                     <p className="text-foreground/80 leading-relaxed mb-6 italic text-sm md:text-base">
                       "{t.quote}"
                     </p>
-                    
+
                     <div className="flex items-center gap-3">
                       <div>
                         <h4 className="font-bold text-foreground text-base">{t.name}</h4>

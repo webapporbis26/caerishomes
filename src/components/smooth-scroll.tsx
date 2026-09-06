@@ -12,7 +12,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     });
 
     let rafId: number;
-    
+
     function raf(time: number) {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);

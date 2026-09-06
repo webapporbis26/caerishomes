@@ -22,11 +22,17 @@ export function Materials() {
             {splitChars("Tactile by intent.")}
           </h1>
         </div>
-        <p className="text-meta hidden md:block max-w-xs">Premium materials sourced with a focus on quality, durability, and timeless elegance.</p>
+        <p className="text-meta hidden md:block max-w-xs">
+          Premium materials sourced with a focus on quality, durability, and timeless elegance.
+        </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-7xl mx-auto">
         {items.map((m, i) => (
-          <article key={m.t} data-reveal className="group relative aspect-[3/4] overflow-hidden bg-background">
+          <article
+            key={m.t}
+            data-reveal
+            className="group relative aspect-[3/4] overflow-hidden bg-background"
+          >
             <img
               src={m.img}
               alt={m.t}

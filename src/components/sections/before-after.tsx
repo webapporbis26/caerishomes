@@ -30,9 +30,22 @@ export function BeforeAfter() {
         onMouseDown={(e) => drag(e.clientX)}
         onTouchMove={(e) => drag(e.touches[0].clientX)}
       >
-        <img src={after} alt="After" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-          <img src={before} alt="Before" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <img
+          src={after}
+          alt="After"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          className="absolute inset-0 overflow-hidden"
+          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        >
+          <img
+            src={before}
+            alt="Before"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
         <div className="absolute top-0 bottom-0 w-px bg-[#C8A45D]" style={{ left: `${pos}%` }}>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-[#C8A45D] bg-background/60 backdrop-blur grid place-items-center text-[#C8A45D]">
@@ -40,7 +53,9 @@ export function BeforeAfter() {
           </div>
         </div>
         <span className="absolute top-6 left-6 text-meta bg-background/50 px-3 py-1">Before</span>
-        <span className="absolute top-6 right-6 text-meta bg-[#C8A45D] text-foreground px-3 py-1">After</span>
+        <span className="absolute top-6 right-6 text-meta bg-[#C8A45D] text-foreground px-3 py-1">
+          After
+        </span>
       </div>
     </section>
   );

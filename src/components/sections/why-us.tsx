@@ -1,4 +1,16 @@
-import { Users, Gem, Calendar, CheckCircle, Settings, Award, Headset, Factory, PenTool, LayoutTemplate, Home } from "lucide-react";
+import {
+  Users,
+  Gem,
+  Calendar,
+  CheckCircle,
+  Settings,
+  Award,
+  Headset,
+  Factory,
+  PenTool,
+  LayoutTemplate,
+  Home,
+} from "lucide-react";
 import whyUsImg from "@/assets/whyus-villa.webp";
 
 export function WhyUs() {
@@ -6,38 +18,38 @@ export function WhyUs() {
     {
       title: "Easy Accessibility",
       desc: "We are always reachable and available when you need support or clarity.",
-      icon: Users
+      icon: Users,
     },
     {
       title: "Trust & Credibility",
       desc: "We build lasting relationships through honesty, consistency, and dependable work.",
-      icon: Award
+      icon: Award,
     },
     {
       title: "Clear Budgets",
       desc: "We offer transparent estimates with complete clarity and no hidden costs.",
-      icon: Settings
+      icon: Settings,
     },
     {
       title: "Reliable Timelines",
       desc: "We plan with care and deliver projects on time, as promised.",
-      icon: Calendar
+      icon: Calendar,
     },
     {
       title: "Quality & Comfort",
       desc: "We focus on materials and finishes that ensure lasting strength and everyday comfort.",
-      icon: Gem
+      icon: Gem,
     },
     {
       title: "Personal Service",
       desc: "We stay closely involved, guiding you through every stage with care.",
-      icon: Headset
+      icon: Headset,
     },
     {
       title: "Local Expertise",
       desc: "We understand local conditions, approvals, and practical building requirements.",
-      icon: Home
-    }
+      icon: Home,
+    },
   ];
 
   const principles = [
@@ -46,22 +58,22 @@ export function WhyUs() {
       title: "Build with Integrity",
       subtitle: "OUR COMMITMENT",
       desc: "We do what we promise, with honesty in every detail and decision.",
-      icon: Award
+      icon: Award,
     },
     {
       num: "02",
       title: "Simplicity",
       subtitle: "OUR APPROACH",
       desc: "We believe in clear thinking, clean design, and straightforward processes.",
-      icon: LayoutTemplate
+      icon: LayoutTemplate,
     },
     {
       num: "03",
       title: "Adaptability",
       subtitle: "OUR PROMISE",
       desc: "We stay flexible and responsive, shaping each home to fit your needs and changing priorities.",
-      icon: Home
-    }
+      icon: Home,
+    },
   ];
 
   const bottomGuarantees = [
@@ -75,27 +87,26 @@ export function WhyUs() {
   return (
     <section className="bg-card pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20">
-        
         {/* Top Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center mb-24 relative z-10">
-          
           <div className="max-w-xl" data-reveal>
             <p className="text-[#C8A45D] text-sm font-bold tracking-[0.2em] uppercase mb-6">
               WHY CAERIS HOMES
             </p>
-            
+
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-normal leading-[1.1] mb-6">
               Crafted Around You. <br />
               <span className="text-[#C8A45D]">Built to Perfection.</span>
             </h2>
-            
+
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[1px] w-12 bg-[#C8A45D]" />
               <div className="w-2 h-2 rotate-45 border border-[#C8A45D]" />
             </div>
 
             <p className="text-foreground/70 text-lg leading-relaxed mb-10 max-w-md">
-              With years of expertise and a passion for design, we create bespoke homes that reflect your lifestyle, your values, and your vision of luxury.
+              With years of expertise and a passion for design, we create bespoke homes that reflect
+              your lifestyle, your values, and your vision of luxury.
             </p>
 
             <div className="space-y-6">
@@ -108,9 +119,7 @@ export function WhyUs() {
                     <h4 className="font-display text-base text-foreground font-medium mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-foreground/60 text-sm">
-                      {item.desc}
-                    </p>
+                    <p className="text-foreground/60 text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -118,13 +127,15 @@ export function WhyUs() {
           </div>
 
           <div className="relative h-[500px] lg:h-[700px] w-full mt-10 lg:mt-0" data-reveal>
-            <div 
+            <div
               className="absolute inset-0 overflow-hidden shadow-2xl"
-              style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)' }}
+              style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)" }}
             >
-              <img 
-                src={whyUsImg} 
-                alt="Luxury Villa Design" 
+              <img
+                loading="lazy"
+                decoding="async"
+                src={whyUsImg}
+                alt="Luxury Villa Design"
                 className="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
               />
             </div>
@@ -146,16 +157,14 @@ export function WhyUs() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {principles.map((item, i) => (
-              <div key={i} className="bg-surface rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow">
-                
-                <h4 className="font-display text-2xl text-foreground mb-2">
-                  {item.title}
-                </h4>
-                
-                <p className="text-[#C8A45D] text-sm font-medium italic mb-4">
-                  {item.subtitle}
-                </p>
-                
+              <div
+                key={i}
+                className="bg-surface rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow"
+              >
+                <h4 className="font-display text-2xl text-foreground mb-2">{item.title}</h4>
+
+                <p className="text-[#C8A45D] text-sm font-medium italic mb-4">{item.subtitle}</p>
+
                 <p className="text-foreground/60 text-sm leading-relaxed mb-6 max-w-[85%]">
                   {item.desc}
                 </p>
@@ -169,15 +178,21 @@ export function WhyUs() {
         </div>
 
         {/* Bottom Section: Guarantees Bar */}
-        <div className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8" data-reveal>
+        <div
+          className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8"
+          data-reveal
+        >
           <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-border/10">
             {bottomGuarantees.map((item, i) => (
-              <div 
+              <div
                 key={i}
                 className="flex flex-col xl:flex-row items-center justify-center gap-4 p-4 text-center xl:text-left group"
               >
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center text-[#C8A45D]">
-                  <item.icon className="w-8 h-8 transition-transform group-hover:scale-110" strokeWidth={1} />
+                  <item.icon
+                    className="w-8 h-8 transition-transform group-hover:scale-110"
+                    strokeWidth={1}
+                  />
                 </div>
                 <p className="font-display text-[13px] lg:text-sm text-foreground font-medium leading-snug whitespace-pre-line">
                   {item.title}
@@ -186,7 +201,6 @@ export function WhyUs() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

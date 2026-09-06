@@ -1,4 +1,16 @@
-import { Users, Gem, Calendar, CheckCircle, Settings, Award, Headset, Factory, PenTool, LayoutTemplate, Home } from "lucide-react";
+import {
+  Users,
+  Gem,
+  Calendar,
+  CheckCircle,
+  Settings,
+  Award,
+  Headset,
+  Factory,
+  PenTool,
+  LayoutTemplate,
+  Home,
+} from "lucide-react";
 import whyUsImg from "@/assets/whyus-villa.webp";
 
 export function ConstructionFeatures() {
@@ -6,18 +18,18 @@ export function ConstructionFeatures() {
     {
       title: "Client-Centric Approach",
       desc: "Your vision is our starting point.",
-      icon: Users
+      icon: Users,
     },
     {
       title: "Uncompromising Quality",
       desc: "We use the finest materials and craftsmanship.",
-      icon: Gem
+      icon: Gem,
     },
     {
       title: "On-Time, Every Time",
       desc: "We value your time and deliver on our promises.",
-      icon: Calendar
-    }
+      icon: Calendar,
+    },
   ];
 
   const principles = [
@@ -26,22 +38,22 @@ export function ConstructionFeatures() {
       title: "Flexibility",
       subtitle: "Designed Around You",
       desc: "We adapt to your needs and preferences, creating spaces as unique as you are.",
-      icon: PenTool
+      icon: PenTool,
     },
     {
       num: "02",
       title: "Simplicity",
       subtitle: "Less Complexity, More Living",
       desc: "Smart planning and minimalist designs that bring clarity, comfort and calm to your home.",
-      icon: LayoutTemplate
+      icon: LayoutTemplate,
     },
     {
       num: "03",
       title: "Adaptability",
       subtitle: "Built for the Future",
       desc: "Homes that evolve with your life, ensuring long-term value and timeless appeal.",
-      icon: Home
-    }
+      icon: Home,
+    },
   ];
 
   const bottomGuarantees = [
@@ -55,27 +67,26 @@ export function ConstructionFeatures() {
   return (
     <section className="bg-card py-8 md:py-10 overflow-hidden relative">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20">
-        
         {/* Top Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center mb-24 relative z-10">
-          
           <div className="max-w-xl" data-reveal>
             <p className="text-[#C8A45D] text-sm font-bold tracking-[0.2em] uppercase mb-6">
               WHY CAERIS HOMES
             </p>
-            
+
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-normal leading-[1.1] mb-6">
               Crafted Around You. <br />
               <span className="text-[#C8A45D]">Built to Perfection.</span>
             </h2>
-            
+
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[1px] w-12 bg-[#C8A45D]" />
               <div className="w-2 h-2 rotate-45 border border-[#C8A45D]" />
             </div>
 
             <p className="text-foreground/70 text-lg leading-relaxed mb-10 max-w-md">
-              With years of expertise and a passion for design, we create bespoke homes that reflect your lifestyle, your values, and your vision of luxury.
+              With years of expertise and a passion for design, we create bespoke homes that reflect
+              your lifestyle, your values, and your vision of luxury.
             </p>
 
             <div className="space-y-8">
@@ -88,9 +99,7 @@ export function ConstructionFeatures() {
                     <h4 className="font-display text-lg text-foreground font-medium mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-foreground/60 text-sm">
-                      {item.desc}
-                    </p>
+                    <p className="text-foreground/60 text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -98,13 +107,15 @@ export function ConstructionFeatures() {
           </div>
 
           <div className="relative h-[500px] lg:h-[700px] w-full mt-10 lg:mt-0" data-reveal>
-            <div 
+            <div
               className="absolute inset-0 overflow-hidden shadow-2xl"
-              style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)' }}
+              style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)" }}
             >
-              <img 
-                src={whyUsImg} 
-                alt="Luxury Villa Design" 
+              <img
+                loading="lazy"
+                decoding="async"
+                src={whyUsImg}
+                alt="Luxury Villa Design"
                 className="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
               />
             </div>
@@ -126,19 +137,18 @@ export function ConstructionFeatures() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {principles.map((item, i) => (
-              <div key={i} className="bg-surface rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow">
+              <div
+                key={i}
+                className="bg-surface rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:shadow-lg transition-shadow"
+              >
                 <div className="bg-[#8A8175] text-white w-12 h-10 flex items-center justify-center text-sm font-bold mb-8 rounded-sm">
                   {item.num}
                 </div>
-                
-                <h4 className="font-display text-2xl text-foreground mb-2">
-                  {item.title}
-                </h4>
-                
-                <p className="text-[#C8A45D] text-sm font-medium italic mb-4">
-                  {item.subtitle}
-                </p>
-                
+
+                <h4 className="font-display text-2xl text-foreground mb-2">{item.title}</h4>
+
+                <p className="text-[#C8A45D] text-sm font-medium italic mb-4">{item.subtitle}</p>
+
                 <p className="text-foreground/60 text-sm leading-relaxed mb-6 max-w-[85%]">
                   {item.desc}
                 </p>
@@ -152,15 +162,21 @@ export function ConstructionFeatures() {
         </div>
 
         {/* Bottom Section: Guarantees Bar */}
-        <div className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8" data-reveal>
+        <div
+          className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-6 md:p-8"
+          data-reveal
+        >
           <div className="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-border/10">
             {bottomGuarantees.map((item, i) => (
-              <div 
+              <div
                 key={i}
                 className="flex flex-col xl:flex-row items-center justify-center gap-4 p-4 text-center xl:text-left group"
               >
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center text-[#C8A45D]">
-                  <item.icon className="w-8 h-8 transition-transform group-hover:scale-110" strokeWidth={1} />
+                  <item.icon
+                    className="w-8 h-8 transition-transform group-hover:scale-110"
+                    strokeWidth={1}
+                  />
                 </div>
                 <p className="font-display text-[13px] lg:text-sm text-foreground font-medium leading-snug whitespace-pre-line">
                   {item.title}
@@ -169,7 +185,6 @@ export function ConstructionFeatures() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

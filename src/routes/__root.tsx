@@ -80,7 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Caeris Homes — Luxury Builders & Architects in Kerala" },
-      { name: "description", content: "Top home builders and architectural consultants in Kerala, focused on delivering sustainable, innovative homes through turnkey construction." },
+      {
+        name: "description",
+        content:
+          "Top home builders and architectural consultants in Kerala, focused on delivering sustainable, innovative homes through turnkey construction.",
+      },
       { property: "og:image", content: "https://caerishomes.com/og-image.jpg" },
     ],
     links: [
@@ -99,19 +103,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HomeAndConstructionBusiness",
-          "name": "Caeris Homes",
-          "image": "https://caerishomes.com/og-image.jpg",
-          "url": "https://caerishomes.com",
-          "telephone": "+918075931749",
-          "address": {
+          name: "Caeris Homes",
+          image: "https://caerishomes.com/og-image.jpg",
+          url: "https://caerishomes.com",
+          telephone: "+918075931749",
+          address: {
             "@type": "PostalAddress",
-            "streetAddress": "Neduvelil H, Mutholapuram PO",
-            "addressLocality": "Elanji, Ernakulam",
-            "addressRegion": "Kerala",
-            "addressCountry": "IN"
-          }
-        })
-      }
+            streetAddress: "Neduvelil H, Mutholapuram PO",
+            addressLocality: "Elanji, Ernakulam",
+            addressRegion: "Kerala",
+            addressCountry: "IN",
+          },
+        }),
+      },
     ],
   }),
 

@@ -18,12 +18,10 @@ export function Hero() {
   const images = [
     { desktop: desk1, mobile: mob1, title: "Caeris Homes – Celebrating Excellence in Kerala" },
     { desktop: desk2, mobile: mob2, title: "Caeris Homes – Building Your Dream Home" },
-    { desktop: desk3, mobile: mob3, title: "Caeris Homes – Generations of Quality Construction" }
+    { desktop: desk3, mobile: mob3, title: "Caeris Homes – Generations of Quality Construction" },
   ];
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
 
   return (
     <section className="relative w-full bg-black">
@@ -32,14 +30,17 @@ export function Hero() {
         className="w-full"
         opts={{
           loop: true,
-          align: "start"
+          align: "start",
         }}
       >
         <CarouselContent className="ml-0">
           {images.map((img, index) => (
-            <CarouselItem key={index} className="pl-0 basis-full relative h-[100dvh] w-full overflow-hidden">
+            <CarouselItem
+              key={index}
+              className="pl-0 basis-full relative h-[100dvh] w-full overflow-hidden"
+            >
               <div className="absolute inset-0 bg-black/40 z-10"></div>
-              
+
               <picture>
                 <source media="(max-width: 768px)" srcSet={img.mobile} />
                 <source media="(min-width: 769px)" srcSet={img.desktop} />

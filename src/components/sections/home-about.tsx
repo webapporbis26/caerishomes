@@ -22,9 +22,14 @@ export function HomeAbout() {
             Built with Care. Made for Life.
           </h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            Caeris Homes is a residential construction company based in Elanji, Ernakulam, Kerala. We specialize in building practical homes designed for everyday living. Our focus is on smart design, clear planning, and reliable execution. We work closely with each client to understand their needs and budget. With a strong local presence and a hands-on approach, we ensure every project is handled with care. Our goal is simple. To deliver homes that are functional, durable, and built with trust.
+            Caeris Homes is a residential construction company based in Elanji, Ernakulam, Kerala.
+            We specialize in building practical homes designed for everyday living. Our focus is on
+            smart design, clear planning, and reliable execution. We work closely with each client
+            to understand their needs and budget. With a strong local presence and a hands-on
+            approach, we ensure every project is handled with care. Our goal is simple. To deliver
+            homes that are functional, durable, and built with trust.
           </p>
-          
+
           <div className="space-y-4 mb-10">
             {points.map((point, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -34,7 +39,7 @@ export function HomeAbout() {
             ))}
           </div>
 
-          <Link 
+          <Link
             to="/about"
             className="inline-block bg-foreground text-background hover:bg-[#C8A45D] px-8 py-4 rounded font-bold transition-colors"
           >
@@ -45,14 +50,16 @@ export function HomeAbout() {
         {/* Image Content */}
         <div className="relative">
           <div className="absolute inset-0 bg-[#C8A45D] rounded-lg translate-x-4 translate-y-4 md:translate-x-6 md:translate-y-6 -z-10"></div>
-          <img 
-            src={aboutImg} 
-            alt="Caeris Homes Villa" 
+          <img
+            loading="lazy"
+            decoding="async"
+            src={aboutImg}
+            alt="Caeris Homes Villa"
             className="w-full h-auto rounded-lg shadow-xl object-cover aspect-[4/3]"
             onError={(e) => {
               // Fallback if about-villa.webp doesn't exist
               const target = e.target as HTMLImageElement;
-              target.src = "/og-image.jpg"; 
+              target.src = "/og-image.jpg";
             }}
           />
         </div>

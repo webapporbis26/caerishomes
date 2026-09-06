@@ -10,18 +10,20 @@ export function ProjectsFeatured() {
       <div className="max-w-[90rem] mx-auto">
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {featuredProjects.map((project, i) => (
-             <Link 
-              key={i} 
-              to={`/projects`} 
+            <Link
+              key={i}
+              to={`/projects`}
               className="group block relative aspect-[4/5] sm:aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-black"
               data-reveal
             >
-              <img 
-                src={project.img} 
-                alt={project.client} 
+              <img
+                loading="lazy"
+                decoding="async"
+                src={project.img}
+                alt={project.client}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
               />
-              
+
               {/* Top Left Icon */}
               <div className="absolute top-6 left-6 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg">
                 <Home className="w-5 h-5 text-[#C8A45D]" strokeWidth={1.5} />
@@ -36,7 +38,7 @@ export function ProjectsFeatured() {
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm font-medium">{project.location}</span>
                 </div>
-                
+
                 <div className="flex items-center gap-2 text-white text-[10px] font-bold tracking-widest uppercase opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   VIEW PROJECT <ArrowRight className="w-3 h-3 text-[#C8A45D]" />
                 </div>

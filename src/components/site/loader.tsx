@@ -58,20 +58,19 @@ export function Loader() {
     <div
       className={cn(
         "fixed inset-0 z-[100] flex items-center justify-center bg-background transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
-        stage === "exit" && "-translate-y-full"
+        stage === "exit" && "-translate-y-full",
       )}
     >
       <div
         className={cn(
           "transition-all duration-500 ease-out flex flex-col items-center w-full px-4",
-          stage === "fadeLogo" ? "opacity-0 scale-95 blur-sm" : "opacity-100 scale-100 blur-0"
+          stage === "fadeLogo" ? "opacity-0 scale-95 blur-sm" : "opacity-100 scale-100 blur-0",
         )}
       >
         <div className="relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest uppercase text-muted-foreground/30 font-heading whitespace-nowrap">
           CAERIS HOMES
-          
           {/* Red Filled Text */}
-          <div 
+          <div
             className="absolute left-0 top-0 overflow-hidden text-red-600 whitespace-nowrap transition-all duration-200 ease-out"
             style={{ width: `${progress}%` }}
           >

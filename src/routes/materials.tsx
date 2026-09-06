@@ -8,7 +8,11 @@ export const Route = createFileRoute("/materials")({
   head: () => ({
     meta: [
       { title: "Materials — Caeris Homes" },
-      { name: "description", content: "Premium materials sourced with a focus on quality, durability, and timeless elegance." },
+      {
+        name: "description",
+        content:
+          "Premium materials sourced with a focus on quality, durability, and timeless elegance.",
+      },
     ],
   }),
   component: MaterialsPage,

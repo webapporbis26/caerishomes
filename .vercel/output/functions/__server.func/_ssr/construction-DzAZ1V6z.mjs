@@ -8,7 +8,7 @@ import { a as SiteLayout, i as STATS, r as Magnetic } from "./site-layout-mg_vMm
 import { t as PageHero } from "./page-hero-O7sT68Px.mjs";
 import { t as useRevealAnimations } from "./use-reveal-animations-BWoamc3F.mjs";
 import { t as whyus_villa_default } from "./whyus-villa-BnqfMg9F.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/construction-Da6NGOv5.js
+//#region node_modules/.nitro/vite/services/ssr/assets/construction-DzAZ1V6z.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var hero_bg_default = "/assets/hero-bg-vM7sUUT4.webp";
@@ -20,6 +20,8 @@ function FinalCTA() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "absolute inset-y-0 right-0 w-full md:w-[65%] z-0",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/80 to-transparent z-10" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					loading: "lazy",
+					decoding: "async",
 					src: hero_bg_default,
 					alt: "Luxury Villa",
 					className: "w-full h-full object-cover"
@@ -321,6 +323,8 @@ function ConstructionFeatures() {
 							className: "absolute inset-0 overflow-hidden shadow-2xl",
 							style: { clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%, 5% 50%)" },
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								loading: "lazy",
+								decoding: "async",
 								src: whyus_villa_default,
 								alt: "Luxury Villa Design",
 								className: "w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105"
@@ -441,6 +445,8 @@ function ConstructionPortfolio() {
 						className: "absolute inset-0 w-full h-[120%] -top-[10%]",
 						"data-parallax": "0.1",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							loading: "lazy",
+							decoding: "async",
 							src: p.img,
 							alt: p.name,
 							className: "w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"

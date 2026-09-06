@@ -13,7 +13,10 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Caeris Homes" },
-      { name: "description", content: "Get in touch with us for any questions or project discussions." },
+      {
+        name: "description",
+        content: "Get in touch with us for any questions or project discussions.",
+      },
     ],
   }),
   component: ContactPage,
@@ -22,11 +25,12 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   useRevealAnimations();
 
-  const inputClass = "h-12 border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 transition-colors";
+  const inputClass =
+    "h-12 border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 transition-colors";
 
   return (
     <SiteLayout>
-      <PageHero 
+      <PageHero
         eyebrow="Get In Touch"
         title="Contact Us"
         description="Whether you have a question about our services, want to discuss a project, or just want to say hello, we are here for you."
@@ -34,19 +38,20 @@ function ContactPage() {
 
       <section className="py-12 md:py-20 px-4 sm:px-8 md:px-12 xl:px-20 max-w-[90rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          
           {/* Left Column: Contact Details & Map */}
           <div data-reveal className="space-y-12 flex flex-col">
             <div>
               <h2 className="font-display text-3xl md:text-4xl mb-8">Reach Out Directly</h2>
-              
+
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#C8A45D]/10 text-[#C8A45D] flex items-center justify-center rounded-full shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Office Address</h3>
+                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
+                      Office Address
+                    </h3>
                     <p className="text-foreground/80 leading-relaxed whitespace-pre-line">
                       {CONTACT.address.split(", ").join("\\n")}
                     </p>
@@ -58,9 +63,12 @@ function ContactPage() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Phone</h3>
+                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
+                      Phone
+                    </h3>
                     <p className="text-foreground/80 leading-relaxed">
-                      {CONTACT.phone}<br />
+                      {CONTACT.phone}
+                      <br />
                       {CONTACT.phone2}
                     </p>
                   </div>
@@ -71,10 +79,10 @@ function ContactPage() {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">Email</h3>
-                    <p className="text-foreground/80 leading-relaxed break-all">
-                      {CONTACT.email}
-                    </p>
+                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
+                      Email
+                    </h3>
+                    <p className="text-foreground/80 leading-relaxed break-all">{CONTACT.email}</p>
                   </div>
                 </div>
               </div>
@@ -95,39 +103,64 @@ function ContactPage() {
           </div>
 
           {/* Right Column: Simple Form */}
-          <div data-reveal className="bg-surface/30 p-8 md:p-12 border border-border/10 rounded-sm h-fit">
+          <div
+            data-reveal
+            className="bg-surface/30 p-8 md:p-12 border border-border/10 rounded-sm h-fit"
+          >
             <h2 className="font-display text-3xl md:text-4xl mb-2">Send a Message</h2>
             <p className="text-foreground/60 mb-8">We usually respond within 24 hours.</p>
 
-            <form className="space-y-8" onSubmit={(e) => {
-              e.preventDefault();
-              const formData = new FormData(e.currentTarget);
-              const name = formData.get("name") as string;
-              const email = formData.get("email") as string;
-              const phone = formData.get("phone") as string;
-              const message = formData.get("message") as string;
-              
-              const text = `Hi Caeris Homes,\n\nI would like to get in touch.\n\n*Name*: ${name}\n*Email*: ${email}\n*Phone*: ${phone || "Not provided"}\n\n*Message*:\n${message}`;
-              const encodedText = encodeURIComponent(text);
-              window.open(`https://wa.me/918075931749?text=${encodedText}`, "_blank");
-            }}>
+            <form
+              className="space-y-8"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const name = formData.get("name") as string;
+                const email = formData.get("email") as string;
+                const phone = formData.get("phone") as string;
+                const message = formData.get("message") as string;
+
+                const text = `Hi Caeris Homes,\n\nI would like to get in touch.\n\n*Name*: ${name}\n*Email*: ${email}\n*Phone*: ${phone || "Not provided"}\n\n*Message*:\n${message}`;
+                const encodedText = encodeURIComponent(text);
+                window.open(`https://wa.me/918075931749?text=${encodedText}`, "_blank");
+              }}
+            >
               <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">Full Name</label>
+                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
+                  Full Name
+                </label>
                 <Input name="name" required placeholder="John Doe" className={inputClass} />
               </div>
-              
+
               <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">Email Address</label>
-                <Input name="email" type="email" required placeholder="john@example.com" className={inputClass} />
+                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
+                  Email Address
+                </label>
+                <Input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="john@example.com"
+                  className={inputClass}
+                />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">Phone (Optional)</label>
-                <Input name="phone" type="tel" placeholder="+91 9876543210" className={inputClass} />
+                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
+                  Phone (Optional)
+                </label>
+                <Input
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 9876543210"
+                  className={inputClass}
+                />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">Your Message</label>
+                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
+                  Your Message
+                </label>
                 <Textarea
                   name="message"
                   required
@@ -136,12 +169,14 @@ function ContactPage() {
                 />
               </div>
 
-              <Button type="submit" className="h-14 w-full bg-[#C8A45D] hover:bg-[#a68645] text-white rounded-sm font-bold tracking-wide uppercase text-sm transition-colors shadow-sm mt-4">
+              <Button
+                type="submit"
+                className="h-14 w-full bg-[#C8A45D] hover:bg-[#a68645] text-white rounded-sm font-bold tracking-wide uppercase text-sm transition-colors shadow-sm mt-4"
+              >
                 Send Message
               </Button>
             </form>
           </div>
-
         </div>
       </section>
 

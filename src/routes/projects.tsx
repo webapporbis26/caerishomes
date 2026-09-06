@@ -13,7 +13,11 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Our Projects — Caeris Homes" },
-      { name: "description", content: "Explore luxury residential projects delivered on time with unwavering commitment." },
+      {
+        name: "description",
+        content:
+          "Explore luxury residential projects delivered on time with unwavering commitment.",
+      },
     ],
   }),
   component: ProjectsPage,

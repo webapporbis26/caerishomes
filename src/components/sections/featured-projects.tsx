@@ -18,7 +18,10 @@ export function FeaturedProjects() {
       </div>
       <div className="h-track flex h-full items-center gap-8 px-8 md:px-12 pt-44 pb-16 will-change-transform">
         {featured.map((p, i) => (
-          <article key={i} className="relative h-full w-[78vw] md:w-[55vw] shrink-0 group overflow-hidden">
+          <article
+            key={i}
+            className="relative h-full w-[78vw] md:w-[55vw] shrink-0 group overflow-hidden"
+          >
             <img
               src={p.img}
               alt={p.name}

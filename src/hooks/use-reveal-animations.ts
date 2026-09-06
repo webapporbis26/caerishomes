@@ -67,7 +67,7 @@ export function useRevealAnimations() {
               start: "top 85%",
               end: "bottom 50%",
             },
-          }
+          },
         );
       });
 
@@ -86,7 +86,7 @@ export function useRevealAnimations() {
               end: "bottom top",
               scrub: true,
             },
-          }
+          },
         );
       });
     });

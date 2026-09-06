@@ -14,7 +14,7 @@ export function useSectionOverlap() {
 
         // Select all major sections on the page
         const sections = gsap.utils.toArray<HTMLElement>("section");
-        
+
         sections.forEach((section, i) => {
           // Only apply the overlap pinning effect to the very first section
           if (i !== 0) return;

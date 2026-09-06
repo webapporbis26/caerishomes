@@ -1,28 +1,23 @@
-import { cn } from "@/lib/utils"
-import { Avatar, AvatarImage } from "@/components/ui/avatar"
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export interface TestimonialAuthor {
-  name: string
-  handle: string
-  avatar: string
-  rating?: number
+  name: string;
+  handle: string;
+  avatar: string;
+  rating?: number;
 }
 
 export interface TestimonialCardProps {
-  author: TestimonialAuthor
-  text: string
-  href?: string
-  className?: string
+  author: TestimonialAuthor;
+  text: string;
+  href?: string;
+  className?: string;
 }
 
-export function TestimonialCard({ 
-  author,
-  text,
-  href,
-  className
-}: TestimonialCardProps) {
-  const Card = href ? 'a' : 'div'
-  
+export function TestimonialCard({ author, text, href, className }: TestimonialCardProps) {
+  const Card = href ? "a" : "div";
+
   return (
     <Card
       {...(href ? { href } : {})}
@@ -33,7 +28,7 @@ export function TestimonialCard({
         "hover:from-muted/60 hover:to-muted/20",
         "max-w-[320px] sm:max-w-[320px]",
         "transition-colors duration-300 shadow-none",
-        className
+        className,
       )}
     >
       <div className="flex items-center gap-3">
@@ -46,17 +41,11 @@ export function TestimonialCard({
               <span key={i}>★</span>
             ))}
           </div>
-          <h3 className="text-md font-semibold leading-none">
-            {author.name}
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            {author.handle}
-          </p>
+          <h3 className="text-md font-semibold leading-none">{author.name}</h3>
+          <p className="text-sm text-muted-foreground">{author.handle}</p>
         </div>
       </div>
-      <p className="sm:text-md mt-4 text-sm text-muted-foreground">
-        {text}
-      </p>
+      <p className="sm:text-md mt-4 text-sm text-muted-foreground">{text}</p>
     </Card>
-  )
+  );
 }

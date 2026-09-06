@@ -2,7 +2,13 @@ import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { splitChars } from "@/lib/split-chars";
 import { areaOptions, CONTACT, serviceOptions } from "@/lib/site-data";
@@ -20,7 +26,10 @@ export function QuoteForm() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
         <div data-reveal>
           <p className="text-eyebrow mb-4">Get a Free Quote</p>
-          <h1 data-split className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          <h1
+            data-split
+            className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight mb-6"
+          >
             {splitChars("Come on, we will help you build your dream home.")}
           </h1>
           <p className="text-foreground/60 leading-relaxed mb-10">
@@ -35,32 +44,60 @@ export function QuoteForm() {
             </p>
             <p>
               <span className="text-meta text-[#C8A45D] block mb-1">Email</span>
-              <a href={`mailto:${CONTACT.email}`} className="font-display text-2xl hover:text-[#C8A45D]">
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="font-display text-2xl hover:text-[#C8A45D]"
+              >
                 {CONTACT.email}
               </a>
             </p>
           </div>
         </div>
 
-        <div data-reveal className="border border-border/10 bg-background p-8 md:p-12 apple-shadow rounded-2xl">
+        <div
+          data-reveal
+          className="border border-border/10 bg-background p-8 md:p-12 apple-shadow rounded-2xl"
+        >
           {submitted ? (
             <div className="py-10 text-center">
               <p className="font-display text-4xl text-[#C8A45D] mb-4">Thank you.</p>
-              <p className="text-foreground/60">Our team will contact you shortly to discuss your project.</p>
+              <p className="text-foreground/60">
+                Our team will contact you shortly to discuss your project.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
-                <Input id="name" name="name" required placeholder="Your name" className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]" />
+                <Input
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                  className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]"
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
-                <Input id="phone" name="phone" type="tel" required placeholder="+1 (000) 000 0000" className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]" />
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="+1 (000) 000 0000"
+                  className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]"
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" required placeholder="you@email.com" className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]" />
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@email.com"
+                  className="h-11 bg-background/40 focus-visible:ring-[#C8A45D]"
+                />
               </div>
               <div className="space-y-2">
                 <Label>Service Type</Label>
@@ -102,7 +139,10 @@ export function QuoteForm() {
                   className="bg-background/40 resize-none focus-visible:ring-[#C8A45D]"
                 />
               </div>
-              <Button type="submit" className="w-full h-12 bg-[#C8A45D] text-foreground hover:bg-card text-meta transition-all active:scale-[0.98]">
+              <Button
+                type="submit"
+                className="w-full h-12 bg-[#C8A45D] text-foreground hover:bg-card text-meta transition-all active:scale-[0.98]"
+              >
                 Get Free Quote
               </Button>
             </form>
