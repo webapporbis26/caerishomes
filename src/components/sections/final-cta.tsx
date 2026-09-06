@@ -48,7 +48,7 @@ export function FinalCTA() {
               <div className="h-[1px] w-8 bg-[#C8A45D]" />
             </div>
 
-            <h2 className="font-display text-6xl md:text-[6rem] lg:text-[7.5rem] leading-[1.05] text-foreground mb-8 font-normal">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] text-foreground mb-8 font-normal">
               Let's create <br />
               <span className="italic text-[#C8A45D]">your dream</span> <br />
               space.

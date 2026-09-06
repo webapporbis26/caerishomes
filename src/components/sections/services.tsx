@@ -9,22 +9,16 @@ export function Services() {
         "We help you plan your dream home considering your plot, budget, and lifestyle, ensuring maximum space utilization.",
     },
     {
-      title: "Architecture Designing",
-      icon: PenTool,
-      description:
-        "Our expert architects create modern and traditional Kerala designs that are beautiful, practical, and Vastu-compliant.",
-    },
-    {
       title: "Permit Approval",
       icon: FileCheck,
       description:
         "We handle all the paperwork, K-SMART submissions, and local body approvals so you don't have to worry.",
     },
     {
-      title: "Interior Designing",
-      icon: Sofa,
+      title: "Turnkey Projects",
+      icon: Building2,
       description:
-        "From modular kitchens to custom wardrobes, our interior team brings your spaces to life with premium finishes.",
+        "Complete peace of mind. We handle everything from the first sketch to handing over the keys to your new home.",
     },
     {
       title: "Contracting",
@@ -33,10 +27,16 @@ export function Services() {
         "End-to-end construction with guaranteed branded materials, transparent pricing, and weekly progress updates.",
     },
     {
-      title: "Turnkey Projects",
-      icon: Building2,
+      title: "Architecture Designing",
+      icon: PenTool,
       description:
-        "Complete peace of mind. We handle everything from the first sketch to handing over the keys to your new home.",
+        "Our expert architects create modern and traditional Kerala designs that are beautiful, practical, and Vastu-compliant.",
+    },
+    {
+      title: "Interior Designing",
+      icon: Sofa,
+      description:
+        "From modular kitchens to custom wardrobes, our interior team brings your spaces to life with premium finishes.",
     },
   ];
 

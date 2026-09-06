@@ -15,20 +15,14 @@ export function ProjectsStats() {
       desc: "Delivering excellence consistently.",
     },
     {
-      icon: HardHat,
-      value: "100+",
-      label: "Expert Team",
-      desc: "Architects, engineers & professionals.",
-    },
-    {
       icon: Handshake,
-      value: "500+",
+      value: "100+",
       label: "Happy Clients",
       desc: "Trusted by families across the globe.",
     },
     {
       icon: Globe,
-      value: "10+",
+      value: "5+",
       label: "Cities",
       desc: "Projects across India and international locations.",
     },
@@ -40,7 +34,7 @@ export function ProjectsStats() {
         className="max-w-[90rem] mx-auto bg-card rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.04)] border border-[#C8A45D]/10 p-8 lg:p-12"
         data-reveal
       >
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 md:divide-x divide-border/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-border/10">
           {stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-center text-center px-4">
               <stat.icon className="w-10 h-10 text-[#C8A45D] mb-4" strokeWidth={1} />

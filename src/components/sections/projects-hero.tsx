@@ -28,7 +28,7 @@ export function ProjectsHero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 w-full max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20 mt-10">
+      <div className="relative z-20 w-full max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20 mt-24 md:mt-32">
         <div className="max-w-2xl text-left" data-reveal>
           <div className="flex items-center gap-4 mb-8">
             <p className="text-[#C8A45D] text-xs font-bold tracking-[0.25em] uppercase">

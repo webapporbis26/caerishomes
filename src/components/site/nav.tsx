@@ -24,7 +24,9 @@ export function Nav() {
 
   const isHome = pathname === "/";
   const isProjects = pathname === "/projects";
-  const hasDarkHero = isHome || isProjects;
+  const isConstruction = pathname === "/construction";
+  const isAbout = pathname === "/about";
+  const hasDarkHero = isHome || isProjects || isConstruction || isAbout;
 
   const isTransparent = !isScrolled;
   const shouldInvertLogo = (isTransparent && hasDarkHero) || theme === "dark";

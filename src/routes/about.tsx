@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/site-layout";
-import { PageHero } from "@/components/site/page-hero";
+import { AboutHero } from "@/components/sections/about-hero";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 import { splitChars } from "@/lib/split-chars";
 import heroImg from "@/assets/hero.webp";
@@ -27,11 +27,7 @@ function AboutPage() {
 
   return (
     <SiteLayout>
-      <PageHero
-        eyebrow="ABOUT CAERIS HOMES"
-        title="Trusted Home Builders in Kerala"
-        image={heroImg}
-      />
+      <AboutHero />
 
       {/* Founding Story Section */}
       <section className="py-16 px-4 sm:px-6 md:px-10 xl:px-20 max-w-5xl mx-auto text-center">
