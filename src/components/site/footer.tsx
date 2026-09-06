@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="bg-background text-foreground relative pt-12 pb-24 md:pb-8 px-4 sm:px-8 md:px-12">
       <div className="max-w-[90rem] mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8 mb-6 md:mb-8">
           <div className="flex flex-col text-left">
             <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-4 text-foreground/90">
               Address
@@ -35,9 +35,9 @@ export function Footer() {
             <img
               src={logoImg}
               alt="Caeris Homes Logo"
-              className="h-12 sm:h-16 md:h-32 w-auto object-contain mb-3 md:mb-6 filter dark:invert"
+              className="h-12 sm:h-16 md:h-20 w-auto object-contain mb-2 md:mb-4 filter dark:invert"
             />
-            <div className="text-[10px] md:text-sm text-foreground/80 font-medium mb-3 md:mb-6 max-w-sm hidden sm:block">
+            <div className="text-[10px] md:text-sm text-foreground/80 font-medium mb-2 md:mb-4 max-w-sm hidden sm:block">
               <span className="block font-bold text-[#C8A45D] mb-1">Care in Every Detail</span>
               Quality construction is our principle, our promise, and our priority.
             </div>

@@ -1,21 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ProjectCTA } from "@/components/sections/project-cta";
 import { SiteLayout } from "@/components/site/site-layout";
-import { PageHero } from "@/components/site/page-hero";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import { CONTACT } from "@/lib/site-data";
+import heroImg from "@/assets/hero.webp";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Caeris Homes" },
+      { title: "Contact Us — Caeris Homes | Get In Touch" },
       {
         name: "description",
-        content: "Get in touch with us for any questions or project discussions.",
+        content:
+          "Get in touch with Caeris Homes. Whether you have a question, want to discuss a project, or just want to say hello, we're here for you.",
       },
     ],
   }),
@@ -25,162 +22,170 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   useRevealAnimations();
 
-  const inputClass =
-    "h-12 border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 transition-colors";
-
   return (
     <SiteLayout>
-      <PageHero
-        eyebrow="Get In Touch"
-        title="Contact Us"
-        description="Whether you have a question about our services, want to discuss a project, or just want to say hello, we are here for you."
-      />
+      <section className="relative min-h-screen w-full overflow-hidden bg-[#f5f0e8]">
+        {/* Background image — fades from right */}
+        <div className="absolute inset-y-0 right-0 w-full md:w-[60%] z-0">
+          <div className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-[#f5f0e8] to-transparent z-10" />
+          <img src={heroImg} alt="Luxury Home" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#f5f0e8] to-transparent z-10" />
+        </div>
 
-      <section className="py-12 md:py-20 px-4 sm:px-8 md:px-12 xl:px-20 max-w-[90rem] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left Column: Contact Details & Map */}
-          <div data-reveal className="space-y-12 flex flex-col">
-            <div>
-              <h2 className="font-display text-3xl md:text-4xl mb-8">Reach Out Directly</h2>
+        {/* Spaces tagline — far right */}
+        <div className="absolute top-1/2 -translate-y-1/2 right-6 z-20 text-right hidden xl:block">
+          <p className="text-foreground/25 text-[10px] tracking-[0.3em] font-medium leading-loose uppercase">
+            Spaces<br />For A Better<br />Tomorrow
+          </p>
+        </div>
 
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#C8A45D]/10 text-[#C8A45D] flex items-center justify-center rounded-full shrink-0">
-                    <MapPin className="w-5 h-5" />
+
+
+        {/* Page content */}
+        <div className="relative z-20 w-full max-w-[90rem] mx-auto px-6 sm:px-10 md:px-14 xl:px-20 pt-36 pb-20">
+          <div className="flex flex-col lg:flex-row gap-14 xl:gap-20 items-start">
+
+            {/* ── Left Column ── */}
+            <div data-reveal className="flex-1 min-w-0">
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-[1.5px] bg-[#C8A45D]" />
+                <p className="text-[#C8A45D] text-[11px] font-bold tracking-[0.3em] uppercase">Get In Touch</p>
+              </div>
+
+              {/* Heading */}
+              <h1 className="font-display text-[2.6rem] md:text-5xl lg:text-[3.2rem] leading-[1.1] text-foreground mb-5 font-normal">
+                Let's Build Something Great{" "}
+                <span className="text-[#C8A45D] italic">Together</span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-foreground/55 text-[15px] leading-relaxed mb-10 max-w-[420px]">
+                Whether you have a question about our services, want to discuss a project, or
+                just want to say hello, we're here for you. Our team is ready to help you turn
+                your vision into a home.
+              </p>
+
+              {/* Contact details — 2×2 grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-7 mb-12">
+
+                {/* Address */}
+                <div className="flex gap-3.5">
+                  <div className="w-9 h-9 rounded-full border border-[#C8A45D]/30 bg-[#C8A45D]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#C8A45D]" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
-                      Office Address
-                    </h3>
-                    <p className="text-foreground/80 leading-relaxed whitespace-pre-line">
-                      {CONTACT.address.split(", ").join("\\n")}
+                    <p className="text-[9px] font-bold tracking-[0.25em] uppercase text-foreground/35 mb-1.5">Office Address</p>
+                    <p className="text-foreground/70 text-[13px] leading-relaxed">
+                      Caeris Homes, Neduvelli H,<br />
+                      Mutholapuram PO, Elanji,<br />
+                      Ernakulam, Kerala - 686665
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#C8A45D]/10 text-[#C8A45D] flex items-center justify-center rounded-full shrink-0">
-                    <Phone className="w-5 h-5" />
+                {/* Phone */}
+                <div className="flex gap-3.5">
+                  <div className="w-9 h-9 rounded-full border border-[#C8A45D]/30 bg-[#C8A45D]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Phone className="w-3.5 h-3.5 text-[#C8A45D]" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
-                      Phone
-                    </h3>
-                    <p className="text-foreground/80 leading-relaxed">
-                      {CONTACT.phone}
-                      <br />
-                      {CONTACT.phone2}
-                    </p>
+                    <p className="text-[9px] font-bold tracking-[0.25em] uppercase text-foreground/35 mb-1.5">Phone</p>
+                    <a href={CONTACT.phoneHref} className="block text-foreground/70 text-[13px] hover:text-[#C8A45D] transition-colors">{CONTACT.phone}</a>
+                    <a href={`tel:${CONTACT.phone2?.replace(/\D/g, "")}`} className="block text-foreground/70 text-[13px] hover:text-[#C8A45D] transition-colors">{CONTACT.phone2}</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#C8A45D]/10 text-[#C8A45D] flex items-center justify-center rounded-full shrink-0">
-                    <Mail className="w-5 h-5" />
+                {/* Email */}
+                <div className="flex gap-3.5">
+                  <div className="w-9 h-9 rounded-full border border-[#C8A45D]/30 bg-[#C8A45D]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Mail className="w-3.5 h-3.5 text-[#C8A45D]" />
                   </div>
                   <div>
-                    <h3 className="font-bold uppercase tracking-widest text-xs mb-2 text-foreground/50">
-                      Email
-                    </h3>
-                    <p className="text-foreground/80 leading-relaxed break-all">{CONTACT.email}</p>
+                    <p className="text-[9px] font-bold tracking-[0.25em] uppercase text-foreground/35 mb-1.5">Email</p>
+                    <a href={`mailto:${CONTACT.email}`} className="block text-foreground/70 text-[13px] hover:text-[#C8A45D] transition-colors break-all">{CONTACT.email}</a>
+                  </div>
+                </div>
+
+                {/* Working Hours */}
+                <div className="flex gap-3.5">
+                  <div className="w-9 h-9 rounded-full border border-[#C8A45D]/30 bg-[#C8A45D]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Clock className="w-3.5 h-3.5 text-[#C8A45D]" />
+                  </div>
+                  <div>
+                    <p className="text-[9px] font-bold tracking-[0.25em] uppercase text-foreground/35 mb-1.5">Working Hours</p>
+                    <p className="text-foreground/70 text-[13px]">Mon – Sat : 9:00 AM – 6:00 PM</p>
+                    <p className="text-foreground/70 text-[13px]">Sunday : By Appointment</p>
                   </div>
                 </div>
               </div>
+
+
             </div>
 
-            <div className="w-full h-[300px] bg-surface relative overflow-hidden border border-border/10 rounded-sm">
-              <iframe
-                src="https://maps.google.com/maps?q=Elanji,+Ernakulam,+Kerala&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, position: "absolute", inset: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
-              />
+            {/* ── Right Column: Form Card ── */}
+            <div data-reveal className="w-full lg:w-[420px] xl:w-[460px] shrink-0">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10 border border-[#ede5d8]">
+                <h2 className="font-display text-[1.6rem] text-foreground mb-1">Send Us a Message</h2>
+                <p className="text-foreground/40 text-[13px] mb-7">We usually respond within 24 hours.</p>
+
+                <form
+                  className="space-y-4"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const name = formData.get("name") as string;
+                    const email = formData.get("email") as string;
+                    const phone = formData.get("phone") as string;
+                    const subject = formData.get("subject") as string;
+                    const message = formData.get("message") as string;
+                    const text = `Hi Caeris Homes,\n\nI would like to get in touch.\n\n*Name*: ${name}\n*Email*: ${email}\n*Phone*: ${phone || "Not provided"}\n*Subject*: ${subject || "General Inquiry"}\n\n*Message*:\n${message}`;
+                    window.open(`https://wa.me/918075931749?text=${encodeURIComponent(text)}`, "_blank");
+                  }}
+                >
+                  <div className="grid grid-cols-2 gap-3">
+                    <input name="name" required placeholder="Full Name *"
+                      className="w-full h-11 px-4 rounded-lg border border-[#e8dfd0] bg-[#faf7f2] text-foreground placeholder:text-foreground/30 text-sm focus:outline-none focus:border-[#C8A45D] transition-colors" />
+                    <input name="phone" type="tel" placeholder="Phone Number *"
+                      className="w-full h-11 px-4 rounded-lg border border-[#e8dfd0] bg-[#faf7f2] text-foreground placeholder:text-foreground/30 text-sm focus:outline-none focus:border-[#C8A45D] transition-colors" />
+                  </div>
+
+                  <input name="email" type="email" required placeholder="Email Address *"
+                    className="w-full h-11 px-4 rounded-lg border border-[#e8dfd0] bg-[#faf7f2] text-foreground placeholder:text-foreground/30 text-sm focus:outline-none focus:border-[#C8A45D] transition-colors" />
+
+                  <input name="subject" placeholder="Subject"
+                    className="w-full h-11 px-4 rounded-lg border border-[#e8dfd0] bg-[#faf7f2] text-foreground placeholder:text-foreground/30 text-sm focus:outline-none focus:border-[#C8A45D] transition-colors" />
+
+                  <textarea name="message" required rows={5} placeholder="Your Message *"
+                    className="w-full px-4 py-3 rounded-lg border border-[#e8dfd0] bg-[#faf7f2] text-foreground placeholder:text-foreground/30 text-sm focus:outline-none focus:border-[#C8A45D] transition-colors resize-none" />
+
+                  <button type="submit"
+                    className="w-full py-4 bg-[#B89650] hover:bg-[#a68645] text-white rounded-lg font-bold tracking-[0.15em] uppercase text-sm transition-all hover:-translate-y-0.5 shadow-[0_6px_20px_rgba(184,150,80,0.3)] flex items-center justify-center gap-3">
+                    SEND MESSAGE <ArrowRight className="w-4 h-4" />
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
 
-          {/* Right Column: Simple Form */}
-          <div
-            data-reveal
-            className="bg-surface/30 p-8 md:p-12 border border-border/10 rounded-sm h-fit"
-          >
-            <h2 className="font-display text-3xl md:text-4xl mb-2">Send a Message</h2>
-            <p className="text-foreground/60 mb-8">We usually respond within 24 hours.</p>
-
-            <form
-              className="space-y-8"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-                const name = formData.get("name") as string;
-                const email = formData.get("email") as string;
-                const phone = formData.get("phone") as string;
-                const message = formData.get("message") as string;
-
-                const text = `Hi Caeris Homes,\n\nI would like to get in touch.\n\n*Name*: ${name}\n*Email*: ${email}\n*Phone*: ${phone || "Not provided"}\n\n*Message*:\n${message}`;
-                const encodedText = encodeURIComponent(text);
-                window.open(`https://wa.me/918075931749?text=${encodedText}`, "_blank");
-              }}
-            >
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
-                  Full Name
-                </label>
-                <Input name="name" required placeholder="John Doe" className={inputClass} />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
-                  Email Address
-                </label>
-                <Input
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="john@example.com"
-                  className={inputClass}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
-                  Phone (Optional)
-                </label>
-                <Input
-                  name="phone"
-                  type="tel"
-                  placeholder="+91 9876543210"
-                  className={inputClass}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">
-                  Your Message
-                </label>
-                <Textarea
-                  name="message"
-                  required
-                  placeholder="How can we help you?"
-                  className="min-h-[120px] border-0 border-b border-border/30 rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-foreground bg-transparent text-foreground placeholder:text-muted-foreground/50 resize-none transition-colors"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="h-14 w-full bg-[#C8A45D] hover:bg-[#a68645] text-white rounded-sm font-bold tracking-wide uppercase text-sm transition-colors shadow-sm mt-4"
-              >
-                Send Message
-              </Button>
-            </form>
           </div>
         </div>
       </section>
 
-      <ProjectCTA />
+      {/* ── Map Section ── */}
+      <section className="w-full px-6 sm:px-10 md:px-14 xl:px-20 py-10 bg-[#faf8f4]">
+        <div className="relative w-full h-[420px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg border border-[#ede5d8]">
+
+          {/* Full-width Map */}
+          <iframe
+            src="https://maps.google.com/maps?q=Elanji,+Ernakulam,+Kerala&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%"
+            style={{ border: 0, position: "absolute", inset: 0 }}
+            allowFullScreen={false} loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+
+        </div>
+      </section>
     </SiteLayout>
   );
 }

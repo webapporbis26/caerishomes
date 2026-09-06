@@ -4,12 +4,13 @@ import { Link } from "@tanstack/react-router";
 
 export function AboutHero() {
   return (
-    <section className="relative w-full h-[100dvh] flex flex-col justify-center overflow-hidden bg-black text-white">
+    <section className="relative w-full h-[100dvh] flex flex-col justify-start overflow-hidden bg-black text-white">
       {/* Background Image Area */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImg} alt="About Us" className="w-full h-full object-cover" />
-        {/* Gradients to match the design */}
-        <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent z-10" />
+        <img src={heroImg} alt="About Us" className="w-full h-full object-cover object-top md:object-center" />
+        {/* Stronger gradient on mobile so text is readable */}
+        <div className="absolute inset-0 bg-[#111111]/70 md:bg-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent z-10 hidden md:block" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#111111] via-[#111111]/50 to-transparent z-10" />
       </div>
 
@@ -28,7 +29,7 @@ export function AboutHero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 w-full max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20 mt-24 md:mt-32">
+      <div className="relative z-20 w-full max-w-[90rem] mx-auto px-4 sm:px-8 md:px-12 xl:px-20 mt-32 md:mt-48">
         <div className="max-w-2xl text-left" data-reveal>
           <div className="flex items-center gap-4 mb-8">
             <p className="text-[#C8A45D] text-xs font-bold tracking-[0.25em] uppercase">

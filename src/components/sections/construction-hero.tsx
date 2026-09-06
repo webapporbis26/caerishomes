@@ -7,9 +7,10 @@ export function ConstructionHero() {
     <section className="relative w-full h-[100dvh] flex flex-col justify-center overflow-hidden bg-black text-white">
       {/* Background Image Area */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImg} alt="Construction" className="w-full h-full object-cover" />
-        {/* Gradients to match the design */}
-        <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent z-10" />
+        <img src={heroImg} alt="Construction" className="w-full h-full object-cover object-top md:object-center" />
+        {/* Stronger gradient on mobile so text is readable */}
+        <div className="absolute inset-0 bg-[#111111]/70 md:bg-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent z-10 hidden md:block" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#111111] via-[#111111]/50 to-transparent z-10" />
       </div>
 
