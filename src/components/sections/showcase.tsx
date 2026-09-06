@@ -47,7 +47,7 @@ export function Showcase() {
     <section className="py-10 px-8 md:px-12">
       <div className="max-w-7xl mx-auto mb-24 text-center" data-reveal>
         <p className="text-eyebrow mb-3">Project Stories · 07</p>
-        <h2 data-split className="font-display text-6xl md:text-8xl">
+        <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl">
           {splitChars("Spaces that")} <span className="italic text-[#C8A45D]">{splitChars("inspire.")}</span>
         </h2>
       </div>
@@ -62,7 +62,7 @@ export function Showcase() {
             </div>
             <div data-reveal>
               <p className="text-eyebrow mb-4">{p.n} · Featured</p>
-              <h3 className="font-display text-5xl md:text-7xl mb-8">{p.t}</h3>
+              <h3 className="font-display text-3xl md:text-4xl lg:text-5xl mb-8">{p.t}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-border/10 pt-8">
                 <Detail label="Location" value={p.loc} />
                 <Detail label="Area" value={p.area} />

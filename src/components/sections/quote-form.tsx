@@ -20,7 +20,7 @@ export function QuoteForm() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
         <div data-reveal>
           <p className="text-eyebrow mb-4">Get a Free Quote</p>
-          <h1 data-split className="font-display text-5xl md:text-7xl leading-tight mb-6">
+          <h1 data-split className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
             {splitChars("Come on, we will help you build your dream home.")}
           </h1>
           <p className="text-foreground/60 leading-relaxed mb-10">

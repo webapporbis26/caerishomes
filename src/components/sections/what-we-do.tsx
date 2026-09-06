@@ -1,14 +1,14 @@
-import p1 from "@/assets/hero and complted projects/caeris-homes-elanji-villa-1.webp";
-import p2 from "@/assets/hero and complted projects/SHIBU 5_2 - Photo.jpg.webp";
-import p3 from "@/assets/hero and complted projects/JAMSHEER FINAL 02.jpg.webp";
-import p4 from "@/assets/about-villa.webp"; // Fallback to whatever images are there
+import p1 from "@/assets/consultation.png";
+import p2 from "@/assets/construction.png";
+import p3 from "@/assets/architecture.png";
+import p4 from "@/assets/interior_design.png";
 
 export function WhatWeDo() {
   const categories = [
-    { title: "Construction", img: p1 },
-    { title: "Architecture", img: p2 },
-    { title: "Interior Design", img: p3 },
-    { title: "Consultation", img: p4 },
+    { title: "Consultation", img: p1 },
+    { title: "Construction", img: p2 },
+    { title: "Architecture", img: p3 },
+    { title: "Interior Design", img: p4 },
   ];
 
   return (
@@ -18,7 +18,7 @@ export function WhatWeDo() {
           <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-3 text-sm">
             Expertise
           </h4>
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Areas of Excellence
           </h2>
         </div>

@@ -13,7 +13,7 @@ export function ConstructionPortfolio() {
     <section className="py-8 md:py-10 bg-background">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 xl:px-20 mb-12 md:mb-16" data-reveal>
         <p className="text-eyebrow mb-3 text-[#C8A45D]">Our Portfolio</p>
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
           Under Construction
         </h2>
       </div>

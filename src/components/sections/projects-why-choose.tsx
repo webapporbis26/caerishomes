@@ -50,7 +50,7 @@ export function ProjectsWhyChoose() {
             <p className="text-[#C8A45D] text-xs font-bold tracking-[0.2em] uppercase mb-6">
               WHY CHOOSE CAERIS HOMES
             </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground font-normal leading-[1.1] mb-12">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-normal leading-[1.1] mb-12">
               Built on Values. <br />
               Focused on <span className="text-[#C8A45D]">You.</span>
             </h2>

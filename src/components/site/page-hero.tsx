@@ -7,7 +7,7 @@ export function PageHero({ eyebrow, title, description, image }: { eyebrow: stri
         <p className="text-eyebrow mb-4" data-reveal>
           {eyebrow}
         </p>
-        <h1 data-split className="font-display text-5xl md:text-6xl lg:text-8xl leading-[0.95]">
+        <h1 data-split className="font-display text-3xl md:text-4xl lg:text-5xl leading-[1.1]">
           {splitChars(title)}
         </h1>
         {description && (

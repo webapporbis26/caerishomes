@@ -38,7 +38,7 @@ export function Process() {
         <div className="w-full md:w-1/2 flex flex-col md:pt-[15dvh] md:pb-[30dvh] order-2">
           <div className="process-header mb-16 md:mb-32">
             <p className="text-eyebrow mb-3 text-[#C8A45D]">Design Process</p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-7xl text-foreground">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
               <span className="italic">A method</span>, not a formula.
             </h1>
           </div>
@@ -55,7 +55,7 @@ export function Process() {
                 <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-border/20 hidden md:block">
                   <div className="progress-line w-full bg-[#C8A45D]" style={{ height: "0%" }} />
                 </div>
-                <h3 className="font-display text-3xl md:text-5xl lg:text-6xl mb-4 text-foreground">{s.t}</h3>
+                <h3 className="font-display text-3xl md:text-4xl lg:text-5xl mb-4 text-foreground">{s.t}</h3>
                 <p className="text-foreground/60 text-lg md:text-xl max-w-md leading-relaxed">{s.d}</p>
               </div>
             </div>

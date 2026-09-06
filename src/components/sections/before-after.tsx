@@ -16,7 +16,7 @@ export function BeforeAfter() {
     <section className="px-8 md:px-12 py-10">
       <div className="max-w-4xl mb-12" data-reveal>
         <p className="text-eyebrow mb-3">Transformations · 04</p>
-        <h2 data-split className="font-display text-5xl md:text-7xl mb-6">
+        <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl mb-6">
           {splitChars("Before. After.")}
         </h2>
         <p className="text-foreground/60 max-w-xl leading-relaxed">

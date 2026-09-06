@@ -5,6 +5,7 @@ import { FinalCTA } from '@/components/sections/final-cta'
 import { ConstructionStats } from '@/components/sections/construction-stats'
 import { ConstructionFeatures } from '@/components/sections/construction-features'
 import { ConstructionPortfolio } from '@/components/sections/construction-portfolio'
+import { Services } from '@/components/sections/services'
 import { useRevealAnimations } from '@/hooks/use-reveal-animations'
 
 import heroImg from '@/assets/construction-hero.webp'
@@ -30,6 +31,7 @@ function ConstructionRoute() {
         description="We are top home builders and architectural consultants in Kerala, focused on delivering sustainable, innovative homes through turnkey construction. Our architects and engineers create strong, innovative designs, keeping function, schedule, budget, safety, and sustainability in mind."
         image={heroImg}
       />
+      <Services />
       <ConstructionStats />
       <ConstructionPortfolio />
       <ConstructionFeatures />

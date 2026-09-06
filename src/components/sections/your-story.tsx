@@ -13,9 +13,9 @@ export function YourStory() {
             <div className="h-[1px] w-8 bg-[#C8A45D]" />
           </div>
           
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight text-foreground font-normal" data-reveal>
-            A space to recharge <br />
-            <span className="text-[#C8A45D] italic">life's</span> batteries.
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-8 leading-tight text-foreground font-normal" data-reveal>
+            Built with Care. <br />
+            <span className="text-[#C8A45D]">Made for Life.</span>
           </h2>
           
           <div className="w-2 h-2 rotate-45 border border-[#C8A45D] mb-8" data-reveal />

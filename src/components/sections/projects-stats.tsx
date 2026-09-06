@@ -4,15 +4,15 @@ export function ProjectsStats() {
   const stats = [
     {
       icon: Home,
-      value: "1000+",
+      value: "20+",
       label: "Homes Delivered",
       desc: "Successfully completed residential projects."
     },
     {
       icon: Users,
-      value: "12+",
+      value: "5+",
       label: "Years of Experience",
-      desc: "Delivering excellence since over a decade."
+      desc: "Delivering excellence consistently."
     },
     {
       icon: HardHat,

@@ -39,7 +39,7 @@ export function ConstructionStats() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
         {stats.map((s) => (
           <div key={s.l} data-reveal className="border-l border-border/10 pl-6 flex flex-col justify-center">
-            <div className="font-display text-5xl md:text-6xl lg:text-7xl text-[#C8A45D]">
+            <div className="font-display text-3xl md:text-4xl lg:text-5xl text-[#C8A45D]">
               <span className="counter-num" data-count={s.n}>
                 0
               </span>

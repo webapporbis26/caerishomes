@@ -41,7 +41,7 @@ export function Services() {
           <h4 className="text-eyebrow mb-4">
             What We Do
           </h4>
-          <h2 className="font-display text-4xl md:text-6xl text-foreground">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
             Our Services
           </h2>
         </div>

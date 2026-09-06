@@ -1,5 +1,3 @@
-import kerala1 from "@/assets/kerala-modern-1.webp";
-import kerala2 from "@/assets/kerala-modern-2.webp";
 import client1 from "@/assets/client-1.webp";
 import client2 from "@/assets/client-2.webp";
 import client3 from "@/assets/client-3.webp";
@@ -24,8 +22,7 @@ export const CONTACT = {
   whatsappHref:
     "https://wa.me/918075931749?text=Hi%20Caeris%20Homes%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services.",
   email: "info@caerishomes.com",
-  address:
-    "Caeris Homes, Neduvelil H, Mutholapuram PO, Elanji, Ernakulam, Kerala",
+  address: "Caeris Homes, Neduvelil H, Mutholapuram PO, Elanji, Ernakulam, Kerala",
 };
 
 // ── Single source of truth: Social links ─────────────────────────
@@ -39,8 +36,8 @@ export const SOCIAL = {
 // ── Single source of truth: Stats ────────────────────────────────
 // These EXACT numbers are used on every page (Home, About, Services, Projects).
 export const STATS = {
-  projectsCompleted: { value: 100, suffix: "+", label: "Completed Projects" },
-  yearsExperience: { value: 12, suffix: "+", label: "Years of Experience" },
+  projectsCompleted: { value: 20, suffix: "+", label: "Completed Projects" },
+  yearsExperience: { value: 5, suffix: "+", label: "Years of Experience" },
   clientSatisfaction: { value: 98, suffix: "%", label: "Client Satisfaction" },
 };
 
@@ -49,7 +46,7 @@ export const services = [
   {
     title: "Residential Construction",
     description:
-      "We build well-planned homes that balance comfort, durability, and cost — ensuring long-term value for your investment.",
+      "We build well-planned homes that balance comfort, durability, and cost, ensuring long-term value for your investment.",
   },
   {
     title: "Renovation & Extension",
@@ -59,56 +56,188 @@ export const services = [
   {
     title: "Design & Planning",
     description:
-      "We create smart, practical designs that make the best use of your plot while keeping your budget under control. Vastu-compliant plans available.",
+      "We create smart and practical designs that make the best use of space while keeping your budget in control.",
   },
   {
     title: "Turnkey Projects",
     description:
-      "From idea to key handover, we manage the entire process — design, permits, construction, interiors — so you can build stress-free.",
+      "From idea to handover, we manage the entire process so you can build your home without stress or confusion.",
   },
   {
-    title: "Consultation & Permits",
+    title: "Consultation",
     description:
-      "We prepare building plans based on your site and requirements. We also assist with K-SMART submissions, permits, approvals, completion certificates, and full site guidance.",
+      "We prepare building plans based on your site and requirements. We also assist with K-SMART submissions, permits, approvals, completion certificates, and provide full site guidance.",
   },
 ];
 
 // ── Projects (named by project + town, not client) ───────────────
+import p5 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.38.41 PM.jpeg";
+import p6 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.38.42 PM (1).jpeg";
+import p7 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.38.42 PM.jpeg";
+import p8 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.38.43 PM.jpeg";
+import p9 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.48.16 PM (1).jpeg";
+import p10 from "@/assets/hero and complted projects/WhatsApp Image 2026-09-05 at 3.48.16 PM.jpeg";
+
 export const projects = [
-  { img: jamsheer1, name: "Greenfield Villa", location: "Elanji", slug: "greenfield-villa-elanji", type: "Contemporary Villa" },
-  { img: shibu1, name: "Hilltop Residence", location: "Thodupuzha", slug: "hilltop-residence-thodupuzha", type: "Modern House" },
-  { img: jamsheer2, name: "Greenfield Villa", location: "Elanji", slug: "greenfield-villa-elanji-2", type: "Contemporary Villa" },
-  { img: shibu2, name: "Hilltop Residence", location: "Thodupuzha", slug: "hilltop-residence-thodupuzha-2", type: "Modern House" },
-  { img: jamsheer3, name: "Greenfield Villa", location: "Elanji", slug: "greenfield-villa-elanji-3", type: "Contemporary Villa" },
-  { img: shibu3, name: "Hilltop Residence", location: "Thodupuzha", slug: "hilltop-residence-thodupuzha-3", type: "Modern House" },
-  { img: wp1, name: "Lakeside Villa", location: "Piravom", slug: "lakeside-villa-piravom", type: "Residence" },
-  { img: wp2, name: "Riverside Residence", location: "Muvattupuzha", slug: "riverside-residence-muvattupuzha", type: "Residence" },
-  { img: wp3, name: "Palm Grove Villa", location: "Perumbavoor", slug: "palm-grove-villa-perumbavoor", type: "Residence" },
-  { img: wp4, name: "Courtyard House", location: "Kothamangalam", slug: "courtyard-house-kothamangalam", type: "Residence" },
+  {
+    img: jamsheer1,
+    name: "Greenfield Villa",
+    location: "Elanji",
+    slug: "greenfield-villa-elanji",
+    type: "Contemporary Villa",
+  },
+  {
+    img: shibu1,
+    name: "Hilltop Residence",
+    location: "Thodupuzha",
+    slug: "hilltop-residence-thodupuzha",
+    type: "Modern House",
+  },
+  {
+    img: jamsheer2,
+    name: "Greenfield Villa",
+    location: "Elanji",
+    slug: "greenfield-villa-elanji-2",
+    type: "Contemporary Villa",
+  },
+  {
+    img: shibu2,
+    name: "Hilltop Residence",
+    location: "Thodupuzha",
+    slug: "hilltop-residence-thodupuzha-2",
+    type: "Modern House",
+  },
+  {
+    img: jamsheer3,
+    name: "Greenfield Villa",
+    location: "Elanji",
+    slug: "greenfield-villa-elanji-3",
+    type: "Contemporary Villa",
+  },
+  {
+    img: shibu3,
+    name: "Hilltop Residence",
+    location: "Thodupuzha",
+    slug: "hilltop-residence-thodupuzha-3",
+    type: "Modern House",
+  },
+  {
+    img: wp1,
+    name: "Lakeside Villa",
+    location: "Piravom",
+    slug: "lakeside-villa-piravom",
+    type: "Residence",
+  },
+  {
+    img: wp2,
+    name: "Riverside Residence",
+    location: "Muvattupuzha",
+    slug: "riverside-residence-muvattupuzha",
+    type: "Residence",
+  },
+  {
+    img: wp3,
+    name: "Palm Grove Villa",
+    location: "Perumbavoor",
+    slug: "palm-grove-villa-perumbavoor",
+    type: "Residence",
+  },
+  {
+    img: wp4,
+    name: "Courtyard House",
+    location: "Kothamangalam",
+    slug: "courtyard-house-kothamangalam",
+    type: "Residence",
+  },
+  {
+    img: p5,
+    name: "Elegant Mansion",
+    location: "Kerala",
+    slug: "elegant-mansion-kerala-1",
+    type: "Premium Residence",
+  },
+  {
+    img: p6,
+    name: "Modern Family Home",
+    location: "Kerala",
+    slug: "modern-family-home-kerala-1",
+    type: "Residence",
+  },
+  {
+    img: p7,
+    name: "Classic Kerala Home",
+    location: "Kerala",
+    slug: "classic-kerala-home-1",
+    type: "Traditional Residence",
+  },
+  {
+    img: p8,
+    name: "Contemporary Residence",
+    location: "Kerala",
+    slug: "contemporary-residence-1",
+    type: "Modern Villa",
+  },
+  {
+    img: p9,
+    name: "Luxury Villa",
+    location: "Kerala",
+    slug: "luxury-villa-1",
+    type: "Premium Residence",
+  },
+  {
+    img: p10,
+    name: "Spacious Bungalow",
+    location: "Kerala",
+    slug: "spacious-bungalow-1",
+    type: "Residence",
+  },
 ];
 
 // ── Why Us pillars ───────────────────────────────────────────────
 export const whyPillars = [
   {
-    title: "Transparency",
-    subtitle: "CLEAR ESTIMATES, NO SURPRISES",
-    description:
-      "Every project comes with a detailed cost breakdown upfront. No hidden charges, no last-minute additions — just honest pricing you can trust.",
+    title: "Easy Accessibility",
+    subtitle: "ALWAYS WITHIN REACH",
+    description: "We are always reachable and available when you need support or clarity.",
     img: jamsheer1,
   },
   {
-    title: "Quality First",
-    subtitle: "MATERIALS YOU CAN COUNT ON",
+    title: "Trust & Credibility",
+    subtitle: "HONESTY IN EVERY STEP",
     description:
-      "We use only branded materials — Ultratech cement, Jindal steel, Asian Paints — with on-site quality checks at every stage of construction.",
+      "We build lasting relationships through honesty, consistency, and dependable work.",
     img: shibu1,
   },
   {
-    title: "On-Time Delivery",
-    subtitle: "YOUR TIMELINE, OUR COMMITMENT",
-    description:
-      "From design approval to key handover, we follow a clear project timeline with weekly progress updates so you always know where things stand.",
+    title: "Clear Budgets",
+    subtitle: "NO HIDDEN COSTS",
+    description: "We offer transparent estimates with complete clarity and no hidden costs.",
     img: wp1,
+  },
+  {
+    title: "Reliable Timelines",
+    subtitle: "ON TIME, AS PROMISED",
+    description: "We plan with care and deliver projects on time, as promised.",
+    img: jamsheer2,
+  },
+  {
+    title: "Quality & Comfort",
+    subtitle: "BUILT TO LAST",
+    description:
+      "We focus on materials and finishes that ensure lasting strength and everyday comfort.",
+    img: shibu2,
+  },
+  {
+    title: "Personal Service",
+    subtitle: "GUIDED WITH CARE",
+    description: "We stay closely involved, guiding you through every stage with care.",
+    img: wp2,
+  },
+  {
+    title: "Local Expertise",
+    subtitle: "KNOWLEDGE YOU CAN TRUST",
+    description: "We understand local conditions, approvals, and practical building requirements.",
+    img: jamsheer3,
   },
 ];
 
@@ -232,8 +361,7 @@ export const testimonials = [
     name: "Sini Mathew",
     location: "Thrissur",
     rating: 5,
-    quote:
-      "Our home feels open, calm, and well thought out. It suits our lifestyle perfectly.",
+    quote: "Our home feels open, calm, and well thought out. It suits our lifestyle perfectly.",
   },
   {
     image: client3,

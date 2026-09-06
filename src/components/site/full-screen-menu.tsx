@@ -111,7 +111,7 @@ export function FullScreenMenu({ isOpen, onClose }: { isOpen: boolean; onClose: 
               <Link
                 to={link.to}
                 onClick={onClose}
-                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:italic hover:text-[#C8A45D] transition-colors block leading-tight"
+                className="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl hover:italic hover:text-[#C8A45D] transition-colors block leading-tight"
                 activeProps={{ className: "italic text-[#C8A45D]" }}
               >
                 {link.label}

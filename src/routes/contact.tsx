@@ -99,7 +99,18 @@ function ContactPage() {
             <h2 className="font-display text-3xl md:text-4xl mb-2">Send a Message</h2>
             <p className="text-foreground/60 mb-8">We usually respond within 24 hours.</p>
 
-            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-8" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const name = formData.get("name") as string;
+              const email = formData.get("email") as string;
+              const phone = formData.get("phone") as string;
+              const message = formData.get("message") as string;
+              
+              const text = `Hi Caeris Homes,\n\nI would like to get in touch.\n\n*Name*: ${name}\n*Email*: ${email}\n*Phone*: ${phone || "Not provided"}\n\n*Message*:\n${message}`;
+              const encodedText = encodeURIComponent(text);
+              window.open(`https://wa.me/918075931749?text=${encodedText}`, "_blank");
+            }}>
               <div className="space-y-2">
                 <label className="text-xs font-bold tracking-widest uppercase text-foreground/50">Full Name</label>
                 <Input name="name" required placeholder="John Doe" className={inputClass} />

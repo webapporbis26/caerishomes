@@ -67,7 +67,7 @@ export function Loader() {
           stage === "fadeLogo" ? "opacity-0 scale-95 blur-sm" : "opacity-100 scale-100 blur-0"
         )}
       >
-        <div className="relative text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-widest uppercase text-muted-foreground/30 font-heading whitespace-nowrap">
+        <div className="relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest uppercase text-muted-foreground/30 font-heading whitespace-nowrap">
           CAERIS HOMES
           
           {/* Red Filled Text */}

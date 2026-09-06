@@ -6,7 +6,7 @@ export function ProjectsFeatured() {
   const featuredProjects = projects.slice(0, 3);
 
   return (
-    <section className="relative z-30 px-4 sm:px-8 md:px-12 xl:px-20 -mt-24 sm:-mt-32 md:-mt-48 pb-20">
+    <section className="relative z-30 px-4 sm:px-8 md:px-12 xl:px-20 py-20 bg-surface">
       <div className="max-w-[90rem] mx-auto">
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {featuredProjects.map((project, i) => (
@@ -19,9 +19,8 @@ export function ProjectsFeatured() {
               <img 
                 src={project.img} 
                 alt={project.client} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/90" />
               
               {/* Top Left Icon */}
               <div className="absolute top-6 left-6 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg">

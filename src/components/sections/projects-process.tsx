@@ -35,7 +35,7 @@ export function ProjectsProcess() {
         <p className="text-[#C8A45D] text-xs font-bold tracking-[0.2em] uppercase mb-4">
           OUR PROCESS
         </p>
-        <h2 className="font-display text-4xl md:text-5xl text-foreground font-normal mb-8">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-normal mb-8">
           A Seamless Journey, From Start to Finish
         </h2>
         <div className="flex items-center justify-center gap-4 mb-20">

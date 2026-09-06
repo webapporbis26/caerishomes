@@ -10,7 +10,7 @@ export function FeaturedProjects() {
       <div className="absolute top-0 left-0 right-0 px-8 md:px-12 py-8 z-10 flex justify-between items-end">
         <div>
           <p className="text-eyebrow mb-3">Featured Works · 01</p>
-          <h2 data-split className="font-display text-5xl md:text-7xl">
+          <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl">
             {splitChars("Selected Projects")}
           </h2>
         </div>
@@ -29,7 +29,7 @@ export function FeaturedProjects() {
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 flex justify-between items-end">
               <div>
                 <p className="text-eyebrow mb-2">{`0${i + 1} · ${p.type}`}</p>
-                <h3 className="font-display text-4xl md:text-6xl">{p.name}</h3>
+                <h3 className="font-display text-3xl md:text-4xl lg:text-5xl">{p.name}</h3>
                 <p className="text-meta mt-2">{p.location}</p>
               </div>
               <p className="text-meta">2026</p>

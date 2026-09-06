@@ -18,7 +18,7 @@ export function Materials() {
       <div className="flex justify-between items-end mb-16 max-w-7xl mx-auto" data-reveal>
         <div>
           <p className="text-eyebrow mb-3">Material Library · 05</p>
-          <h1 data-split className="font-display text-5xl md:text-7xl">
+          <h1 data-split className="font-display text-3xl md:text-4xl lg:text-5xl">
             {splitChars("Tactile by intent.")}
           </h1>
         </div>

@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/hero";
 import { ProjectCTA } from "@/components/sections/project-cta";
 import { ProjectsGrid } from "@/components/sections/projects-grid";
-import { Services } from "@/components/sections/services";
 import { Testimonials } from "@/components/sections/testimonials";
 import { WeEnsure } from "@/components/sections/we-ensure";
 import { WhatWeDo } from "@/components/sections/what-we-do";
@@ -35,7 +34,6 @@ function HomePage() {
       <Hero />
       <HomeAbout />
       <Stats />
-      <Services />
       <WhatWeDo />
       <ProjectsGrid limit={6} showViewAll />
       <ProjectCTA />

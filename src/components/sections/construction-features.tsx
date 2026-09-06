@@ -64,7 +64,7 @@ export function ConstructionFeatures() {
               WHY CAERIS HOMES
             </p>
             
-            <h2 className="font-display text-5xl md:text-6xl text-foreground font-normal leading-[1.1] mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-normal leading-[1.1] mb-6">
               Crafted Around You. <br />
               <span className="text-[#C8A45D]">Built to Perfection.</span>
             </h2>

@@ -32,12 +32,7 @@ function AboutPage() {
       {/* Founding Story Section */}
       <section className="py-16 px-4 sm:px-6 md:px-10 xl:px-20 max-w-5xl mx-auto text-center">
         <p className="text-foreground/80 text-xl md:text-2xl leading-relaxed font-medium" data-reveal>
-          Caeris Homes is a trusted construction company based in Elanji, Ernakulam, Kerala.
-          With over a decade of hands-on experience in residential construction, we specialize in
-          building practical, well-designed homes that suit the Kerala climate and lifestyle.
-          From contemporary villas to budget-friendly family homes, every project is handled
-          with care, transparency, and a commitment to quality that families across central Kerala
-          have come to rely on.
+          Caeris Homes is a residential construction company based in Elanji, Ernakulam, Kerala. With over 5 years of hands-on experience in residential construction, we specialize in building practical homes designed for everyday living. Our focus is on smart design, clear planning, and reliable execution. We work closely with each client to understand their needs and budget. With a strong local presence and a hands-on approach, we ensure every project is handled with care. Our goal is simple. To deliver homes that are functional, durable, and built with trust.
         </p>
       </section>
 
@@ -104,7 +99,7 @@ function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-display leading-tight" data-split>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight" data-split>
               {splitChars("From first meeting to key handover")}
             </h2>
             <div data-reveal className="space-y-8 text-white/70 leading-relaxed text-xl">

@@ -8,7 +8,7 @@ export function ProjectCTA() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         <div data-reveal>
           <p className="text-meta mb-3 opacity-70">Let's begin</p>
-          <h2 data-split className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight">
+          <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight">
             {splitChars("Have a project in mind?")}
           </h2>
         </div>

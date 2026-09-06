@@ -23,8 +23,11 @@ export function Nav() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   
   const isHome = pathname === "/";
-  const isTransparent = isHome && !isScrolled;
-  const shouldInvertLogo = isTransparent || theme === "dark";
+  const isProjects = pathname === "/projects";
+  const hasDarkHero = isHome || isProjects;
+  
+  const isTransparent = !isScrolled;
+  const shouldInvertLogo = (isTransparent && hasDarkHero) || theme === "dark";
   
   useEffect(() => {
     if (isMenuOpen) {
@@ -77,7 +80,7 @@ export function Nav() {
         {/* Center/Right: Navigation Desktop */}
         <nav className={cn(
           "hidden md:flex items-center gap-8 text-[14px] font-medium transition-colors duration-300",
-          isTransparent ? "text-white" : "text-foreground/80"
+          isTransparent ? (hasDarkHero ? "text-white" : "text-foreground") : "text-foreground/80"
         )}>
           {links.map((link) => (
             <Magnetic key={link.label}>
@@ -94,12 +97,7 @@ export function Nav() {
             </Magnetic>
           ))}
 
-          
-          <Magnetic>
-            <Link to="/contact" className="bg-[#C8A45D] hover:bg-foreground hover:text-background text-white px-6 py-2.5 rounded text-sm transition-colors font-bold ml-4 inline-block">
-              Get a Quote
-            </Link>
-          </Magnetic>
+
 
           <div className="ml-2">
             <ThemeToggle />
@@ -111,7 +109,7 @@ export function Nav() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={cn(
             "md:hidden flex items-center justify-center w-10 h-10 transition-colors",
-            isTransparent ? "text-white" : "text-foreground"
+            isTransparent ? (hasDarkHero ? "text-white" : "text-foreground") : "text-foreground"
           )}
           aria-label="Toggle menu"
         >
@@ -142,13 +140,6 @@ export function Nav() {
         <div className="flex justify-center">
           <ThemeToggle />
         </div>
-        <Link 
-          to="/contact" 
-          onClick={() => setIsMenuOpen(false)}
-          className="block w-full text-center bg-[#C8A45D] text-white py-4 rounded font-bold text-lg"
-        >
-          Get a Quote
-        </Link>
       </div>
     </div>
     </>

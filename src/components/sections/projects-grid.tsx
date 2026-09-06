@@ -18,7 +18,7 @@ export function ProjectsGrid({ limit, showViewAll = false }: ProjectsGridProps) 
             <h4 className="text-[#C8A45D] font-bold tracking-widest uppercase mb-3 text-sm">
               Portfolio
             </h4>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Our Projects
             </h2>
           </div>

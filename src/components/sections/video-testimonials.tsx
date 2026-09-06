@@ -74,7 +74,7 @@ export function VideoTestimonials() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 md:mb-16" data-reveal>
           <div>
             <p className="text-eyebrow mb-3">Video Stories · 06b</p>
-            <h2 data-split className="font-display text-4xl md:text-5xl lg:text-7xl">
+            <h2 data-split className="font-display text-3xl md:text-4xl lg:text-5xl">
               {splitChars("Hear them speak.")}
             </h2>
           </div>
