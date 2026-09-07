@@ -1,34 +1,34 @@
 import { Users, PencilRuler, HardHat, Key, Heart } from "lucide-react";
 
-export function ProjectsProcess() {
-  const steps = [
-    {
-      icon: Users,
-      title: "Consultation",
-      desc: "Understanding your needs and vision.",
-    },
-    {
-      icon: PencilRuler,
-      title: "Design & Planning",
-      desc: "Creating designs that inspire and function.",
-    },
-    {
-      icon: HardHat,
-      title: "Execution",
-      desc: "Precision construction with quality checks.",
-    },
-    {
-      icon: Key,
-      title: "Handover",
-      desc: "Delivering your dream home, ready to live.",
-    },
-    {
-      icon: Heart,
-      title: "After Care",
-      desc: "Continued support for complete peace of mind.",
-    },
-  ];
+const STEPS = [
+  {
+    icon: Users,
+    title: "Consultation",
+    desc: "Understanding your needs and vision.",
+  },
+  {
+    icon: PencilRuler,
+    title: "Design & Planning",
+    desc: "Creating designs that inspire and function.",
+  },
+  {
+    icon: HardHat,
+    title: "Execution",
+    desc: "Precision construction with quality checks.",
+  },
+  {
+    icon: Key,
+    title: "Handover",
+    desc: "Delivering your dream home, ready to live.",
+  },
+  {
+    icon: Heart,
+    title: "After Care",
+    desc: "Continued support for complete peace of mind.",
+  },
+];
 
+export function ProjectsProcess() {
   return (
     <section className="px-4 sm:px-8 md:px-12 xl:px-20 mb-20 md:mb-32">
       <div className="max-w-[90rem] mx-auto text-center" data-reveal>
@@ -49,8 +49,8 @@ export function ProjectsProcess() {
           <div className="hidden md:block absolute top-10 left-12 right-12 h-[1px] border-t-2 border-dashed border-[#C8A45D]/20 z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative z-10">
-            {steps.map((step, i) => (
-              <div key={i} className="flex flex-col items-center">
+            {STEPS.map((step) => (
+              <div key={step.title} className="flex flex-col items-center">
                 <div className="w-20 h-20 bg-surface rounded-full border border-[#C8A45D]/30 flex items-center justify-center mb-6 relative">
                   <div className="absolute inset-0 rounded-full border border-white m-1 shadow-sm" />
                   <step.icon className="w-8 h-8 text-[#C8A45D] relative z-10" strokeWidth={1} />

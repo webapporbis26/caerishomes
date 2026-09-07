@@ -20,7 +20,7 @@ export function ProjectsFeatured() {
                 loading="lazy"
                 decoding="async"
                 src={project.img}
-                alt={project.client}
+                alt={project.name}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
               />
 
@@ -32,7 +32,7 @@ export function ProjectsFeatured() {
               {/* Bottom Content */}
               <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
                 <h3 className="font-display text-2xl md:text-3xl text-white mb-2">
-                  {project.client}
+                  {project.name}
                 </h3>
                 <div className="flex items-center gap-2 text-[#C8A45D] mb-6">
                   <MapPin className="w-4 h-4" />

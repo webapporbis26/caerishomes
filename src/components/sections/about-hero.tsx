@@ -7,7 +7,11 @@ export function AboutHero() {
     <section className="relative w-full h-[100dvh] flex flex-col justify-start overflow-hidden bg-black text-white">
       {/* Background Image Area */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImg} alt="About Us" className="w-full h-full object-cover object-top md:object-center" />
+        <img
+          src={heroImg}
+          alt="About Us"
+          className="w-full h-full object-cover object-top md:object-center"
+        />
         {/* Stronger gradient on mobile so text is readable */}
         <div className="absolute inset-0 bg-[#111111]/70 md:bg-transparent z-10" />
         <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-transparent z-10 hidden md:block" />
@@ -44,7 +48,10 @@ export function AboutHero() {
           </h1>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mt-12">
-            <Link to="/contact" className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-4 font-bold tracking-[0.15em] uppercase text-xs rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 bg-[#B89650] hover:bg-[#a68645] text-white px-8 py-4 font-bold tracking-[0.15em] uppercase text-xs rounded-sm shadow-[0_8px_20px_rgba(184,150,80,0.3)] transition-all hover:-translate-y-1"
+            >
               GET IN TOUCH <ArrowRightIcon className="w-4 h-4" />
             </Link>
           </div>

@@ -7,7 +7,6 @@ import { ConstructionFeatures } from "@/components/sections/construction-feature
 import { Services } from "@/components/sections/services";
 import { useRevealAnimations } from "@/hooks/use-reveal-animations";
 
-
 export const Route = createFileRoute("/construction")({
   head: () => ({
     meta: [

@@ -1,33 +1,33 @@
-import { Home, Users, HardHat, Handshake, Globe } from "lucide-react";
+import { Home, Users, Handshake, Globe } from "lucide-react";
+
+const STATS = [
+  {
+    icon: Home,
+    value: "20+",
+    label: "Homes Delivered",
+    desc: "Successfully completed residential projects.",
+  },
+  {
+    icon: Users,
+    value: "5+",
+    label: "Years of Experience",
+    desc: "Delivering excellence consistently.",
+  },
+  {
+    icon: Handshake,
+    value: "100+",
+    label: "Happy Clients",
+    desc: "Trusted by families across the globe.",
+  },
+  {
+    icon: Globe,
+    value: "5+",
+    label: "Cities",
+    desc: "Projects across India and international locations.",
+  },
+];
 
 export function ProjectsStats() {
-  const stats = [
-    {
-      icon: Home,
-      value: "20+",
-      label: "Homes Delivered",
-      desc: "Successfully completed residential projects.",
-    },
-    {
-      icon: Users,
-      value: "5+",
-      label: "Years of Experience",
-      desc: "Delivering excellence consistently.",
-    },
-    {
-      icon: Handshake,
-      value: "100+",
-      label: "Happy Clients",
-      desc: "Trusted by families across the globe.",
-    },
-    {
-      icon: Globe,
-      value: "5+",
-      label: "Cities",
-      desc: "Projects across India and international locations.",
-    },
-  ];
-
   return (
     <section className="px-4 sm:px-8 md:px-12 xl:px-20 mb-20 md:mb-32">
       <div
@@ -35,8 +35,8 @@ export function ProjectsStats() {
         data-reveal
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-border/10">
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col items-center text-center px-4">
+          {STATS.map((stat) => (
+            <div key={stat.label} className="flex flex-col items-center text-center px-4">
               <stat.icon className="w-10 h-10 text-[#C8A45D] mb-4" strokeWidth={1} />
               <h4 className="font-display text-4xl text-foreground mb-1">{stat.value}</h4>
               <p className="text-[#C8A45D] text-xs font-bold tracking-widest uppercase mb-4">
