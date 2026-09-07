@@ -1,12 +1,12 @@
-import { Clock, ShieldCheck, Award, Headset, Factory } from "lucide-react";
+import { Clock, ShieldCheck, Headset, FileCheck, Handshake } from "lucide-react";
 
 export function WeEnsure() {
   const guarantees = [
     { title: "Timely\nDelivery", icon: Clock },
-    { title: "Using German\nTechnology", icon: ShieldCheck },
-    { title: "15 Years\nWarranty", icon: Award },
+    { title: "15 Years\nWarranty", icon: ShieldCheck },
     { title: "Assured\nLifetime Service", icon: Headset },
-    { title: "Delivery Directly\nFrom Our Factories", icon: Factory },
+    { title: "Transparent\nPricing", icon: Handshake },
+    { title: "End-to-End\nManagement", icon: FileCheck },
   ];
 
   return (

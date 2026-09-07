@@ -1,15 +1,23 @@
 import { Link } from "@tanstack/react-router";
 import { Magnetic } from "@/components/site/magnetic";
-import { Calendar, ArrowRight, Clock, ShieldCheck, Award, Headset, Factory } from "lucide-react";
+import {
+  Calendar,
+  ArrowRight,
+  Clock,
+  ShieldCheck,
+  Headset,
+  Handshake,
+  FileCheck,
+} from "lucide-react";
 import heroImg from "@/assets/hero-bg.webp";
 
 export function FinalCTA() {
   const guarantees = [
     { title: "Timely\nDelivery", icon: Clock },
-    { title: "Using German\nTechnology", icon: ShieldCheck },
-    { title: "15 Years\nWarranty", icon: Award },
+    { title: "15 Years\nWarranty", icon: ShieldCheck },
     { title: "Assured\nLifetime Service", icon: Headset },
-    { title: "Delivery Directly\nFrom Our Factories", icon: Factory },
+    { title: "Transparent\nPricing", icon: Handshake },
+    { title: "End-to-End\nManagement", icon: FileCheck },
   ];
 
   return (
@@ -33,7 +41,7 @@ export function FinalCTA() {
             <div className="flex items-center gap-4">
               <div className="h-[1px] w-8 bg-[#C8A45D]" />
               <p className="text-[#C8A45D] text-sm font-bold tracking-[0.2em] uppercase">
-                BEGIN . 08
+                GET STARTED
               </p>
               <div className="h-[1px] w-8 bg-[#C8A45D]" />
             </div>
@@ -43,7 +51,7 @@ export function FinalCTA() {
             <div className="hidden lg:flex items-center gap-4 mb-16">
               <div className="h-[1px] w-8 bg-[#C8A45D]" />
               <p className="text-[#C8A45D] text-sm font-bold tracking-[0.2em] uppercase">
-                BEGIN . 08
+                GET STARTED
               </p>
               <div className="h-[1px] w-8 bg-[#C8A45D]" />
             </div>
