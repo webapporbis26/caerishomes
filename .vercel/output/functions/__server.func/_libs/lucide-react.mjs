@@ -266,6 +266,26 @@ var Calendar = createLucideIcon("calendar", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ChevronLeft = createLucideIcon("chevron-left", [["path", {
+	d: "m15 18-6-6 6-6",
+	key: "1wnfg3"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var ChevronRight = createLucideIcon("chevron-right", [["path", {
+	d: "m9 18 6-6-6-6",
+	key: "mthhwq"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Clock = createLucideIcon("clock", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -642,19 +662,6 @@ var Moon = createLucideIcon("moon", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var MoveUpRight = createLucideIcon("move-up-right", [["path", {
-	d: "M13 5H19V11",
-	key: "1n1gyv"
-}], ["path", {
-	d: "M19 5L5 19",
-	key: "72u4yj"
-}]]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var PenTool = createLucideIcon("pen-tool", [
 	["path", {
 		d: "M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z",
@@ -907,5 +914,40 @@ var X = createLucideIcon("x", [["path", {
 	d: "m6 6 12 12",
 	key: "d8bk6v"
 }]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var ZoomIn = createLucideIcon("zoom-in", [
+	["circle", {
+		cx: "11",
+		cy: "11",
+		r: "8",
+		key: "4ej97u"
+	}],
+	["line", {
+		x1: "21",
+		x2: "16.65",
+		y1: "21",
+		y2: "16.65",
+		key: "13gj7c"
+	}],
+	["line", {
+		x1: "11",
+		x2: "11",
+		y1: "8",
+		y2: "14",
+		key: "1vmskp"
+	}],
+	["line", {
+		x1: "8",
+		x2: "14",
+		y1: "11",
+		y2: "11",
+		key: "durymu"
+	}]
+]);
 //#endregion
-export { Factory as A, House as B, Headset as C, Globe as D, Hammer as E, Building2 as F, CircleCheck as H, Award as I, ArrowUp as L, Compass as M, Clock as N, Gem as O, Calendar as P, ArrowRight as R, HeartHandshake as S, Handshake as T, CircleCheckBig as V, Mail as _, Sofa as a, Key as b, Quote as c, PencilRuler as d, PenTool as f, MapPin as g, Menu as h, Sun as i, Eye as j, FileCheck as k, Play as l, Moon as m, Users as n, ShieldCheck as o, MoveUpRight as p, Target as r, Settings as s, X as t, Phone as u, Lightbulb as v, HardHat as w, Heart as x, LayoutTemplate as y, ArrowLeft as z };
+export { Factory as A, ArrowRight as B, Headset as C, Globe as D, Hammer as E, ChevronLeft as F, House as H, Calendar as I, Building2 as L, Compass as M, Clock as N, Gem as O, ChevronRight as P, Award as R, HeartHandshake as S, Handshake as T, CircleCheckBig as U, ArrowLeft as V, CircleCheck as W, Mail as _, Sun as a, Key as b, Settings as c, Phone as d, PencilRuler as f, MapPin as g, Menu as h, Target as i, Eye as j, FileCheck as k, Quote as l, Moon as m, X as n, Sofa as o, PenTool as p, Users as r, ShieldCheck as s, ZoomIn as t, Play as u, Lightbulb as v, HardHat as w, Heart as x, LayoutTemplate as y, ArrowUp as z };

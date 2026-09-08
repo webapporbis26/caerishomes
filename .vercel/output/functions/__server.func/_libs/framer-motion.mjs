@@ -2314,7 +2314,8 @@ var acceleratedValues = /* @__PURE__ */ new Set([
 	"opacity",
 	"clipPath",
 	"filter",
-	"transform"
+	"transform",
+	"backgroundColor"
 ]);
 //#endregion
 //#region node_modules/motion-dom/dist/es/animation/waapi/utils/is-browser-color.mjs
@@ -2340,13 +2341,15 @@ var colorProperties = /* @__PURE__ */ new Set([
 var supportsWaapi = /*@__PURE__*/ memo(() => Object.hasOwnProperty.call(Element.prototype, "animate"));
 function supportsBrowserAnimation(options) {
 	const { motionValue, name, repeatDelay, repeatType, damping, type, keyframes } = options;
+	const subject = motionValue?.owner?.current;
 	/**
-	* We use this check instead of isHTMLElement() because we explicitly
-	* **don't** want elements in different timing contexts (i.e. popups)
-	* to be accelerated, as it's not possible to sync these animations
-	* properly with those driven from the main window frameloop.
+	* We use instanceof checks instead of isHTMLElement()/isSVGElement()
+	* because we explicitly **don't** want elements in different timing
+	* contexts (i.e. popups) to be accelerated, as it's not possible to sync
+	* these animations properly with those driven from the main window
+	* frameloop.
 	*/
-	if (!(motionValue?.owner?.current instanceof HTMLElement)) return false;
+	if (!(subject instanceof HTMLElement) && !(subject instanceof SVGElement)) return false;
 	const { onUpdate, transformTemplate } = motionValue.owner.getProps();
 	return supportsWaapi() && name && (acceleratedValues.has(name) || colorProperties.has(name) && hasBrowserOnlyColors(keyframes)) && (name !== "transform" || !transformTemplate) && !onUpdate && !repeatDelay && repeatType !== "mirror" && damping !== 0 && type !== "inertia";
 }
@@ -4788,6 +4791,20 @@ function renderHTML(element, { style, vars }, styleProp, projection) {
 	for (key in vars) elementStyle.setProperty(key, vars[key]);
 }
 //#endregion
+//#region node_modules/motion-dom/dist/es/utils/border-radius.mjs
+/**
+* The four corner-radius longhands. Shared so the projection mixer, scale
+* corrector, WAAPI px-value set and view-transition crop pass don't each carry
+* their own copy. Order is irrelevant - every consumer mixes/corrects/animates
+* each corner independently.
+*/
+var cornerRadiusProps = [
+	"borderTopLeftRadius",
+	"borderTopRightRadius",
+	"borderBottomRightRadius",
+	"borderBottomLeftRadius"
+];
+//#endregion
 //#region node_modules/motion-dom/dist/es/projection/styles/scale-border-radius.mjs
 function pixelsToPercent(pixels, axis) {
 	if (axis.max === axis.min) return 0;
@@ -4838,12 +4855,7 @@ var correctBoxShadow = { correct: (latest, { treeScale, projectionDelta }) => {
 var scaleCorrectors = {
 	borderRadius: {
 		...correctBorderRadius,
-		applyTo: [
-			"borderTopLeftRadius",
-			"borderTopRightRadius",
-			"borderBottomLeftRadius",
-			"borderBottomRightRadius"
-		]
+		applyTo: [...cornerRadiusProps]
 	},
 	borderTopLeftRadius: correctBorderRadius,
 	borderTopRightRadius: correctBorderRadius,
@@ -4876,6 +4888,15 @@ var HTMLVisualElement = class extends DOMVisualElement {
 		super(...arguments);
 		this.type = "html";
 		this.renderInstance = renderHTML;
+	}
+	mount(instance) {
+		/**
+		* If a custom component forwards its ref to something other than a
+		* HTML/SVG element (a class instance, an imperative handle) there's
+		* nothing for Motion to style, measure or attach gestures to. #2777
+		*/
+		Boolean(instance.style);
+		super.mount(instance);
 	}
 	readValueFromInstance(instance, key) {
 		if (transformProps.has(key)) return this.projection?.isProjecting ? defaultTransformValue(key) : readTransformValue(instance, key);
@@ -5670,13 +5691,7 @@ function isSVGSVGElement(element) {
 }
 //#endregion
 //#region node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs
-var borderLabels = [
-	"borderTopLeftRadius",
-	"borderTopRightRadius",
-	"borderBottomLeftRadius",
-	"borderBottomRightRadius"
-];
-var numBorders = borderLabels.length;
+var numBorders = cornerRadiusProps.length;
 var asNumber = (value) => typeof value === "string" ? parseFloat(value) : value;
 var isPx = (value) => typeof value === "number" || px.test(value);
 function mixValues(target, follow, lead, progress, shouldCrossfadeOpacity, isOnlyMember) {
@@ -5688,7 +5703,7 @@ function mixValues(target, follow, lead, progress, shouldCrossfadeOpacity, isOnl
 	* Mix border radius
 	*/
 	for (let i = 0; i < numBorders; i++) {
-		const borderLabel = borderLabels[i];
+		const borderLabel = cornerRadiusProps[i];
 		let followRadius = getRadius(follow, borderLabel);
 		let leadRadius = getRadius(lead, borderLabel);
 		if (followRadius === void 0 && leadRadius === void 0) continue;
@@ -7404,7 +7419,7 @@ function PopChild({ children, isPresent, anchorX, anchorY, root, pop }) {
 		direction: "ltr"
 	});
 	const { nonce } = (0, import_react.useContext)(MotionConfigContext);
-	const composedRef = useComposedRefs(ref, children.props?.ref ?? children?.ref);
+	const composedRef = useComposedRefs(ref, pop !== false ? children.props?.ref ?? children?.ref : void 0);
 	/**
 	* We create and inject a style block so we can apply this explicit
 	* sizing in a non-destructive manner by just deleting the style block.

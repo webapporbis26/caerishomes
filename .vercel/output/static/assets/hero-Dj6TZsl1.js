@@ -1,0 +1,1 @@
+var e=`/assets/hero-0o9Hxzr1.webp`;export{e as t};
